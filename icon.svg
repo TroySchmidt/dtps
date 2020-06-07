@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="299.99533"
+   width="225"
+   version="1.1"
+   viewBox="0 0 48 63.999005"
+   x="0px"
+   y="0px"
+   id="svg6"
+   sodipodi:docname="powerplusAAAA.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   style="fill:#1a1a1a">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>book-bookmark</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="0.78666667"
+     inkscape:cx="112.5"
+     inkscape:cy="149.99533"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="title2">book-bookmark</title>
+  <path
+     d="M 5.333,0 C 2.387,0 0,2.4000001 0,5.3330001 V 53.333001 c 0,2.933 2.388,5.333 5.333,5.333 h 5.333 v 5.333 l 6.667,-5.333 6.667,5.333 v -5.333 h 18.667 c 2.947,0 5.333,-2.4 5.333,-5.333 v -2.667 c 0,2.933 -2.387,5.333 -5.333,5.333 H 24 v -5.333 H 10.667 v 5.333 h -4 c -2.209,0 -4,-1.867 -4,-4 0,-2.4 1.791,-4 4,-4 h 36 c 2.947,0 5.333,-2.4 5.333,-5.333 V 5.3330001 C 48,2.4000001 45.613,0 42.667,0 H 5.334 Z"
+     id="path4"
+     style="fill:#e2cf57;fill-opacity:1"
+     inkscape:connector-curvature="0" />
+</svg>
