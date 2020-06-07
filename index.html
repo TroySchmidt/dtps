@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://powerplus.app" />
     <meta property="og:title" content="Power+" />
     <meta property="og:description" content="A better UI for Canvas LMS" />
-    <meta property="og:image" content="https://powerplus.app/icon.png" />
+    <meta property="og:image" content="https://powerplus.app/logo.png" />
 
     <title>Power+</title>
 
@@ -25,7 +25,6 @@
     <script async src="https://cdn.jottocraft.com/fluid/assets/tinycolor.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jottocraft.com/fluid/v4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
 
     <style>
         /* Header */
@@ -119,22 +118,10 @@
 
 <body>
 
-    <script>
-        var markdown = new showdown.Converter();
-        jQuery.getJSON("https://api.github.com/repos/jottocraft/dtps/releases/latest", function (data) {
-            var log = data.body;
-            log = log.split("\n").slice(1).join("\n"); //remove first (title) line
-            log = log.replace(/^.*What's new in Power\+.*$/mg, "").replace(/^.*Thanks for using Power\+.*$/mg, ""); //try removing title line again for good measure and also remove footer
-            jQuery("#changelog").html(markdown.makeHtml(log));
-        }).error(function () {
-            jQuery("#changelog").html(`<p>An error occured when trying to get the latest Power+ updates. Try again later.</p>`);
-        });
-    </script>
-
     <div id="header">
         <div class="content">
             <div class="title">
-                <img src="https://powerplus.app/outline.png" />
+                <img src="https://powerplus.app/icon.png" />
                 <h1>Power+</h1>
             </div>
             <div class="row">
@@ -182,16 +169,6 @@
                     <li>Power+'s code is open-source and hosted directly from <a
                             href="https://github.com/jottocraft/dtps">GitHub</a></li>
                 </ul>
-            </div>
-        </div>
-
-        <div class="block left">
-            <img src="assets/content.svg" />
-            <div class="description">
-                <h3>What's new in Power+</h3>
-                <div id="changelog">
-                    <p>Getting the latest changes...</p>
-                </div>
             </div>
         </div>
     </div>
