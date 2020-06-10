@@ -1,1 +1,1 @@
-{"version":3,"sources":["init.js"],"names":["DTPS_ROOT_URL","window","location","hostname","jQuery","getScript"],"mappings":";;;;;;;AAQA,MAAMA,cAAgB,yBAEtB,GAAIC,OAAOC,SAASC,UAAY,0BAA2B,CACvDC,OAAOC,UAAUL,cAAgB,6BAC9B,CACH,KAAM"}
+{"version":3,"sources":["init.js"],"names":["DTPS_ROOT_URL","window","location","hostname","jQuery","getScript","endsWith"],"mappings":";;;;;;;AAQA,MAAMA,cAAgB,yBAEtB,GAAIC,OAAOC,SAASC,UAAY,0BAA2B,CAEvDC,OAAOC,UAAUL,cAAgB,8BAC9B,GAAIC,OAAOC,SAASC,SAASG,SAAS,mBAAoB,CAE7DF,OAAOC,UAAUL,cAAgB,8BAC9B,CACH,KAAM"}
