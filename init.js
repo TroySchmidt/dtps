@@ -6,4 +6,3 @@
  * @license GPL-2.0-only
  */
 const DTPS_ROOT_URL="https://powerplus.app/";if(window.location.hostname=="dtechhs.instructure.com"){jQuery.getScript(DTPS_ROOT_URL+"/scripts/lms/dtech.js")}else if(window.location.hostname.endsWith("instructure.com")){jQuery.getScript(DTPS_ROOT_URL+"/scripts/lms/canvas.js")}else{throw"Error: Invalid domain"}
-//# sourceMappingURL=/init.js.map
