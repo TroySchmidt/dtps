@@ -1,5 +1,5 @@
 /*
-Power+ CSS v2.9.1
+Power+ CSS
 (c) jottocraft 2018-2020
 */
 
@@ -295,14 +295,6 @@ body.darkPowerpoints, body.showThemeWindows .themeWindow.darkPowerpoints {
 
 .classContent .card.collapsed .moduleContents {
     display: none;
-}
-
-body:not(.dark) .sidebar img {
-    filter: saturate(1.5) brightness(0.8) !important;
-}
-
-body:not(.dark) .sidenav .title img {
-    filter: saturate(1.5) brightness(0.9) !important;
 }
 
 .fc .fc-button-group>* {
