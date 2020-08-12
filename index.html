@@ -118,6 +118,16 @@
 
 <body>
 
+	<script>
+		$(document).ready(() => {
+			if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+				if ($("#dtpsInstallBtn").text().includes("extension")) {
+					$("#dtpsInstallBtn").attr("onclick", "window.location.href = 'https://powerplus.app/firefox.xpi';");
+				}
+			}
+		})
+	</script>
+
     <div id="header">
         <div class="content">
             <div class="title">
