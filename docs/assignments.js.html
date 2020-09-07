@@ -264,19 +264,21 @@ dtps.masterStream = function () {
     dtps.renderUpdates();
 
     //Render upcoming assignments stream
-    dtps.renderUpcoming();
+    dtps.renderUpcoming(doneLoading);
 
     //Render calendar
     dtps.calendar();
 
     //Render due today
-    dtps.renderDueToday();
+    dtps.renderDueToday(doneLoading);
 }
 
 /**
  * Compiles and displays due today / to-do stream
+ * 
+ * @param {boolean} doneLoading True if all classes have finished loading their assignment lists
  */
-dtps.renderDueToday = function () {
+dtps.renderDueToday = function (doneLoading) {
     //Combine class stream arrays
     var combinedStream = [];
     if (dtps.classes) {
@@ -311,7 +313,11 @@ dtps.renderDueToday = function () {
 
     if (combinedStream.length == 0) {
         //Nothing due today
-        combinedHTML = `&lt;p style="text-align: center;margin: 10px 25px 10px 75px; font-size: 18px;">&lt;i class="material-icons">done&lt;/i> Nothing due today&lt;/p>`;
+        if (doneLoading) {
+            combinedHTML = `&lt;p style="text-align: center;margin: 10px 25px 10px 75px; font-size: 18px;">&lt;i class="material-icons">done&lt;/i> Nothing due today&lt;/p>`;
+        } else {
+            combinedHTML = ``;
+        }
     } else {
         //Add header
         combinedHTML = /*html*/`
@@ -670,7 +676,7 @@ dtps.assignment = function (id, classNum) {
                 ${assignment.category ? `&lt;p style="color: var(--secText); margin: 5px 0px;">&lt;i style="vertical-align: middle;" class="material-icons">category&lt;/i> Category: ${assignment.category}&lt;/p>` : ""}
                 ${assignment.rubric ? assignment.rubric.map(function (rubricItem) { return `&lt;p style="color: var(--secText); margin: 5px 0px;">&lt;i style="vertical-align: middle;" class="material-icons">adjust&lt;/i> ${rubricItem.title}&lt;/p>`; }).join("") : ""}
                 &lt;p style="color: var(--secText); margin: 5px 0px;">&lt;i style="vertical-align: middle;" class="material-icons">class&lt;/i> Class: ${dtps.classes[assignment.class].subject}&lt;/p>
-                &lt;p style="color: var(--secText); margin: 5px 0px;">&lt;i style="vertical-align: middle;" class="material-icons">code&lt;/i> Assignment ID: ${assignment.id}&lt;/p>
+                ${dtps.env == "dev" ? `&lt;p style="color: var(--secText); margin: 5px 0px;">&lt;i style="vertical-align: middle;" class="material-icons">code&lt;/i> Assignment ID: ${assignment.id}&lt;/p>` : ""}
 
                 &lt;br />
                 &lt;div class="row">
@@ -765,8 +771,20 @@ dtps.moduleStream = function (classID) {
                 //Get module action
                 var action = "";
                 if (item.type == "assignment") action = "dtps.assignment('" + item.id + "', " + classNum + ")";
-                if (item.type == "page") action = "fluid.screen('pages', '" + classID + "|" + item.id + "')";
-                if (item.type == "discussion") action = "fluid.screen('discussions', '" + classID + "|" + item.id + "')";
+                if (item.type == "page") {
+                    if (dtps.classes[classNum].pages) {
+                        action = "fluid.screen('pages', '" + classID + "|" + item.id + "')";
+                    } else {
+                        action = "window.open('" + item.url + "')";
+                    }                 
+                }  
+                if (item.type == "discussion") {
+                    if (dtps.classes[classNum].discussions) {
+                        action = "fluid.screen('discussions', '" + classID + "|" + item.id + "')";
+                    } else {
+                        action = "window.open('" + item.url + "')";
+                    }
+                }
                 if (item.type == "url") action = "window.open('" + item.url + "')";
                 if (item.type == "header") action = "";
                 if (item.type == "embed") action = "dtps.showIFrameCard('" + item.url + "')";
@@ -799,6 +817,10 @@ dtps.moduleStream = function (classID) {
                 &lt;/div>
             `;
         });
+
+        if (data.length == 0) {
+            modulesHTML += `&lt;div style="cursor: auto;" class="card assignment">&lt;h4>No modules&lt;/h4>&lt;p>There aren't any modules in this class yet&lt;/p>&lt;/div>`;
+        }
 
         //Render module HTML
         if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "moduleStream")) {
@@ -917,7 +939,7 @@ dtps.classInfo = function (num) {
         &lt;p style="color: var(--secText)">${dtps.classes[num].description || ""}&lt;/p>
 
         &lt;div class="assignmentChip">&lt;i class="material-icons">group&lt;/i>&lt;span>${dtps.classes[num].numStudents} students&lt;/span>&lt;/div>
-        &lt;div class="assignmentChip">&lt;i class="material-icons">code&lt;/i>&lt;span>Class ID: ${dtps.classes[num].id}&lt;/span>&lt;/div>
+        ${dtps.env == "dev" ? `&lt;div class="assignmentChip">&lt;i class="material-icons">code&lt;/i>&lt;span>Class ID: ${dtps.classes[num].id}&lt;/span>&lt;/div>` : ``}
     
         &lt;br />
 
@@ -1173,7 +1195,7 @@ fluid.externalScreens.gradebook = (courseID) => {
  * @property {string} type Either "assignment", "page", "discussion", "url", "embed", or "header".
  * @property {string} [title] Required for URL and header items, and can be used to override the title of assignment, page, and discussion items.
  * @property {string} [id] Required for assignment, page, and discussion items.
- * @property {string} [url] Required for URL and embed items.
+ * @property {string} [url] Required for URL and embed items. Required for discussion and page items if the class does not support the pages or discussions feature.
  * @property {number} [indent] Indent level
  */
 
@@ -1223,7 +1245,7 @@ fluid.externalScreens.gradebook = (courseID) => {
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 18th Aug 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 6th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

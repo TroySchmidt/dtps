@@ -118,7 +118,7 @@
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
  * @file DTPS Core functions and module loader
  * @author jottocraft
- * @version v3.0.1
+ * @version v3.0.2
  * 
  * @copyright Copyright (c) 2018-2020 jottocraft. All rights reserved.
  * @license GPL-2.0-only
@@ -134,6 +134,7 @@ if (typeof dtps !== "undefined") throw "Error: DTPS is already loading";
  * @global
  * @namespace dtps
  * @property {number} ver Comparable version number
+ * @property {string} env DTPS enviornment ("prod" or "dev")
  * @property {string} readableVer Formatted semantic version number
  * @property {Class[]} classes DTPS classes array
  * @property {string} baseURL The base URL that DTPS is being loaded from
@@ -150,8 +151,9 @@ if (typeof dtps !== "undefined") throw "Error: DTPS is already loading";
  * @property {DashboardItem[]} rightDashboard Items on the right side of the dashboard based on dtps.dashboardItems and user prefrences. Set in dtps.loadDashboardPrefs.
  */
 var dtps = {
-    ver: 301,
-    readableVer: "v3.0.1",
+    ver: 302,
+    readableVer: "v3.0.2",
+    env: window.jottocraftSatEnv || "prod",
     classes: [],
     baseURL: String(document.currentScript.src).split('/')[0] + "//" + String(document.currentScript.src).split('/')[2],
     unstable: window.localStorage.dtpsLoaderPref == "canary" || window.localStorage.dtpsLoaderPref == "debugging" || String(document.currentScript.src).includes("http://localhost"),
@@ -267,7 +269,7 @@ dtps.changelog = function (onlyIfNewVersion) {
  * @param {string} msg The debugging message to log
  */
 dtps.log = function (msg) {
-    console.debug("[DTPS] ", msg);
+    if (dtps.env == "dev") console.log("[DTPS]", msg);
 }
 
 
@@ -902,7 +904,7 @@ dtps.showClasses = function (override) {
             }
 
             if ((dtps.selectedContent == "moduleStream") &amp;&amp; dtps.classes[dtps.selectedClass]) {
-                fluid.screen("modules", dtps.classes[dtps.selectedClass].id);
+                fluid.screen("moduleStream", dtps.classes[dtps.selectedClass].id);
             }
 
             if ((dtps.selectedContent == "grades") &amp;&amp; dtps.classes[dtps.selectedClass]) {
@@ -1353,7 +1355,7 @@ dtps.renderLite = function () {
 	            &lt;img src="https://powerplus.app/icon.svg" style="width: 50px;vertical-align: middle;padding: 7px; padding-top: 14px;" />
 	            &lt;div style="vertical-align: middle; display: inline-block;">
                     &lt;h5 style="font-weight: bold;display: inline-block;vertical-align: middle;">Power+&lt;/h5>
-                    &lt;p>${dtps.readableVer}&lt;/p>
+                    &lt;p>${dtps.readableVer + (window.localStorage.dtpsLoaderPref ? ` &lt;span style="font-size: 12px;">(${window.localStorage.dtpsLoaderPref})&lt;/span>` : "")}&lt;/p>
 	            &lt;/div>
             &lt;/div>
 
@@ -1363,6 +1365,11 @@ dtps.renderLite = function () {
             &lt;div onclick="$('.abtpage').hide();$('.abtpage.dashboard').show();" class="item">
                 &lt;i class="material-icons">dashboard&lt;/i> Dashboard
             &lt;/div>
+            ${dtps.env == "dev" ? /*html*/`
+                &lt;div onclick="$('.abtpage').hide();$('.abtpage.debugging').show();" class="item">
+                    &lt;i class="material-icons">bug_report&lt;/i> Debugging
+                &lt;/div>
+            ` : ``}
             &lt;div onclick="$('.abtpage').hide();$('.abtpage.about').show(); if ($('body').hasClass('sudo')) { $('.advancedOptions').show(); $('.advOp').hide(); } else { $('.advancedOptions').hide(); $('.advOp').show(); }" class="item abt">
                 &lt;i class="material-icons">info&lt;/i> About
             &lt;/div>
@@ -1446,6 +1453,27 @@ dtps.renderLite = function () {
 
             &lt;/div>
 
+            ${dtps.env == "dev" ? /*html*/`
+                &lt;div style="display: none;" class="abtpage debugging">
+                   &lt;h5>Debugging&lt;/h5>
+                   &lt;p>These settings are for development only and might break Power+. Use at your own risk.&lt;/p>
+
+                   &lt;br />
+
+                   &lt;div>
+                       &lt;input id="dtpsDebuggingPort" value="${window.localStorage.dtpsDebuggingPort || ""}" placeholder="Debugging Port" />
+                       &lt;button class="btn small" onclick="window.localStorage.setItem('dtpsDebuggingPort', $('#dtpsDebuggingPort').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
+                   &lt;/div>
+
+                   &lt;br />
+
+                   &lt;div>
+                       &lt;input id="dtpsLMSOverride" value="${window.localStorage.dtpsLMSOverride || ""}" placeholder="LMS override" />
+                       &lt;button class="btn small" onclick="window.localStorage.setItem('dtpsLMSOverride', $('#dtpsLMSOverride').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
+                   &lt;/div>
+                &lt;/div>
+            ` : ``}
+
             &lt;div style="display: none;" class="abtpage about">
                 &lt;h5>About&lt;/h5>
 
@@ -1468,10 +1496,12 @@ dtps.renderLite = function () {
                 &lt;/div>
 
                 &lt;div class="card" style="padding: 10px 20px; box-shadow: none !important; border: 2px solid var(--elements); margin-top: 20px;">
-                    &lt;img src="${dtps.user.photoURL}" style="height: 50px; margin-right: 10px; vertical-align: middle; margin-top: 20px; border-radius: 50%;" />
+                    &lt;div style="margin-top: 12px;">
+                        &lt;img src="${dtps.user.photoURL}" style="height: 50px; margin-right: 10px; vertical-align: middle; border-radius: 50%;" />
 
-                    &lt;div style="display: inline-block; vertical-align: middle;">
-                        &lt;h4 style="font-weight: bold; font-size: 32px; margin-bottom: 0px;">${dtps.user.name} &lt;span style="font-size: 12px;">${dtps.user.id}&lt;/span>&lt;/h4>
+                        &lt;div style="display: inline-block; vertical-align: middle;">
+                            &lt;h4 style="font-weight: bold; font-size: 32px; margin: 0px;">${dtps.user.name} &lt;span style="font-size: 12px; line-height: 0px;">${dtps.user.id}&lt;/span>&lt;/h4>
+                        &lt;/div>
                     &lt;/div>
 
                     &lt;div style="margin-top: 15px; margin-bottom: 7px;">
@@ -1533,7 +1563,7 @@ dtps.renderLite = function () {
         &lt;/div>
 
         &lt;div style="margin-top: 5px; display: inline-block; text-align: right; float: right;">
-            &lt;div onclick="window.location.href = '/';" class="itemButton">&lt;i class="material-icons">exit_to_app&lt;/i> Go to ${dtpsLMS.shortName || dtpsLMS.name}&lt;/div>
+            &lt;a href="/" class="itemButton">&lt;i class="material-icons">exit_to_app&lt;/i> Go to ${dtpsLMS.shortName || dtpsLMS.name}&lt;/a>
             ${dtps.unstable ? `&lt;div onclick="window.open('https://github.com/jottocraft/dtps/issues/new/choose')" class="itemButton">&lt;i class="material-icons">feedback&lt;/i> Feedback&lt;/div>` : ""}
             &lt;div onclick="dtps.settings();" class="itemButton">&lt;i class="material-icons">settings&lt;/i> Settings&lt;/div>
         &lt;/div>
@@ -1783,7 +1813,7 @@ dtps.init();
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 18th Aug 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 6th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

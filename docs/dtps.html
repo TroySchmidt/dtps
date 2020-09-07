@@ -144,6 +144,13 @@
 							</td>
 						</tr>
 						<tr>
+								<td><code>env</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									DTPS enviornment ("prod" or "dev")
+							</td>
+						</tr>
+						<tr>
 								<td><code>readableVer</code></td>
 							<td><span class="param-type">string</span></td>
 							<td class="last">
@@ -480,6 +487,43 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
+			<h4 id=".masterStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">masterStream</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the DTPS dashboard and calls dtps.renderCalendar, dtps.renderUpdates, and dtps.renderUpcoming</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-98">line 98</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
 			<h4 id=".class" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">class</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{object|undefined}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
@@ -513,44 +557,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-97">line 97</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".masterStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">masterStream</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the DTPS dashboard and calls dtps.renderCalendar, dtps.renderUpdates, and dtps.renderUpcoming</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-98">line 98</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-99">line 99</a></p>
 								</div>
 							</div>
 			
@@ -608,7 +615,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-106">line 106</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-108">line 108</a></p>
 								</div>
 							</div>
 			
@@ -666,7 +673,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-120">line 120</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-122">line 122</a></p>
 								</div>
 							</div>
 			
@@ -789,7 +796,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-152">line 152</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-154">line 154</a></p>
 								</div>
 							</div>
 			
@@ -801,12 +808,33 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".renderDueToday" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderDueToday</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id=".renderDueToday" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderDueToday</span><span class="signature-params">( <span class="signature-param">doneLoading</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays due today / to-do stream</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>doneLoading</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if all classes have finished loading their assignment lists
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -826,7 +854,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-162">line 162</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-164">line 164</a></p>
 								</div>
 							</div>
 			
@@ -902,7 +930,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-164">line 164</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-166">line 166</a></p>
 								</div>
 							</div>
 			
@@ -939,7 +967,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-178">line 178</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-180">line 180</a></p>
 								</div>
 							</div>
 			
@@ -976,7 +1004,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-213">line 213</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-219">line 219</a></p>
 								</div>
 							</div>
 			
@@ -1013,7 +1041,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-222">line 222</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-224">line 224</a></p>
 								</div>
 							</div>
 			
@@ -1071,7 +1099,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-241">line 241</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-243">line 243</a></p>
 								</div>
 							</div>
 			
@@ -1108,7 +1136,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-259">line 259</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-265">line 265</a></p>
 								</div>
 							</div>
 			
@@ -1145,7 +1173,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-266">line 266</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-268">line 268</a></p>
 								</div>
 							</div>
 			
@@ -1250,7 +1278,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-297">line 297</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-303">line 303</a></p>
 								</div>
 							</div>
 			
@@ -1287,7 +1315,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-313">line 313</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-315">line 315</a></p>
 								</div>
 							</div>
 			
@@ -1363,7 +1391,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-349">line 349</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-355">line 355</a></p>
 								</div>
 							</div>
 			
@@ -1493,7 +1521,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-462">line 462</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-468">line 468</a></p>
 								</div>
 							</div>
 			
@@ -1530,7 +1558,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-579">line 579</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-585">line 585</a></p>
 								</div>
 							</div>
 			
@@ -1588,7 +1616,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-596">line 596</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-602">line 602</a></p>
 								</div>
 							</div>
 			
@@ -1654,7 +1682,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-613">line 613</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-615">line 615</a></p>
 								</div>
 							</div>
 			
@@ -1720,7 +1748,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-630">line 630</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-632">line 632</a></p>
 								</div>
 							</div>
 			
@@ -1778,7 +1806,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-643">line 643</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-645">line 645</a></p>
 								</div>
 							</div>
 			
@@ -1836,7 +1864,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-663">line 663</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-665">line 665</a></p>
 								</div>
 							</div>
 			
@@ -1873,7 +1901,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-674">line 674</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-676">line 676</a></p>
 								</div>
 							</div>
 			
@@ -1910,7 +1938,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-686">line 686</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-688">line 688</a></p>
 								</div>
 							</div>
 			
@@ -1923,6 +1951,66 @@
 										<p class="form-control-static">Pending v3 rewrite</p>
 								</div>
 							</div>
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".showClasses" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">showClasses</span><span class="signature-params">( [&nbsp;<span class="signature-param">override</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the class list in the sidebar</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>override</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the sidebar should be forcefully re-rendered
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-721">line 721</a></p>
+								</div>
+							</div>
+			
+			
+			
 			
 					</form>
 			</div>	</div>
@@ -1989,67 +2077,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-702">line 702</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".showClasses" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">showClasses</span><span class="signature-params">( [&nbsp;<span class="signature-param">override</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the class list in the sidebar</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>override</code></td>
-							<td><span class="param-type">boolean</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-							<td class="last">
-									True if the sidebar should be forcefully re-rendered
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-719">line 719</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-724">line 724</a></p>
 								</div>
 							</div>
 			
@@ -2133,7 +2161,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-725">line 725</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-747">line 747</a></p>
 								</div>
 							</div>
 			
@@ -2191,7 +2219,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-778">line 778</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-800">line 800</a></p>
 								</div>
 							</div>
 			
@@ -2249,7 +2277,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-811">line 811</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-813">line 813</a></p>
 								</div>
 							</div>
 			
@@ -2307,7 +2335,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-822">line 822</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-844">line 844</a></p>
 								</div>
 							</div>
 			
@@ -2365,7 +2393,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-874">line 874</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-896">line 896</a></p>
 								</div>
 							</div>
 			
@@ -2423,7 +2451,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-917">line 917</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-919">line 919</a></p>
 								</div>
 							</div>
 			
@@ -2481,7 +2509,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-970">line 970</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-972">line 972</a></p>
 								</div>
 							</div>
 			
@@ -2539,7 +2567,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-986">line 986</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-988">line 988</a></p>
 								</div>
 							</div>
 			
@@ -2576,7 +2604,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1015">line 1015</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1017">line 1017</a></p>
 								</div>
 							</div>
 			
@@ -2613,7 +2641,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1054">line 1054</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1056">line 1056</a></p>
 								</div>
 							</div>
 			
@@ -2650,7 +2678,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1079">line 1079</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1081">line 1081</a></p>
 								</div>
 							</div>
 			
@@ -2687,7 +2715,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1126">line 1126</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1128">line 1128</a></p>
 								</div>
 							</div>
 			
@@ -2724,7 +2752,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1217">line 1217</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1219">line 1219</a></p>
 								</div>
 							</div>
 			
@@ -2746,7 +2774,7 @@
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 18th Aug 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 6th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
