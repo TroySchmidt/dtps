@@ -258,15 +258,6 @@ window.lunrData = {
           "stream",
           "updat"
         ],
-        "dtps.html#.CSS": [
-          "css",
-          "dtp",
-          "dtps.css",
-          "file",
-          "function",
-          "load",
-          "lt;static&gt"
-        ],
         "dtps.html#.loadPagesList": [
           "class",
           "courseid",
@@ -278,6 +269,15 @@ window.lunrData = {
           "lt;static&gt",
           "page",
           "render"
+        ],
+        "dtps.html#.CSS": [
+          "css",
+          "dtp",
+          "dtps.css",
+          "file",
+          "function",
+          "load",
+          "lt;static&gt"
         ],
         "dtps.html#.calendar": [
           "assign",
@@ -425,17 +425,6 @@ window.lunrData = {
           "run",
           "select"
         ],
-        "dtps.html#.showClasses": [
-          "class",
-          "dtps.showclass",
-          "function",
-          "list",
-          "lt;static&gt",
-          "overrid",
-          "render",
-          "showclass",
-          "sidebar"
-        ],
         "dtps.html#.moduleCollapse": [
           "classid",
           "collaps",
@@ -446,6 +435,17 @@ window.lunrData = {
           "modid",
           "modul",
           "modulecollaps"
+        ],
+        "dtps.html#.showClasses": [
+          "class",
+          "dtps.showclass",
+          "function",
+          "list",
+          "lt;static&gt",
+          "overrid",
+          "render",
+          "showclass",
+          "sidebar"
         ],
         "dtps.html#.renderClassTools": [
           "box",
@@ -3499,13 +3499,13 @@ window.lunrData = {
                                     "ref": "dtps.html#.renderUpdates",
                                     "tf": 50
                                   },
-                                  "dtps.html#.CSS": {
-                                    "ref": "dtps.html#.CSS",
-                                    "tf": 50
-                                  },
                                   "dtps.html#.loadPagesList": {
                                     "ref": "dtps.html#.loadPagesList",
                                     "tf": 25
+                                  },
+                                  "dtps.html#.CSS": {
+                                    "ref": "dtps.html#.CSS",
+                                    "tf": 50
                                   },
                                   "dtps.html#.calendar": {
                                     "ref": "dtps.html#.calendar",
@@ -3559,13 +3559,13 @@ window.lunrData = {
                                     "ref": "dtps.html#.chroma",
                                     "tf": 50
                                   },
-                                  "dtps.html#.showClasses": {
-                                    "ref": "dtps.html#.showClasses",
-                                    "tf": 33.33333333333333
-                                  },
                                   "dtps.html#.moduleCollapse": {
                                     "ref": "dtps.html#.moduleCollapse",
                                     "tf": 20
+                                  },
+                                  "dtps.html#.showClasses": {
+                                    "ref": "dtps.html#.showClasses",
+                                    "tf": 33.33333333333333
                                   },
                                   "dtps.html#.renderClassTools": {
                                     "ref": "dtps.html#.renderClassTools",
@@ -5527,12 +5527,12 @@ window.lunrData = {
                             "ref": "dtps.html#.renderUpdates",
                             "tf": 110
                           },
-                          "dtps.html#.CSS": {
-                            "ref": "dtps.html#.CSS",
-                            "tf": 110
-                          },
                           "dtps.html#.loadPagesList": {
                             "ref": "dtps.html#.loadPagesList",
+                            "tf": 110
+                          },
+                          "dtps.html#.CSS": {
+                            "ref": "dtps.html#.CSS",
                             "tf": 110
                           },
                           "dtps.html#.calendar": {
@@ -5587,12 +5587,12 @@ window.lunrData = {
                             "ref": "dtps.html#.chroma",
                             "tf": 110
                           },
-                          "dtps.html#.showClasses": {
-                            "ref": "dtps.html#.showClasses",
-                            "tf": 110
-                          },
                           "dtps.html#.moduleCollapse": {
                             "ref": "dtps.html#.moduleCollapse",
+                            "tf": 110
+                          },
+                          "dtps.html#.showClasses": {
+                            "ref": "dtps.html#.showClasses",
                             "tf": 110
                           },
                           "dtps.html#.renderClassTools": {
@@ -9582,16 +9582,6 @@ window.lunrData = {
       "summary": "",
       "description": "Renders updates stream (recently graded &amp; announcements)"
     },
-    "dtps.html#.CSS": {
-      "id": "dtps.html#.CSS",
-      "kind": "function",
-      "title": "&lt;static&gt; CSS()",
-      "longname": "dtps.CSS",
-      "name": "CSS",
-      "tags": "dtps.CSS CSS",
-      "summary": "",
-      "description": "Load all DTPS CSS files"
-    },
     "dtps.html#.loadPagesList": {
       "id": "dtps.html#.loadPagesList",
       "kind": "function",
@@ -9601,6 +9591,16 @@ window.lunrData = {
       "tags": "dtps.loadPagesList loadPagesList",
       "summary": "",
       "description": "Renders the pages list for a class"
+    },
+    "dtps.html#.CSS": {
+      "id": "dtps.html#.CSS",
+      "kind": "function",
+      "title": "&lt;static&gt; CSS()",
+      "longname": "dtps.CSS",
+      "name": "CSS",
+      "tags": "dtps.CSS CSS",
+      "summary": "",
+      "description": "Load all DTPS CSS files"
     },
     "dtps.html#.calendar": {
       "id": "dtps.html#.calendar",
@@ -9732,16 +9732,6 @@ window.lunrData = {
       "summary": "",
       "description": "Runs Razer Chroma RGB effects for the selected content"
     },
-    "dtps.html#.showClasses": {
-      "id": "dtps.html#.showClasses",
-      "kind": "function",
-      "title": "&lt;static&gt; showClasses( [ override ] )",
-      "longname": "dtps.showClasses",
-      "name": "showClasses",
-      "tags": "dtps.showClasses showClasses",
-      "summary": "",
-      "description": "Renders the class list in the sidebar"
-    },
     "dtps.html#.moduleCollapse": {
       "id": "dtps.html#.moduleCollapse",
       "kind": "function",
@@ -9751,6 +9741,16 @@ window.lunrData = {
       "tags": "dtps.moduleCollapse moduleCollapse",
       "summary": "",
       "description": "Collapses a module"
+    },
+    "dtps.html#.showClasses": {
+      "id": "dtps.html#.showClasses",
+      "kind": "function",
+      "title": "&lt;static&gt; showClasses( [ override ] )",
+      "longname": "dtps.showClasses",
+      "name": "showClasses",
+      "tags": "dtps.showClasses showClasses",
+      "summary": "",
+      "description": "Renders the class list in the sidebar"
     },
     "dtps.html#.renderClassTools": {
       "id": "dtps.html#.renderClassTools",

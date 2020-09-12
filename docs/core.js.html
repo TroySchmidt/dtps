@@ -118,7 +118,7 @@
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
  * @file DTPS Core functions and module loader
  * @author jottocraft
- * @version v3.0.2
+ * @version v3.0.3
  * 
  * @copyright Copyright (c) 2018-2020 jottocraft. All rights reserved.
  * @license GPL-2.0-only
@@ -151,8 +151,8 @@ if (typeof dtps !== "undefined") throw "Error: DTPS is already loading";
  * @property {DashboardItem[]} rightDashboard Items on the right side of the dashboard based on dtps.dashboardItems and user prefrences. Set in dtps.loadDashboardPrefs.
  */
 var dtps = {
-    ver: 302,
-    readableVer: "v3.0.2",
+    ver: 303,
+    readableVer: "v3.0.3",
     env: window.jottocraftSatEnv || "prod",
     classes: [],
     baseURL: String(document.currentScript.src).split('/')[0] + "//" + String(document.currentScript.src).split('/')[2],
@@ -170,7 +170,7 @@ var dtps = {
             name: "Updates",
             id: "dtps.updates",
             icon: "calendar_view_day",
-            size: 80,
+            size: 170,
             defaultSide: "left"
         }, {
             name: "Due Today",
@@ -310,20 +310,27 @@ dtps.firstrun = function () {
             ${dtpsLMS.gradebook ? `Power+ includes a gradebook designed for ${dtpsLMS.name} to help you understand your grades.` : ``}&lt;/p>
         &lt;/div>
 
-        &lt;div class="welcomeSection">
-            &lt;i class="material-icons">security&lt;/i>
-            &lt;h5>Privacy&lt;/h5>
-            &lt;p>Power+ does not collect any information. All of the data used in Power+ is fetched directly from ${dtpsLMS.shortName} and is never sent anywhere else. 
-             User preferences, grade history, and other Power+ data is stored locally on your computer and is not associated with your ${dtpsLMS.shortName} account.&lt;/p>
-        &lt;/div>
-
-        &lt;div class="welcomeSection">
-            &lt;i class="material-icons">error_outline&lt;/i>
-            &lt;h5>Power+ is not official&lt;/h5>
-            &lt;p>Assignment information, grades, and other content displayed in Power+ are not official. Power+ is neither created nor endorsed by ${dtpsLMS.legalName}.
-             Power+ may have bugs that could cause it to display inaccurate information. Use Power+ at your own risk.&lt;/p>
-        &lt;/div>
-
+        ${dtpsLMS.isDemoLMS ? /*html*/`
+            &lt;div class="welcomeSection">
+                &lt;i class="material-icons">priority_high&lt;/i>
+                &lt;h5>This is a demo&lt;/h5>
+                &lt;p>Assignment information, grades, and other content displayed is not real and is for demonstration purposes only. This demo does not retrieve or collect any data.&lt;/p>
+            &lt;/div>
+        ` : /*html*/`
+            &lt;div class="welcomeSection">
+                &lt;i class="material-icons">security&lt;/i>
+                &lt;h5>Privacy&lt;/h5>
+                &lt;p>Power+ does not collect any information. All of the data used in Power+ is fetched directly from ${dtpsLMS.shortName} and is never sent anywhere else. 
+                 User preferences, grade history, and other Power+ data is stored locally on your computer and is not associated with your ${dtpsLMS.shortName} account.&lt;/p>
+            &lt;/div>
+            &lt;div class="welcomeSection">
+                &lt;i class="material-icons">priority_high&lt;/i>
+                &lt;h5>Power+ is not official&lt;/h5>
+                &lt;p>Assignment information, grades, and other content displayed in Power+ are not official. Power+ is neither created nor endorsed by ${dtpsLMS.legalName}.
+                 Power+ may have bugs that could cause it to display inaccurate information. Use Power+ at your own risk.&lt;/p>
+            &lt;/div>
+        `}
+        
         &lt;br />
         &lt;div onclick="window.localStorage.setItem('dtpsInstalled', 'true'); fluid.cards.close('.card.changelog');" class="btn">
             &lt;i class="material-icons">arrow_forward&lt;/i> Continue
@@ -455,6 +462,9 @@ dtps.init = function () {
     //Fluid UI settings
     fluidThemes = [["midnight", "tome"], ["rainbow"]];
     fluidAutoLoad = false;
+
+    //Set env discovery
+    window.localStorage.setItem("jottocraftEnv", true);
 
     //Default selected content
     dtps.selectedContent = "stream";
@@ -607,8 +617,8 @@ dtps.init = function () {
                         return new Date(b.gradedAt || b.postedAt).getTime() - new Date(a.gradedAt || a.postedAt).getTime()
                     });
 
-                    //Keep only the 10 most recent updates
-                    if (dtps.updates.length > 10) dtps.updates.length = 10;
+                    //Keep only the 15 most recent updates
+                    if (dtps.updates.length > 15) dtps.updates.length = 15;
 
                     //Calculate class grade if supported
                     if (dtpsLMS.calculateGrade) {
@@ -682,8 +692,8 @@ dtps.init = function () {
                         return new Date(b.gradedAt || b.postedAt).getTime() - new Date(a.gradedAt || a.postedAt).getTime()
                     });
 
-                    //Keep only the 10 most recent updates
-                    if (dtps.updates.length > 10) dtps.updates.length = 10;
+                    //Keep only the 15 most recent updates
+                    if (dtps.updates.length > 15) dtps.updates.length = 15;
 
                     if (dtps.selectedClass == "dash") {
                         fluid.screen();
@@ -1563,7 +1573,7 @@ dtps.renderLite = function () {
         &lt;/div>
 
         &lt;div style="margin-top: 5px; display: inline-block; text-align: right; float: right;">
-            &lt;a href="/" class="itemButton">&lt;i class="material-icons">exit_to_app&lt;/i> Go to ${dtpsLMS.shortName || dtpsLMS.name}&lt;/a>
+            &lt;a href="/" class="itemButton">&lt;i class="material-icons">exit_to_app&lt;/i> ${dtpsLMS.isDemoLMS ? "Exit demo" : "Go to " + (dtpsLMS.shortName || dtpsLMS.name)}&lt;/a>
             ${dtps.unstable ? `&lt;div onclick="window.open('https://github.com/jottocraft/dtps/issues/new/choose')" class="itemButton">&lt;i class="material-icons">feedback&lt;/i> Feedback&lt;/div>` : ""}
             &lt;div onclick="dtps.settings();" class="itemButton">&lt;i class="material-icons">settings&lt;/i> Settings&lt;/div>
         &lt;/div>
@@ -1813,7 +1823,7 @@ dtps.init();
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 6th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> on 12th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
