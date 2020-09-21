@@ -404,15 +404,6 @@
           "lt;static&gt",
           "match"
         ],
-        "dtps.html#.clearData": [
-          "clear",
-          "cleardata",
-          "data",
-          "dtp",
-          "dtps.cleardata",
-          "function",
-          "lt;static&gt"
-        ],
         "dtps.html#.moduleCollapse": [
           "classid",
           "collaps",
@@ -423,6 +414,15 @@
           "modid",
           "modul",
           "modulecollaps"
+        ],
+        "dtps.html#.clearData": [
+          "clear",
+          "cleardata",
+          "data",
+          "dtp",
+          "dtps.cleardata",
+          "function",
+          "lt;static&gt"
         ],
         "dtps.html#.chroma": [
           "chroma",
@@ -3551,13 +3551,13 @@
                                     "ref": "dtps.html#.iframeLoad",
                                     "tf": 33.33333333333333
                                   },
-                                  "dtps.html#.clearData": {
-                                    "ref": "dtps.html#.clearData",
-                                    "tf": 50
-                                  },
                                   "dtps.html#.moduleCollapse": {
                                     "ref": "dtps.html#.moduleCollapse",
                                     "tf": 20
+                                  },
+                                  "dtps.html#.clearData": {
+                                    "ref": "dtps.html#.clearData",
+                                    "tf": 50
                                   },
                                   "dtps.html#.chroma": {
                                     "ref": "dtps.html#.chroma",
@@ -5579,12 +5579,12 @@
                             "ref": "dtps.html#.iframeLoad",
                             "tf": 110
                           },
-                          "dtps.html#.clearData": {
-                            "ref": "dtps.html#.clearData",
-                            "tf": 110
-                          },
                           "dtps.html#.moduleCollapse": {
                             "ref": "dtps.html#.moduleCollapse",
+                            "tf": 110
+                          },
+                          "dtps.html#.clearData": {
+                            "ref": "dtps.html#.clearData",
                             "tf": 110
                           },
                           "dtps.html#.chroma": {
@@ -9712,16 +9712,6 @@
       "summary": "",
       "description": "Adjusts the height of an iFrame to match its content"
     },
-    "dtps.html#.clearData": {
-      "id": "dtps.html#.clearData",
-      "kind": "function",
-      "title": "&lt;static&gt; clearData()",
-      "longname": "dtps.clearData",
-      "name": "clearData",
-      "tags": "dtps.clearData clearData",
-      "summary": "",
-      "description": "Clears all DTPS data"
-    },
     "dtps.html#.moduleCollapse": {
       "id": "dtps.html#.moduleCollapse",
       "kind": "function",
@@ -9731,6 +9721,16 @@
       "tags": "dtps.moduleCollapse moduleCollapse",
       "summary": "",
       "description": "Collapses a module"
+    },
+    "dtps.html#.clearData": {
+      "id": "dtps.html#.clearData",
+      "kind": "function",
+      "title": "&lt;static&gt; clearData()",
+      "longname": "dtps.clearData",
+      "name": "clearData",
+      "tags": "dtps.clearData clearData",
+      "summary": "",
+      "description": "Clears all DTPS data"
     },
     "dtps.html#.chroma": {
       "id": "dtps.html#.chroma",

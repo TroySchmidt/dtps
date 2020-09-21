@@ -156,7 +156,7 @@ var dtps = {
     readableVer: "v3.0.4",
     env: window.localStorage.dtpsLoaderPref == "debugging" ? "dev" : window.jottocraftSatEnv || "prod",
     classes: [],
-    baseURL: document.currentScript.src ? (String(document.currentScript.src).split('/')[0] + "//" + String(document.currentScript.src).split('/')[2]) : "https://powerplus.app",
+    baseURL: document.currentScript.src ? document.currentScript.src.split("/scripts/core.js")[0] : "https://powerplus.app",
     unstable: window.localStorage.dtpsLoaderPref == "canary" || window.localStorage.dtpsLoaderPref == "debugging" || String(document.currentScript.src).includes("http://localhost"),
     gradebookExpanded: false,
     updates: [],
@@ -490,7 +490,20 @@ dtps.init = function () {
     //Fetch remote config
     new Promise((r) => {
         jQuery.getJSON('https://project-dtps.firebaseio.com/config.json', (remoteConfig) => {
-            if (remoteConfig) Object.assign(dtps.remoteConfig, remoteConfig);
+            if (remoteConfig) {
+                Object.keys(remoteConfig).forEach(k => {
+                    var val = remoteConfig[k];
+
+                    if ((dtps.env == "dev") &amp;&amp; window.localStorage.getItem("dtpsRemoteConfig-" + k)) {
+                        val = window.localStorage.getItem("dtpsRemoteConfig-" + k);
+
+                        if (val == "true") val = true;
+                        if (val == "false") val = false;
+                    }
+
+                    dtps.remoteConfig[k] = val;
+                });
+            }
             r();
         }).fail(r);
     }).then(() => {
@@ -1317,7 +1330,7 @@ dtps.render = function () {
         &lt;!-- Header with class name and tabs -->
         &lt;div class="header">
             &lt;p id="timeRemaining" style="position: absolute;top:${dtps.unstable ? "2px" : "14px"};margin-left: 20px;">&lt;/p>
-            ${dtps.unstable ? `&lt;p style="position: absolute;top: 45px;margin-left: 20px; color: #ff6e6e; background-color: black; font-size: 12px;">THIS IS AN UNSTABLE VERSION OF POWER+. USE AT YOUR OWN RISK.&lt;/p>` : ""}
+            ${dtps.unstable ? `&lt;p style="position: absolute;top: 45px;margin-left: 20px; color: red;font-weight: bold;background-color: black; font-size: 12px;">THIS IS AN UNSTABLE VERSION OF POWER+. USE AT YOUR OWN RISK.&lt;/p>` : ""}
         
             &lt;h2 id="headText">Dashboard&lt;/h2>
         
@@ -1422,7 +1435,7 @@ dtps.renderLite = function () {
 
         &lt;div style="min-height: 100%" class="content">
             &lt;div class="abtpage settings">
-                &lt;h5>Settings&lt;/h5>
+                &lt;h5>&lt;b>Settings&lt;/b>&lt;/h5>
                 
                 &lt;br />
                 &lt;p>Theme&lt;/p>
@@ -1487,7 +1500,7 @@ dtps.renderLite = function () {
             &lt;/div>
 
             &lt;div style="display: none;" class="abtpage dashboard">
-                &lt;h5>Dashboard&lt;/h5>
+                &lt;h5>&lt;b>Dashboard&lt;/b>&lt;/h5>
                 &lt;p>You can rearrange the items shown on the dashboard by dragging them below. You might have to reload Power+ for changes to take effect.&lt;/p>
 
                 &lt;br />
@@ -1500,7 +1513,7 @@ dtps.renderLite = function () {
 
             ${dtps.env == "dev" ? /*html*/`
                 &lt;div style="display: none;" class="abtpage debugging">
-                   &lt;h5>Debugging&lt;/h5>
+                   &lt;h5>&lt;b>Debugging&lt;/b>&lt;/h5>
                    &lt;p>These settings are for development only and might break Power+. Use at your own risk.&lt;/p>
 
                    &lt;br />
@@ -1510,17 +1523,28 @@ dtps.renderLite = function () {
                        &lt;button class="btn small" onclick="window.localStorage.setItem('dtpsDebuggingPort', $('#dtpsDebuggingPort').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
                    &lt;/div>
 
-                   &lt;br />
-
                    &lt;div>
                        &lt;input id="dtpsLMSOverride" value="${window.localStorage.dtpsLMSOverride || ""}" placeholder="LMS override" />
                        &lt;button class="btn small" onclick="window.localStorage.setItem('dtpsLMSOverride', $('#dtpsLMSOverride').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
                    &lt;/div>
+
+                   &lt;br />
+
+                   &lt;h5>Remote config overrides&lt;/h5>
+                   &lt;button onclick="Object.keys(dtps.remoteConfig).forEach(k => window.localStorage.removeItem('dtpsRemoteConfig-' + k));" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Clear&lt;/button>
+                   &lt;br />&lt;br />
+                   ${Object.keys(dtps.remoteConfig).map(k => (`
+                        &lt;div>
+                            &lt;p>${k} ${window.localStorage.getItem("dtpsRemoteConfig-" + k) ? " &lt;b>(overridden)&lt;/b>" : ""}&lt;/p>
+                            &lt;input value="${dtps.remoteConfig[k]}" placeholder="Value" />
+                            &lt;button class="btn small" onclick="window.localStorage.setItem('dtpsRemoteConfig-${k}', $(this).siblings('input').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
+                        &lt;/div>
+                    `)).join("")}
                 &lt;/div>
             ` : ``}
 
             &lt;div style="display: none;" class="abtpage about">
-                &lt;h5>About&lt;/h5>
+                &lt;h5>&lt;b>About&lt;/b>&lt;/h5>
 
                 &lt;div class="card" style="padding: 10px 20px; box-shadow: none !important; border: 2px solid var(--elements); margin-top: 20px;">
                     &lt;img src="https://powerplus.app/icon.svg" style="height: 50px; margin-right: 10px; vertical-align: middle; margin-top: 20px;" />
@@ -1576,7 +1600,7 @@ dtps.renderLite = function () {
 
                     &lt;div style="margin-top: 15px; margin-bottom: 7px;">
                         &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="dtps.clearData();">&lt;i class="material-icons" style="vertical-align: middle">refresh&lt;/i> Reset Power+&lt;/a>
-                        &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="window.localStorage.dtpsDebuggingPort = window.prompt('Please enter the port the server is running on'); alert('Reload the page for changes to take effect');">&lt;i class="material-icons" style="vertical-align: middle">bug_report&lt;/i> Load from localhost&lt;/a>
+                        &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="window.localStorage.dtpsDebuggingPort = window.prompt('Please enter the port the server is running on'); alert('Reload the page for changes to take effect');">&lt;i class="material-icons" style="vertical-align: middle">bug_report&lt;/i> Debug mode&lt;/a>
                     &lt;/div>
                 &lt;/div>
 
@@ -1858,7 +1882,7 @@ dtps.init();
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 20th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 21st Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
