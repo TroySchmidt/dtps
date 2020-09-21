@@ -413,18 +413,6 @@ window.lunrData = {
           "function",
           "lt;static&gt"
         ],
-        "dtps.html#.chroma": [
-          "chroma",
-          "content",
-          "dtps.chroma",
-          "effect",
-          "function",
-          "lt;static&gt",
-          "razer",
-          "rgb",
-          "run",
-          "select"
-        ],
         "dtps.html#.moduleCollapse": [
           "classid",
           "collaps",
@@ -436,16 +424,17 @@ window.lunrData = {
           "modul",
           "modulecollaps"
         ],
-        "dtps.html#.showClasses": [
-          "class",
-          "dtps.showclass",
+        "dtps.html#.chroma": [
+          "chroma",
+          "content",
+          "dtps.chroma",
+          "effect",
           "function",
-          "list",
           "lt;static&gt",
-          "overrid",
-          "render",
-          "showclass",
-          "sidebar"
+          "razer",
+          "rgb",
+          "run",
+          "select"
         ],
         "dtps.html#.renderClassTools": [
           "box",
@@ -467,6 +456,17 @@ window.lunrData = {
           "tool",
           "type"
         ],
+        "dtps.html#.showClasses": [
+          "class",
+          "dtps.showclass",
+          "function",
+          "list",
+          "lt;static&gt",
+          "overrid",
+          "render",
+          "showclass",
+          "sidebar"
+        ],
         "dtps.html#.classInfo": [
           "amp",
           "card",
@@ -479,6 +479,16 @@ window.lunrData = {
           "lt;static&gt",
           "num",
           "syllabu"
+        ],
+        "dtps.html#.classHome": [
+          "class",
+          "classhom",
+          "display",
+          "dtps.classhom",
+          "function",
+          "homepag",
+          "lt;static&gt",
+          "num"
         ],
         "dtps.html#.presentClass": [
           "class",
@@ -495,16 +505,6 @@ window.lunrData = {
           "select",
           "set",
           "tab"
-        ],
-        "dtps.html#.classHome": [
-          "class",
-          "classhom",
-          "display",
-          "dtps.classhom",
-          "function",
-          "homepag",
-          "lt;static&gt",
-          "num"
         ],
         "dtps.html#.gradebook": [
           "classid",
@@ -3555,32 +3555,32 @@ window.lunrData = {
                                     "ref": "dtps.html#.clearData",
                                     "tf": 50
                                   },
-                                  "dtps.html#.chroma": {
-                                    "ref": "dtps.html#.chroma",
-                                    "tf": 50
-                                  },
                                   "dtps.html#.moduleCollapse": {
                                     "ref": "dtps.html#.moduleCollapse",
                                     "tf": 20
                                   },
-                                  "dtps.html#.showClasses": {
-                                    "ref": "dtps.html#.showClasses",
-                                    "tf": 33.33333333333333
+                                  "dtps.html#.chroma": {
+                                    "ref": "dtps.html#.chroma",
+                                    "tf": 50
                                   },
                                   "dtps.html#.renderClassTools": {
                                     "ref": "dtps.html#.renderClassTools",
                                     "tf": 16.666666666666664
                                   },
+                                  "dtps.html#.showClasses": {
+                                    "ref": "dtps.html#.showClasses",
+                                    "tf": 33.33333333333333
+                                  },
                                   "dtps.html#.classInfo": {
                                     "ref": "dtps.html#.classInfo",
                                     "tf": 33.33333333333333
                                   },
-                                  "dtps.html#.presentClass": {
-                                    "ref": "dtps.html#.presentClass",
-                                    "tf": 33.33333333333333
-                                  },
                                   "dtps.html#.classHome": {
                                     "ref": "dtps.html#.classHome",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "dtps.html#.presentClass": {
+                                    "ref": "dtps.html#.presentClass",
                                     "tf": 33.33333333333333
                                   },
                                   "dtps.html#.gradebook": {
@@ -5583,32 +5583,32 @@ window.lunrData = {
                             "ref": "dtps.html#.clearData",
                             "tf": 110
                           },
-                          "dtps.html#.chroma": {
-                            "ref": "dtps.html#.chroma",
-                            "tf": 110
-                          },
                           "dtps.html#.moduleCollapse": {
                             "ref": "dtps.html#.moduleCollapse",
                             "tf": 110
                           },
-                          "dtps.html#.showClasses": {
-                            "ref": "dtps.html#.showClasses",
+                          "dtps.html#.chroma": {
+                            "ref": "dtps.html#.chroma",
                             "tf": 110
                           },
                           "dtps.html#.renderClassTools": {
                             "ref": "dtps.html#.renderClassTools",
                             "tf": 110
                           },
+                          "dtps.html#.showClasses": {
+                            "ref": "dtps.html#.showClasses",
+                            "tf": 110
+                          },
                           "dtps.html#.classInfo": {
                             "ref": "dtps.html#.classInfo",
                             "tf": 110
                           },
-                          "dtps.html#.presentClass": {
-                            "ref": "dtps.html#.presentClass",
-                            "tf": 110
-                          },
                           "dtps.html#.classHome": {
                             "ref": "dtps.html#.classHome",
+                            "tf": 110
+                          },
+                          "dtps.html#.presentClass": {
+                            "ref": "dtps.html#.presentClass",
                             "tf": 110
                           },
                           "dtps.html#.gradebook": {
@@ -7408,25 +7408,25 @@ window.lunrData = {
                       "ref": "dtps.html#.moduleStream",
                       "tf": 12.5
                     },
-                    "dtps.html#.showClasses": {
-                      "ref": "dtps.html#.showClasses",
-                      "tf": 12.5
-                    },
                     "dtps.html#.renderClassTools": {
                       "ref": "dtps.html#.renderClassTools",
                       "tf": 5
+                    },
+                    "dtps.html#.showClasses": {
+                      "ref": "dtps.html#.showClasses",
+                      "tf": 12.5
                     },
                     "dtps.html#.classInfo": {
                       "ref": "dtps.html#.classInfo",
                       "tf": 8.333333333333332
                     },
-                    "dtps.html#.presentClass": {
-                      "ref": "dtps.html#.presentClass",
-                      "tf": 13.636363636363635
-                    },
                     "dtps.html#.classHome": {
                       "ref": "dtps.html#.classHome",
                       "tf": 16.666666666666664
+                    },
+                    "dtps.html#.presentClass": {
+                      "ref": "dtps.html#.presentClass",
+                      "tf": 13.636363636363635
                     },
                     "dtpsLMS.html#.fetchClasses": {
                       "ref": "dtpsLMS.html#.fetchClasses",
@@ -9722,16 +9722,6 @@ window.lunrData = {
       "summary": "",
       "description": "Clears all DTPS data"
     },
-    "dtps.html#.chroma": {
-      "id": "dtps.html#.chroma",
-      "kind": "function",
-      "title": "&lt;static&gt; chroma()",
-      "longname": "dtps.chroma",
-      "name": "chroma",
-      "tags": "dtps.chroma chroma",
-      "summary": "",
-      "description": "Runs Razer Chroma RGB effects for the selected content"
-    },
     "dtps.html#.moduleCollapse": {
       "id": "dtps.html#.moduleCollapse",
       "kind": "function",
@@ -9742,15 +9732,15 @@ window.lunrData = {
       "summary": "",
       "description": "Collapses a module"
     },
-    "dtps.html#.showClasses": {
-      "id": "dtps.html#.showClasses",
+    "dtps.html#.chroma": {
+      "id": "dtps.html#.chroma",
       "kind": "function",
-      "title": "&lt;static&gt; showClasses( [ override ] )",
-      "longname": "dtps.showClasses",
-      "name": "showClasses",
-      "tags": "dtps.showClasses showClasses",
+      "title": "&lt;static&gt; chroma()",
+      "longname": "dtps.chroma",
+      "name": "chroma",
+      "tags": "dtps.chroma chroma",
       "summary": "",
-      "description": "Renders the class list in the sidebar"
+      "description": "Runs Razer Chroma RGB effects for the selected content"
     },
     "dtps.html#.renderClassTools": {
       "id": "dtps.html#.renderClassTools",
@@ -9762,6 +9752,16 @@ window.lunrData = {
       "summary": "",
       "description": "Gets stream tools HTML (search box, class info, and modules/assignment switcher)"
     },
+    "dtps.html#.showClasses": {
+      "id": "dtps.html#.showClasses",
+      "kind": "function",
+      "title": "&lt;static&gt; showClasses( [ override ] )",
+      "longname": "dtps.showClasses",
+      "name": "showClasses",
+      "tags": "dtps.showClasses showClasses",
+      "summary": "",
+      "description": "Renders the class list in the sidebar"
+    },
     "dtps.html#.classInfo": {
       "id": "dtps.html#.classInfo",
       "kind": "function",
@@ -9772,16 +9772,6 @@ window.lunrData = {
       "summary": "",
       "description": "Displays class info &amp; syllabus card"
     },
-    "dtps.html#.presentClass": {
-      "id": "dtps.html#.presentClass",
-      "kind": "function",
-      "title": "&lt;static&gt; presentClass( classNum )",
-      "longname": "dtps.presentClass",
-      "name": "presentClass",
-      "tags": "dtps.presentClass presentClass",
-      "summary": "",
-      "description": "Renders the class header (color, name, tabs, etc.) and sets the class as the selected class"
-    },
     "dtps.html#.classHome": {
       "id": "dtps.html#.classHome",
       "kind": "function",
@@ -9791,6 +9781,16 @@ window.lunrData = {
       "tags": "dtps.classHome classHome",
       "summary": "",
       "description": "Displays the class homepage"
+    },
+    "dtps.html#.presentClass": {
+      "id": "dtps.html#.presentClass",
+      "kind": "function",
+      "title": "&lt;static&gt; presentClass( classNum )",
+      "longname": "dtps.presentClass",
+      "name": "presentClass",
+      "tags": "dtps.presentClass presentClass",
+      "summary": "",
+      "description": "Renders the class header (color, name, tabs, etc.) and sets the class as the selected class"
     },
     "dtps.html#.gradebook": {
       "id": "dtps.html#.gradebook",
