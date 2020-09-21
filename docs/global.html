@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>Globals</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #b59032;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #b59032;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #b59032;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #b59032;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#b59032","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2020 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/favicon.png);">
+					Power+ Docs
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="global.html#Announcement">Announcement</a></li>
+											<li><a href="global.html#Assignment">Assignment</a></li>
+											<li><a href="global.html#AssignmentFeedback">AssignmentFeedback</a></li>
+											<li><a href="global.html#Class">Class</a></li>
+											<li><a href="global.html#DashboardItem">DashboardItem</a></li>
+											<li><a href="global.html#Date">Date</a></li>
+											<li><a href="global.html#DiscussionPost">DiscussionPost</a></li>
+											<li><a href="global.html#DiscussionThread">DiscussionThread</a></li>
+											<li><a href="global.html#Module">Module</a></li>
+											<li><a href="global.html#ModuleItem">ModuleItem</a></li>
+											<li><a href="global.html#Page">Page</a></li>
+											<li><a href="global.html#RubricItem">RubricItem</a></li>
+											<li><a href="global.html#User">User</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="dtps.html">dtps</a></li>
+											<li><a href="dtpsLMS.html">dtpsLMS</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">global</span>
+				<h1><span class="name">Globals</span></h1>
+				<div class="summary"><p>All documented globals.</p></div>			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li class="active">Globals</li>
+						</ol>
+					<section>
+							<article class="secondary">
+									<h3>Type Definitions</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="DiscussionThread" class="typedef public"><span class="name">DiscussionThread</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines discussion thread objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Title of the discussion thread
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Discussion thread ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>posts</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#DiscussionPost">DiscussionPost</a>></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Posts in this thread, with the initial one first. Assume that the topic has not been selected and loaded if this is undefined, and that there are no posts if this is an empty array.
+							</td>
+						</tr>
+						<tr>
+								<td><code>locked</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if posting to the discussion thread is locked
+							</td>
+						</tr>
+						<tr>
+								<td><code>requireInitialPost</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the user must post before viewing others' posts
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-472">line 472</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="DiscussionPost" class="typedef public"><span class="name">DiscussionPost</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines discussion post objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Discussion post ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>body</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Discussion post body HTML
+							</td>
+						</tr>
+						<tr>
+								<td><code>postedAt</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Date for when the post was posted
+							</td>
+						</tr>
+						<tr>
+								<td><code>depth</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The depth level this post is
+							</td>
+						</tr>
+						<tr>
+								<td><code>author</code></td>
+							<td><span class="param-type"><a href="global.html#User">User</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Discussion post author
+							</td>
+						</tr>
+						<tr>
+								<td><code>replies</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#DiscussionPost">DiscussionPost</a>></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Replies to this post. Nested replies (replies to replies) should be after this post in the array with a depth of 1, not in the replies key.
+							</td>
+						</tr>
+						<tr>
+								<td><code>replyURL</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									A URL that the user can visit to reply to this post
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-482">line 482</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="Page" class="typedef public"><span class="name">Page</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines Page objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Page title
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Page ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>content</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Page content. Assume the page hasn't been selected/loaded if this is undefined.
+							</td>
+						</tr>
+						<tr>
+								<td><code>updatedAt</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									When the page was last updated
+							</td>
+						</tr>
+						<tr>
+								<td><code>author</code></td>
+							<td><span class="param-type"><a href="global.html#User">User</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Page author
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-494">line 494</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="Assignment" class="typedef public"><span class="name">Assignment</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines assignments objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Title of the assignment
+							</td>
+						</tr>
+						<tr>
+								<td><code>body</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									HTML of the assignment's body
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Assignment ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>dueAt</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Assignment due date
+							</td>
+						</tr>
+						<tr>
+								<td><code>url</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Assignment URL
+							</td>
+						</tr>
+						<tr>
+								<td><code>feedback</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#AssignmentFeedback">AssignmentFeedback</a>></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Feedback / private comments for this assignment
+							</td>
+						</tr>
+						<tr>
+								<td><code>grader</code></td>
+							<td><span class="param-type"><a href="global.html#User">User</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Assignment grader
+							</td>
+						</tr>
+						<tr>
+								<td><code>turnedIn</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the assignment is turned in
+							</td>
+						</tr>
+						<tr>
+								<td><code>late</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the assignment is late
+							</td>
+						</tr>
+						<tr>
+								<td><code>missing</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the assignment is missing
+							</td>
+						</tr>
+						<tr>
+								<td><code>locked</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if assignment submissions are locked
+							</td>
+						</tr>
+						<tr>
+								<td><code>category</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Assignment category
+							</td>
+						</tr>
+						<tr>
+								<td><code>publishedAt</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Date for when the assignment was published
+							</td>
+						</tr>
+						<tr>
+								<td><code>gradedAt</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Date for when the assignment was graded
+							</td>
+						</tr>
+						<tr>
+								<td><code>grade</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Points earned on this assignment
+							</td>
+						</tr>
+						<tr>
+								<td><code>letter</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Letter grade on this assignment
+							</td>
+						</tr>
+						<tr>
+								<td><code>value</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Total amount of points possible for this assignment
+							</td>
+						</tr>
+						<tr>
+								<td><code>rubric</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#RubricItem">RubricItem</a>></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Assignment rubric
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1043">line 1043</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="Module" class="typedef public"><span class="name">Module</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines module objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Title of the module
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Module ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>collapsed</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the module is collapsed, false otherwise. undefined or null if this module does not support collapsing.
+							</td>
+						</tr>
+						<tr>
+								<td><code>items</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#ModuleItem">ModuleItem</a>></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									An array of items for this module.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1066">line 1066</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="ModuleItem" class="typedef public"><span class="name">ModuleItem</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines module items in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>type</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Either "assignment", "page", "discussion", "url", "embed", or "header".
+							</td>
+						</tr>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Required for URL and header items, and can be used to override the title of assignment, page, and discussion items.
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Required for assignment, page, and discussion items.
+							</td>
+						</tr>
+						<tr>
+								<td><code>url</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Required for URL and embed items. Required for discussion and page items if the class does not support the pages or discussions feature.
+							</td>
+						</tr>
+						<tr>
+								<td><code>indent</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Indent level
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1075">line 1075</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="Announcement" class="typedef public"><span class="name">Announcement</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines announcement objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Title of the announcement
+							</td>
+						</tr>
+						<tr>
+								<td><code>postedAt</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+							<td class="last">
+									Date when the announcement was posted
+							</td>
+						</tr>
+						<tr>
+								<td><code>body</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Announcement content
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1085">line 1085</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="AssignmentFeedback" class="typedef public"><span class="name">AssignmentFeedback</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines assignment feedback objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>comment</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Feedback comment
+							</td>
+						</tr>
+						<tr>
+								<td><code>author</code></td>
+							<td><span class="param-type"><a href="global.html#User">User</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Feedback author
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1093">line 1093</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="RubricItem" class="typedef public"><span class="name">RubricItem</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines rubric item objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>title</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Title of the rubric item
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Rubric item ID (only needs to be unique to this assignment)
+							</td>
+						</tr>
+						<tr>
+								<td><code>value</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Total amount of points possible
+							</td>
+						</tr>
+						<tr>
+								<td><code>outcome</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The ID of the outcome this rubric item is assessing. This is only used for grade calculation.
+							</td>
+						</tr>
+						<tr>
+								<td><code>description</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Rubric item description
+							</td>
+						</tr>
+						<tr>
+								<td><code>score</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Rubric assessment score in points
+							</td>
+						</tr>
+						<tr>
+								<td><code>scoreName</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Rubric assessment score name
+							</td>
+						</tr>
+						<tr>
+								<td><code>color</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Score color in a CSS color format
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1100">line 1100</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="DashboardItem" class="typedef public"><span class="name">DashboardItem</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines dashboard items in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Dashbord item name
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Unique dashboard item ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>icon</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Dashboard item icon
+							</td>
+						</tr>
+						<tr>
+								<td><code>supportsCompactMode</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if this dashboard item supports compact mode
+							</td>
+						</tr>
+						<tr>
+								<td><code>size</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									The approximate size of this dashboard item relative to other dashboard items. Should be no less than 20.
+							</td>
+						</tr>
+						<tr>
+								<td><code>defaultSide</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The default side of this dashboard item. Either "right" or "left".
+							</td>
+						</tr>
+						<tr>
+								<td><code>compact</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if the user has turned on compact mode for this item.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1113">line 1113</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="Date" class="typedef public"><span class="name">Date</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">A date string recognized by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse">Date.parse</a></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1659">line 1659</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="User" class="typedef public"><span class="name">User</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines user objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									User name
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									User ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>photoURL</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									User photo URL
+							</td>
+						</tr>
+						<tr>
+								<td><code>children</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#User">User</a>></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									[ONLY FOR DTPS.USER] Array of child users. If this is defined, the user is treated as a parent account. Sub-children are not allowed.
+							</td>
+						</tr>
+						<tr>
+								<td><code>parent</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									[ONLY FOR DTPS.USER] Automatically managed by DTPS. True if the user is a parent account.
+							</td>
+						</tr>
+						<tr>
+								<td><code>lmsID</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									[ONLY FOR DTPS.USER] Automatically managed by DTPS. This is the user ID that all LMS web requests should use. Can change when a parent account changes the selected child.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1664">line 1664</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title typedef public">
+			<h4 id="Class" class="typedef public"><span class="name">Class</span></h4>
+		</dt>
+<dd class="symbol-details typedef public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Defines class objects in DTPS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Name of the class
+							</td>
+						</tr>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Class ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>num</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Index of the class in the dtps.classes array
+							</td>
+						</tr>
+						<tr>
+								<td><code>subject</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Class subject
+							</td>
+						</tr>
+						<tr>
+								<td><code>assignments</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#Assignment">Assignment</a>></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Class assignments. Assume assignments are still loading if this is undefined. The class has no assignments if this is an empty array. Loaded in dtps.init.
+							</td>
+						</tr>
+						<tr>
+								<td><code>modules</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#Module">Module</a>></span> | <span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class modules. Assume this class supports the modules feature, but is not yet loaded, if this is true and that the class has no modules if this is an empty array. For LMSs that do not support modules, either keep it undefined or set it to false.
+							</td>
+						</tr>
+						<tr>
+								<td><code>discussions</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#DiscussionThread">DiscussionThread</a>></span> | <span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class discussion threads. Assume this class supports discussions, but not yet loaded, if this is true and that the class has no threads if this is an empty array. For LMSs that do not support discussions, either keep it undefined or set it to false.
+							</td>
+						</tr>
+						<tr>
+								<td><code>pages</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#Page">Page</a>></span> | <span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class pages. Assume this class supports the pages feature, but not yet loaded, if true and that the class has no pages if this is an empty array. For LMSs that do not support pages, either keep it undefined or set it to false.
+							</td>
+						</tr>
+						<tr>
+								<td><code>newDiscussionThreadURL</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									A URL the user can visit to create a new discussion thread in this class
+							</td>
+						</tr>
+						<tr>
+								<td><code>syllabus</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class syllabus HTML
+							</td>
+						</tr>
+						<tr>
+								<td><code>homepage</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if the class has a homepage. If a class has a homepage, dtpsLMS.fetchHomepage must be implemented.
+							</td>
+						</tr>
+						<tr>
+								<td><code>description</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class description HTML
+							</td>
+						</tr>
+						<tr>
+								<td><code>numStudents</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Number of students in the class
+							</td>
+						</tr>
+						<tr>
+								<td><code>term</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class term
+							</td>
+						</tr>
+						<tr>
+								<td><code>color</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class color
+							</td>
+						</tr>
+						<tr>
+								<td><code>grade</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Current percentage grade in the class
+							</td>
+						</tr>
+						<tr>
+								<td><code>letter</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Current letter grade in the class
+							</td>
+						</tr>
+						<tr>
+								<td><code>previousLetter</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Automatically managed by DTPS. The previous letter grade in this class, based on local grade history.
+							</td>
+						</tr>
+						<tr>
+								<td><code>image</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									URL to the class background image
+							</td>
+						</tr>
+						<tr>
+								<td><code>teacher</code></td>
+							<td><span class="param-type"><a href="global.html#User">User</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Class teacher
+							</td>
+						</tr>
+						<tr>
+								<td><code>hasGradebook</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Automatically managed by DTPS. True if the class should show the gradebook tab.
+							</td>
+						</tr>
+						<tr>
+								<td><code>gradeCalculation</code></td>
+							<td><span class="param-type">object</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Automatically managed by DTPS. If custom grade calculation is implemented, this will be the results from custom grade calculation returned by dtpsLMS.calculateGrade.
+							</td>
+						</tr>
+						<tr>
+								<td><code>videoMeetingURL</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The URL used to join this class' online meeting
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Object</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1675">line 1675</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
+				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 20th Sep 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
