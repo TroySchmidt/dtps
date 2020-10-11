@@ -77,6 +77,8 @@
 											<li><a href="global.html#Module">Module</a></li>
 											<li><a href="global.html#ModuleItem">ModuleItem</a></li>
 											<li><a href="global.html#Page">Page</a></li>
+											<li><a href="global.html#PartialDiscussionThread">PartialDiscussionThread</a></li>
+											<li><a href="global.html#PartialPage">PartialPage</a></li>
 											<li><a href="global.html#RubricItem">RubricItem</a></li>
 											<li><a href="global.html#User">User</a></li>
 									</ul>
@@ -361,7 +363,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".loadThreadsList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadsList</span><span class="signature-params">( <span class="signature-param">courseID</span> [,&nbsp;<span class="signature-param">defaultThread</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".loadThreadsList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadsList</span><span class="signature-params">( <span class="signature-param">courseID</span> [,&nbsp;<span class="signature-param">defaultThread</span>&nbsp;], <span class="signature-param">fromModules</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -394,6 +396,14 @@
 									The thread to load by default
 							</td>
 						</tr>
+						<tr>
+								<td><code>fromModules</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									True if this page is being loaded from the moduleStream
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -417,7 +427,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-16">line 16</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-17">line 17</a></p>
 								</div>
 							</div>
 			
@@ -565,7 +575,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-107">line 107</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-108">line 108</a></p>
 								</div>
 							</div>
 			
@@ -623,7 +633,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-116">line 116</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-117">line 117</a></p>
 								</div>
 							</div>
 			
@@ -681,7 +691,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-130">line 130</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-131">line 131</a></p>
 								</div>
 							</div>
 			
@@ -693,7 +703,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".loadThreadPosts" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadPosts</span><span class="signature-params">( <span class="signature-param">classNum</span>, <span class="signature-param">threadID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".loadThreadPosts" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadPosts</span><span class="signature-params">( <span class="signature-param">classNum</span>, <span class="signature-param">threadID</span>, <span class="signature-param">fromModules</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -723,6 +733,13 @@
 									The discussion thread to render
 							</td>
 						</tr>
+						<tr>
+								<td><code>fromModules</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if this page is being loaded from the moduleStream
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -746,7 +763,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-140">line 140</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-150">line 150</a></p>
 								</div>
 							</div>
 			
@@ -804,7 +821,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-162">line 162</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-163">line 163</a></p>
 								</div>
 							</div>
 			
@@ -938,7 +955,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-174">line 174</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-175">line 175</a></p>
 								</div>
 							</div>
 			
@@ -975,7 +992,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-188">line 188</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-189">line 189</a></p>
 								</div>
 							</div>
 			
@@ -1049,7 +1066,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-239">line 239</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-240">line 240</a></p>
 								</div>
 							</div>
 			
@@ -1107,7 +1124,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-258">line 258</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-259">line 259</a></p>
 								</div>
 							</div>
 			
@@ -1156,7 +1173,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".loadPagesList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadPagesList</span><span class="signature-params">( <span class="signature-param">courseID</span> [,&nbsp;<span class="signature-param">defaultPage</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".loadPagesList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadPagesList</span><span class="signature-params">( <span class="signature-param">courseID</span> [,&nbsp;<span class="signature-param">defaultPage</span>&nbsp;], <span class="signature-param">fromModules</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -1189,6 +1206,14 @@
 									If provided, load the pageID by default
 							</td>
 						</tr>
+						<tr>
+								<td><code>fromModules</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									True if this page is being loaded from the moduleStream
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -1212,7 +1237,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-274">line 274</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-275">line 275</a></p>
 								</div>
 							</div>
 			
@@ -1249,7 +1274,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-283">line 283</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-284">line 284</a></p>
 								</div>
 							</div>
 			
@@ -1323,7 +1348,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-330">line 330</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-331">line 331</a></p>
 								</div>
 							</div>
 			
@@ -1411,7 +1436,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".loadPage" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadPage</span><span class="signature-params">( <span class="signature-param">classNum</span>, <span class="signature-param">pageID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".loadPage" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadPage</span><span class="signature-params">( <span class="signature-param">classNum</span>, <span class="signature-param">pageID</span>, <span class="signature-param">fromModules</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -1441,6 +1466,13 @@
 									The page ID to render
 							</td>
 						</tr>
+						<tr>
+								<td><code>fromModules</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if this page is being loaded from the moduleStream
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -1464,7 +1496,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-385">line 385</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-395">line 395</a></p>
 								</div>
 							</div>
 			
@@ -1690,7 +1722,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-673">line 673</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-674">line 674</a></p>
 								</div>
 							</div>
 			
@@ -1756,7 +1788,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-690">line 690</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-691">line 691</a></p>
 								</div>
 							</div>
 			
@@ -1814,65 +1846,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-703">line 703</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".iframeLoad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">iframeLoad</span><span class="signature-params">( <span class="signature-param">iframeID</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Adjusts the height of an iFrame to match its content</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>iframeID</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-									The ID of the iFrame element to adjust
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-723">line 723</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-704">line 704</a></p>
 								</div>
 							</div>
 			
@@ -1944,7 +1918,65 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-727">line 727</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-719">line 719</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".iframeLoad" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">iframeLoad</span><span class="signature-params">( <span class="signature-param">iframeID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Adjusts the height of an iFrame to match its content</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>iframeID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The ID of the iFrame element to adjust
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-724">line 724</a></p>
 								</div>
 							</div>
 			
@@ -1981,56 +2013,12 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-734">line 734</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-735">line 735</a></p>
 								</div>
 							</div>
 			
 			
 			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".chroma" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">chroma</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Runs Razer Chroma RGB effects for the selected content</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-746">line 746</a></p>
-								</div>
-							</div>
-			
-			
-			
-							<!-- todo -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">To Do</label>
-								<div class="col-sm-9">
-										<p class="form-control-static">Pending v3 rewrite</p>
-								</div>
-							</div>
 			
 					</form>
 			</div>	</div>
@@ -2109,12 +2097,56 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-750">line 750</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-742">line 742</a></p>
 								</div>
 							</div>
 			
 			
 			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".chroma" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">chroma</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Runs Razer Chroma RGB effects for the selected content</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-747">line 747</a></p>
+								</div>
+							</div>
+			
+			
+			
+							<!-- todo -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">To Do</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">Pending v3 rewrite</p>
+								</div>
+							</div>
 			
 					</form>
 			</div>	</div>
@@ -2169,7 +2201,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-779">line 779</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-780">line 780</a></p>
 								</div>
 							</div>
 			
@@ -2227,7 +2259,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-803">line 803</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-795">line 795</a></p>
 								</div>
 							</div>
 			
@@ -2285,7 +2317,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-847">line 847</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-839">line 839</a></p>
 								</div>
 							</div>
 			
@@ -2343,7 +2375,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-871">line 871</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-872">line 872</a></p>
 								</div>
 							</div>
 			
@@ -2401,7 +2433,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-899">line 899</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-891">line 891</a></p>
 								</div>
 							</div>
 			
@@ -2459,7 +2491,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-977">line 977</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-978">line 978</a></p>
 								</div>
 							</div>
 			
@@ -2517,7 +2549,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1030">line 1030</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1031">line 1031</a></p>
 								</div>
 							</div>
 			
@@ -2575,7 +2607,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1046">line 1046</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1047">line 1047</a></p>
 								</div>
 							</div>
 			
@@ -2587,12 +2619,35 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".settings" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">settings</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id=".settings" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">settings</span><span class="signature-params">( [&nbsp;<span class="signature-param">forceRerenderDashboard</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Opens the settings page</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>forceRerenderDashboard</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									If this is true, the dashboard settings will be re-rendered
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -2612,7 +2667,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1075">line 1075</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1078">line 1078</a></p>
 								</div>
 							</div>
 			
@@ -2649,7 +2704,44 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1114">line 1114</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1165">line 1165</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".resetDashboardPrefs" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">resetDashboardPrefs</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Resets dashboard prefrences</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1190">line 1190</a></p>
 								</div>
 							</div>
 			
@@ -2686,7 +2778,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1139">line 1139</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1204">line 1204</a></p>
 								</div>
 							</div>
 			
@@ -2723,7 +2815,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1186">line 1186</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1251">line 1251</a></p>
 								</div>
 							</div>
 			
@@ -2760,7 +2852,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1277">line 1277</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1342">line 1342</a></p>
 								</div>
 							</div>
 			
@@ -2782,7 +2874,7 @@
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 9th Oct 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 11th Oct 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

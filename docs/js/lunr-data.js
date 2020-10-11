@@ -86,6 +86,7 @@ window.lunrData = {
           "defaultthread",
           "discuss",
           "dtps.loadthreadslist",
+          "frommodul",
           "function",
           "list",
           "loadthreadslist",
@@ -159,6 +160,7 @@ window.lunrData = {
           "display",
           "dtps.loadthreadpost",
           "fetch",
+          "frommodul",
           "function",
           "loadthreadpost",
           "lt;static&gt",
@@ -263,6 +265,7 @@ window.lunrData = {
           "courseid",
           "defaultpag",
           "dtps.loadpageslist",
+          "frommodul",
           "function",
           "list",
           "loadpageslist",
@@ -315,6 +318,7 @@ window.lunrData = {
           "content",
           "dtps.loadpag",
           "fetch",
+          "frommodul",
           "function",
           "loadpag",
           "lt;static&gt",
@@ -392,6 +396,17 @@ window.lunrData = {
           "obsswitch",
           "switch"
         ],
+        "dtps.html#.moduleCollapse": [
+          "classid",
+          "collaps",
+          "dtps.modulecollaps",
+          "el",
+          "function",
+          "lt;static&gt",
+          "modid",
+          "modul",
+          "modulecollaps"
+        ],
         "dtps.html#.iframeLoad": [
           "adjust",
           "content",
@@ -404,17 +419,6 @@ window.lunrData = {
           "lt;static&gt",
           "match"
         ],
-        "dtps.html#.moduleCollapse": [
-          "classid",
-          "collaps",
-          "dtps.modulecollaps",
-          "el",
-          "function",
-          "lt;static&gt",
-          "modid",
-          "modul",
-          "modulecollaps"
-        ],
         "dtps.html#.clearData": [
           "clear",
           "cleardata",
@@ -423,18 +427,6 @@ window.lunrData = {
           "dtps.cleardata",
           "function",
           "lt;static&gt"
-        ],
-        "dtps.html#.chroma": [
-          "chroma",
-          "content",
-          "dtps.chroma",
-          "effect",
-          "function",
-          "lt;static&gt",
-          "razer",
-          "rgb",
-          "run",
-          "select"
         ],
         "dtps.html#.renderClassTools": [
           "box",
@@ -455,6 +447,18 @@ window.lunrData = {
           "switcher",
           "tool",
           "type"
+        ],
+        "dtps.html#.chroma": [
+          "chroma",
+          "content",
+          "dtps.chroma",
+          "effect",
+          "function",
+          "lt;static&gt",
+          "razer",
+          "rgb",
+          "run",
+          "select"
         ],
         "dtps.html#.showClasses": [
           "class",
@@ -552,6 +556,7 @@ window.lunrData = {
         ],
         "dtps.html#.settings": [
           "dtps.set",
+          "forcererenderdashboard",
           "function",
           "lt;static&gt",
           "open",
@@ -566,6 +571,15 @@ window.lunrData = {
           "prefrenc",
           "save",
           "savedashboardpref"
+        ],
+        "dtps.html#.resetDashboardPrefs": [
+          "dashboard",
+          "dtps.resetdashboardpref",
+          "function",
+          "lt;static&gt",
+          "prefrenc",
+          "reset",
+          "resetdashboardpref"
         ],
         "dtps.html#.loadDashboardPrefs": [
           "dashboard",
@@ -737,7 +751,7 @@ window.lunrData = {
           "lm",
           "lt;static&gt",
           "option",
-          "promise.&lt;array.&lt;discussionthread&gt;&gt",
+          "promise.&lt;array.&lt;partialdiscussionthread&gt;&gt",
           "thread"
         ],
         "dtpsLMS.html#.fetchDiscussionPosts": [
@@ -752,7 +766,7 @@ window.lunrData = {
           "lm",
           "lt;static&gt",
           "post",
-          "promise.&lt;array.&lt;discussionpost&gt;&gt",
+          "promise.&lt;discussionthread&gt",
           "requir",
           "thread",
           "threadid"
@@ -768,7 +782,7 @@ window.lunrData = {
           "lt;static&gt",
           "option",
           "page",
-          "promise.&lt;array.&lt;page&gt;&gt"
+          "promise.&lt;array.&lt;partialpage&gt;&gt"
         ],
         "dtpsLMS.html#.fetchPageContent": [
           "classid",
@@ -783,7 +797,7 @@ window.lunrData = {
           "lt;static&gt",
           "page",
           "pageid",
-          "promise.&lt;string&gt",
+          "promise.&lt;page&gt",
           "requir"
         ],
         "dtpsLMS.html#.gradebook": [
@@ -887,7 +901,7 @@ window.lunrData = {
           "updateclass"
         ]
       },
-      "length": 68
+      "length": 69
     },
     "tokenStore": {
       "root": {
@@ -1267,6 +1281,59 @@ window.lunrData = {
                                       "dtps.html#.renderLite": {
                                         "ref": "dtps.html#.renderLite",
                                         "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "s": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "t": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "h": {
+                                    "docs": {},
+                                    "b": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "f": {
+                                                      "docs": {
+                                                        "dtps.html#.resetDashboardPrefs": {
+                                                          "ref": "dtps.html#.resetDashboardPrefs",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
                                       }
                                     }
                                   }
@@ -2760,7 +2827,7 @@ window.lunrData = {
                                   "docs": {
                                     "dtps.html#.loadThreadsList": {
                                       "ref": "dtps.html#.loadThreadsList",
-                                      "tf": 25
+                                      "tf": 20
                                     }
                                   }
                                 }
@@ -2777,7 +2844,7 @@ window.lunrData = {
                             "docs": {
                               "dtps.html#.loadPagesList": {
                                 "ref": "dtps.html#.loadPagesList",
-                                "tf": 25
+                                "tf": 20
                               }
                             }
                           }
@@ -2939,6 +3006,10 @@ window.lunrData = {
                             },
                             "dtps.html#.saveDashboardPrefs": {
                               "ref": "dtps.html#.saveDashboardPrefs",
+                              "tf": 16.666666666666664
+                            },
+                            "dtps.html#.resetDashboardPrefs": {
+                              "ref": "dtps.html#.resetDashboardPrefs",
                               "tf": 16.666666666666664
                             },
                             "dtps.html#.loadDashboardPrefs": {
@@ -3441,7 +3512,7 @@ window.lunrData = {
                                   },
                                   "dtps.html#.loadThreadsList": {
                                     "ref": "dtps.html#.loadThreadsList",
-                                    "tf": 25
+                                    "tf": 20
                                   },
                                   "dtps.html#.renderAssignmentScore": {
                                     "ref": "dtps.html#.renderAssignmentScore",
@@ -3465,7 +3536,7 @@ window.lunrData = {
                                   },
                                   "dtps.html#.loadThreadPosts": {
                                     "ref": "dtps.html#.loadThreadPosts",
-                                    "tf": 25
+                                    "tf": 20
                                   },
                                   "dtps.html#.log": {
                                     "ref": "dtps.html#.log",
@@ -3501,7 +3572,7 @@ window.lunrData = {
                                   },
                                   "dtps.html#.loadPagesList": {
                                     "ref": "dtps.html#.loadPagesList",
-                                    "tf": 25
+                                    "tf": 20
                                   },
                                   "dtps.html#.CSS": {
                                     "ref": "dtps.html#.CSS",
@@ -3521,7 +3592,7 @@ window.lunrData = {
                                   },
                                   "dtps.html#.loadPage": {
                                     "ref": "dtps.html#.loadPage",
-                                    "tf": 25
+                                    "tf": 20
                                   },
                                   "dtps.html#.assignment": {
                                     "ref": "dtps.html#.assignment",
@@ -3547,25 +3618,25 @@ window.lunrData = {
                                     "ref": "dtps.html#.obsSwitch",
                                     "tf": 33.33333333333333
                                   },
-                                  "dtps.html#.iframeLoad": {
-                                    "ref": "dtps.html#.iframeLoad",
-                                    "tf": 33.33333333333333
-                                  },
                                   "dtps.html#.moduleCollapse": {
                                     "ref": "dtps.html#.moduleCollapse",
                                     "tf": 20
+                                  },
+                                  "dtps.html#.iframeLoad": {
+                                    "ref": "dtps.html#.iframeLoad",
+                                    "tf": 33.33333333333333
                                   },
                                   "dtps.html#.clearData": {
                                     "ref": "dtps.html#.clearData",
                                     "tf": 50
                                   },
-                                  "dtps.html#.chroma": {
-                                    "ref": "dtps.html#.chroma",
-                                    "tf": 50
-                                  },
                                   "dtps.html#.renderClassTools": {
                                     "ref": "dtps.html#.renderClassTools",
                                     "tf": 16.666666666666664
+                                  },
+                                  "dtps.html#.chroma": {
+                                    "ref": "dtps.html#.chroma",
+                                    "tf": 50
                                   },
                                   "dtps.html#.showClasses": {
                                     "ref": "dtps.html#.showClasses",
@@ -3601,10 +3672,14 @@ window.lunrData = {
                                   },
                                   "dtps.html#.settings": {
                                     "ref": "dtps.html#.settings",
-                                    "tf": 50
+                                    "tf": 33.33333333333333
                                   },
                                   "dtps.html#.saveDashboardPrefs": {
                                     "ref": "dtps.html#.saveDashboardPrefs",
+                                    "tf": 50
+                                  },
+                                  "dtps.html#.resetDashboardPrefs": {
+                                    "ref": "dtps.html#.resetDashboardPrefs",
                                     "tf": 50
                                   },
                                   "dtps.html#.loadDashboardPrefs": {
@@ -3754,7 +3829,7 @@ window.lunrData = {
                                       "docs": {
                                         "dtps.html#.loadThreadsList": {
                                           "ref": "dtps.html#.loadThreadsList",
-                                          "tf": 675
+                                          "tf": 670
                                         }
                                       }
                                     }
@@ -3772,7 +3847,7 @@ window.lunrData = {
                                     "docs": {
                                       "dtps.html#.loadThreadPosts": {
                                         "ref": "dtps.html#.loadThreadPosts",
-                                        "tf": 675
+                                        "tf": 670
                                       }
                                     }
                                   }
@@ -3793,7 +3868,7 @@ window.lunrData = {
                       "docs": {
                         "dtps.html#.loadPage": {
                           "ref": "dtps.html#.loadPage",
-                          "tf": 675
+                          "tf": 670
                         }
                       },
                       "e": {
@@ -3810,7 +3885,7 @@ window.lunrData = {
                                   "docs": {
                                     "dtps.html#.loadPagesList": {
                                       "ref": "dtps.html#.loadPagesList",
-                                      "tf": 675
+                                      "tf": 670
                                     }
                                   }
                                 }
@@ -4324,95 +4399,78 @@ window.lunrData = {
                                                         }
                                                       }
                                                     },
-                                                    "d": {
+                                                    "p": {
                                                       "docs": {},
-                                                      "i": {
+                                                      "a": {
                                                         "docs": {},
-                                                        "s": {
+                                                        "r": {
                                                           "docs": {},
-                                                          "c": {
+                                                          "t": {
                                                             "docs": {},
-                                                            "u": {
+                                                            "i": {
                                                               "docs": {},
-                                                              "s": {
+                                                              "a": {
                                                                 "docs": {},
-                                                                "s": {
+                                                                "l": {
                                                                   "docs": {},
-                                                                  "i": {
+                                                                  "d": {
                                                                     "docs": {},
-                                                                    "o": {
+                                                                    "i": {
                                                                       "docs": {},
-                                                                      "n": {
+                                                                      "s": {
                                                                         "docs": {},
-                                                                        "t": {
+                                                                        "c": {
                                                                           "docs": {},
-                                                                          "h": {
-                                                                            "docs": {},
-                                                                            "r": {
-                                                                              "docs": {},
-                                                                              "e": {
-                                                                                "docs": {},
-                                                                                "a": {
-                                                                                  "docs": {},
-                                                                                  "d": {
-                                                                                    "docs": {},
-                                                                                    "&": {
-                                                                                      "docs": {},
-                                                                                      "g": {
-                                                                                        "docs": {},
-                                                                                        "t": {
-                                                                                          "docs": {},
-                                                                                          ";": {
-                                                                                            "docs": {},
-                                                                                            "&": {
-                                                                                              "docs": {},
-                                                                                              "g": {
-                                                                                                "docs": {},
-                                                                                                "t": {
-                                                                                                  "docs": {
-                                                                                                    "dtpsLMS.html#.fetchDiscussionThreads": {
-                                                                                                      "ref": "dtpsLMS.html#.fetchDiscussionThreads",
-                                                                                                      "tf": 25
-                                                                                                    }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        },
-                                                                        "p": {
-                                                                          "docs": {},
-                                                                          "o": {
+                                                                          "u": {
                                                                             "docs": {},
                                                                             "s": {
                                                                               "docs": {},
-                                                                              "t": {
+                                                                              "s": {
                                                                                 "docs": {},
-                                                                                "&": {
+                                                                                "i": {
                                                                                   "docs": {},
-                                                                                  "g": {
+                                                                                  "o": {
                                                                                     "docs": {},
-                                                                                    "t": {
+                                                                                    "n": {
                                                                                       "docs": {},
-                                                                                      ";": {
+                                                                                      "t": {
                                                                                         "docs": {},
-                                                                                        "&": {
+                                                                                        "h": {
                                                                                           "docs": {},
-                                                                                          "g": {
+                                                                                          "r": {
                                                                                             "docs": {},
-                                                                                            "t": {
-                                                                                              "docs": {
-                                                                                                "dtpsLMS.html#.fetchDiscussionPosts": {
-                                                                                                  "ref": "dtpsLMS.html#.fetchDiscussionPosts",
-                                                                                                  "tf": 20
+                                                                                            "e": {
+                                                                                              "docs": {},
+                                                                                              "a": {
+                                                                                                "docs": {},
+                                                                                                "d": {
+                                                                                                  "docs": {},
+                                                                                                  "&": {
+                                                                                                    "docs": {},
+                                                                                                    "g": {
+                                                                                                      "docs": {},
+                                                                                                      "t": {
+                                                                                                        "docs": {},
+                                                                                                        ";": {
+                                                                                                          "docs": {},
+                                                                                                          "&": {
+                                                                                                            "docs": {},
+                                                                                                            "g": {
+                                                                                                              "docs": {},
+                                                                                                              "t": {
+                                                                                                                "docs": {
+                                                                                                                  "dtpsLMS.html#.fetchDiscussionThreads": {
+                                                                                                                    "ref": "dtpsLMS.html#.fetchDiscussionThreads",
+                                                                                                                    "tf": 25
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
                                                                                                 }
                                                                                               }
                                                                                             }
@@ -4428,39 +4486,39 @@ window.lunrData = {
                                                                         }
                                                                       }
                                                                     }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    },
-                                                    "p": {
-                                                      "docs": {},
-                                                      "a": {
-                                                        "docs": {},
-                                                        "g": {
-                                                          "docs": {},
-                                                          "e": {
-                                                            "docs": {},
-                                                            "&": {
-                                                              "docs": {},
-                                                              "g": {
-                                                                "docs": {},
-                                                                "t": {
-                                                                  "docs": {},
-                                                                  ";": {
+                                                                  },
+                                                                  "p": {
                                                                     "docs": {},
-                                                                    "&": {
+                                                                    "a": {
                                                                       "docs": {},
                                                                       "g": {
                                                                         "docs": {},
-                                                                        "t": {
-                                                                          "docs": {
-                                                                            "dtpsLMS.html#.fetchPages": {
-                                                                              "ref": "dtpsLMS.html#.fetchPages",
-                                                                              "tf": 25
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "&": {
+                                                                            "docs": {},
+                                                                            "g": {
+                                                                              "docs": {},
+                                                                              "t": {
+                                                                                "docs": {},
+                                                                                ";": {
+                                                                                  "docs": {},
+                                                                                  "&": {
+                                                                                    "docs": {},
+                                                                                    "g": {
+                                                                                      "docs": {},
+                                                                                      "t": {
+                                                                                        "docs": {
+                                                                                          "dtpsLMS.html#.fetchPages": {
+                                                                                            "ref": "dtpsLMS.html#.fetchPages",
+                                                                                            "tf": 25
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
                                                                             }
                                                                           }
                                                                         }
@@ -4506,15 +4564,99 @@ window.lunrData = {
                                                       "ref": "dtpsLMS.html#.fetchHomepage",
                                                       "tf": 25
                                                     },
-                                                    "dtpsLMS.html#.fetchPageContent": {
-                                                      "ref": "dtpsLMS.html#.fetchPageContent",
-                                                      "tf": 20
-                                                    },
                                                     "dtpsLMS.html#.gradebook": {
                                                       "ref": "dtpsLMS.html#.gradebook",
                                                       "tf": 25
                                                     }
                                                   }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "d": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "n": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "d": {
+                                                                "docs": {},
+                                                                "&": {
+                                                                  "docs": {},
+                                                                  "g": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {
+                                                                        "dtpsLMS.html#.fetchDiscussionPosts": {
+                                                                          "ref": "dtpsLMS.html#.fetchDiscussionPosts",
+                                                                          "tf": 20
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "p": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "g": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "&": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "dtpsLMS.html#.fetchPageContent": {
+                                                  "ref": "dtpsLMS.html#.fetchPageContent",
+                                                  "tf": 20
                                                 }
                                               }
                                             }
@@ -4599,6 +4741,10 @@ window.lunrData = {
                             "ref": "dtps.html#.saveDashboardPrefs",
                             "tf": 16.666666666666664
                           },
+                          "dtps.html#.resetDashboardPrefs": {
+                            "ref": "dtps.html#.resetDashboardPrefs",
+                            "tf": 16.666666666666664
+                          },
                           "dtps.html#.loadDashboardPrefs": {
                             "ref": "dtps.html#.loadDashboardPrefs",
                             "tf": 16.666666666666664
@@ -4644,7 +4790,7 @@ window.lunrData = {
                     "docs": {
                       "dtps.html#.loadPage": {
                         "ref": "dtps.html#.loadPage",
-                        "tf": 25
+                        "tf": 20
                       },
                       "dtpsLMS.html#.fetchPageContent": {
                         "ref": "dtpsLMS.html#.fetchPageContent",
@@ -4987,6 +5133,64 @@ window.lunrData = {
                       "dtpsLMS.html#.fetchAnnouncements": {
                         "ref": "dtpsLMS.html#.fetchAnnouncements",
                         "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "dtps.html#.resetDashboardPrefs": {
+                      "ref": "dtps.html#.resetDashboardPrefs",
+                      "tf": 16.666666666666664
+                    }
+                  },
+                  "d": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "h": {
+                          "docs": {},
+                          "b": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "f": {
+                                            "docs": {
+                                              "dtps.html#.resetDashboardPrefs": {
+                                                "ref": "dtps.html#.resetDashboardPrefs",
+                                                "tf": 700
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -5575,24 +5779,24 @@ window.lunrData = {
                             "ref": "dtps.html#.obsSwitch",
                             "tf": 110
                           },
-                          "dtps.html#.iframeLoad": {
-                            "ref": "dtps.html#.iframeLoad",
-                            "tf": 110
-                          },
                           "dtps.html#.moduleCollapse": {
                             "ref": "dtps.html#.moduleCollapse",
+                            "tf": 110
+                          },
+                          "dtps.html#.iframeLoad": {
+                            "ref": "dtps.html#.iframeLoad",
                             "tf": 110
                           },
                           "dtps.html#.clearData": {
                             "ref": "dtps.html#.clearData",
                             "tf": 110
                           },
-                          "dtps.html#.chroma": {
-                            "ref": "dtps.html#.chroma",
-                            "tf": 110
-                          },
                           "dtps.html#.renderClassTools": {
                             "ref": "dtps.html#.renderClassTools",
+                            "tf": 110
+                          },
+                          "dtps.html#.chroma": {
+                            "ref": "dtps.html#.chroma",
                             "tf": 110
                           },
                           "dtps.html#.showClasses": {
@@ -5633,6 +5837,10 @@ window.lunrData = {
                           },
                           "dtps.html#.saveDashboardPrefs": {
                             "ref": "dtps.html#.saveDashboardPrefs",
+                            "tf": 110
+                          },
+                          "dtps.html#.resetDashboardPrefs": {
+                            "ref": "dtps.html#.resetDashboardPrefs",
                             "tf": 110
                           },
                           "dtps.html#.loadDashboardPrefs": {
@@ -5729,6 +5937,47 @@ window.lunrData = {
                       "dtps.html#.search": {
                         "ref": "dtps.html#.search",
                         "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "u": {
+                        "docs": {},
+                        "l": {
+                          "docs": {
+                            "dtps.html#.loadThreadsList": {
+                              "ref": "dtps.html#.loadThreadsList",
+                              "tf": 20
+                            },
+                            "dtps.html#.loadThreadPosts": {
+                              "ref": "dtps.html#.loadThreadPosts",
+                              "tf": 20
+                            },
+                            "dtps.html#.loadPagesList": {
+                              "ref": "dtps.html#.loadPagesList",
+                              "tf": 20
+                            },
+                            "dtps.html#.loadPage": {
+                              "ref": "dtps.html#.loadPage",
+                              "tf": 20
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -6137,6 +6386,68 @@ window.lunrData = {
                         "dtpsLMS.html#.calculateGrade": {
                           "ref": "dtpsLMS.html#.calculateGrade",
                           "tf": 4.166666666666666
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "c": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "h": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {
+                                                      "dtps.html#.settings": {
+                                                        "ref": "dtps.html#.settings",
+                                                        "tf": 33.33333333333333
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -6663,7 +6974,7 @@ window.lunrData = {
                 },
                 "dtps.html#.settings": {
                   "ref": "dtps.html#.settings",
-                  "tf": 716.6666666666666
+                  "tf": 700
                 }
               }
             }
@@ -7453,11 +7764,11 @@ window.lunrData = {
                         "docs": {
                           "dtps.html#.loadThreadPosts": {
                             "ref": "dtps.html#.loadThreadPosts",
-                            "tf": 25
+                            "tf": 20
                           },
                           "dtps.html#.loadPage": {
                             "ref": "dtps.html#.loadPage",
-                            "tf": 25
+                            "tf": 20
                           },
                           "dtps.html#.assignment": {
                             "ref": "dtps.html#.assignment",
@@ -7677,11 +7988,11 @@ window.lunrData = {
                         "docs": {
                           "dtps.html#.loadThreadsList": {
                             "ref": "dtps.html#.loadThreadsList",
-                            "tf": 25
+                            "tf": 20
                           },
                           "dtps.html#.loadPagesList": {
                             "ref": "dtps.html#.loadPagesList",
-                            "tf": 25
+                            "tf": 20
                           }
                         }
                       }
@@ -8665,7 +8976,7 @@ window.lunrData = {
                         "docs": {
                           "dtps.html#.loadThreadPosts": {
                             "ref": "dtps.html#.loadThreadPosts",
-                            "tf": 25
+                            "tf": 20
                           },
                           "dtpsLMS.html#.fetchDiscussionPosts": {
                             "ref": "dtpsLMS.html#.fetchDiscussionPosts",
@@ -9048,7 +9359,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 711
+      "length": 723
     },
     "corpusTokens": [
       "1",
@@ -9153,6 +9464,7 @@ window.lunrData = {
       "dtps.renderloadingscreen",
       "dtps.renderupcom",
       "dtps.renderupd",
+      "dtps.resetdashboardpref",
       "dtps.savedashboardpref",
       "dtps.search",
       "dtps.set",
@@ -9203,10 +9515,12 @@ window.lunrData = {
       "file",
       "first",
       "firstrun",
+      "forcererenderdashboard",
       "format",
       "formatd",
       "formatt",
       "formula",
+      "frommodul",
       "function",
       "fuse.j",
       "gener",
@@ -9294,10 +9608,11 @@ window.lunrData = {
       "promise.&lt;array.&lt;announcement&gt;&gt",
       "promise.&lt;array.&lt;assignment&gt;&gt",
       "promise.&lt;array.&lt;class&gt;&gt",
-      "promise.&lt;array.&lt;discussionpost&gt;&gt",
-      "promise.&lt;array.&lt;discussionthread&gt;&gt",
       "promise.&lt;array.&lt;module&gt;&gt",
-      "promise.&lt;array.&lt;page&gt;&gt",
+      "promise.&lt;array.&lt;partialdiscussionthread&gt;&gt",
+      "promise.&lt;array.&lt;partialpage&gt;&gt",
+      "promise.&lt;discussionthread&gt",
+      "promise.&lt;page&gt",
       "promise.&lt;string&gt",
       "promise.&lt;user&gt",
       "razer",
@@ -9317,6 +9632,8 @@ window.lunrData = {
       "renderupd",
       "request",
       "requir",
+      "reset",
+      "resetdashboardpref",
       "return",
       "rgb",
       "run",
@@ -9435,7 +9752,7 @@ window.lunrData = {
     "dtps.html#.loadThreadsList": {
       "id": "dtps.html#.loadThreadsList",
       "kind": "function",
-      "title": "&lt;static&gt; loadThreadsList( courseID [, defaultThread ] )",
+      "title": "&lt;static&gt; loadThreadsList( courseID [, defaultThread ], fromModules )",
       "longname": "dtps.loadThreadsList",
       "name": "loadThreadsList",
       "tags": "dtps.loadThreadsList loadThreadsList",
@@ -9495,7 +9812,7 @@ window.lunrData = {
     "dtps.html#.loadThreadPosts": {
       "id": "dtps.html#.loadThreadPosts",
       "kind": "function",
-      "title": "&lt;static&gt; loadThreadPosts( classNum, threadID )",
+      "title": "&lt;static&gt; loadThreadPosts( classNum, threadID, fromModules )",
       "longname": "dtps.loadThreadPosts",
       "name": "loadThreadPosts",
       "tags": "dtps.loadThreadPosts loadThreadPosts",
@@ -9585,7 +9902,7 @@ window.lunrData = {
     "dtps.html#.loadPagesList": {
       "id": "dtps.html#.loadPagesList",
       "kind": "function",
-      "title": "&lt;static&gt; loadPagesList( courseID [, defaultPage ] )",
+      "title": "&lt;static&gt; loadPagesList( courseID [, defaultPage ], fromModules )",
       "longname": "dtps.loadPagesList",
       "name": "loadPagesList",
       "tags": "dtps.loadPagesList loadPagesList",
@@ -9635,7 +9952,7 @@ window.lunrData = {
     "dtps.html#.loadPage": {
       "id": "dtps.html#.loadPage",
       "kind": "function",
-      "title": "&lt;static&gt; loadPage( classNum, pageID )",
+      "title": "&lt;static&gt; loadPage( classNum, pageID, fromModules )",
       "longname": "dtps.loadPage",
       "name": "loadPage",
       "tags": "dtps.loadPage loadPage",
@@ -9702,16 +10019,6 @@ window.lunrData = {
       "summary": "",
       "description": "Switches the current child account being observed"
     },
-    "dtps.html#.iframeLoad": {
-      "id": "dtps.html#.iframeLoad",
-      "kind": "function",
-      "title": "&lt;static&gt; iframeLoad( iframeID )",
-      "longname": "dtps.iframeLoad",
-      "name": "iframeLoad",
-      "tags": "dtps.iframeLoad iframeLoad",
-      "summary": "",
-      "description": "Adjusts the height of an iFrame to match its content"
-    },
     "dtps.html#.moduleCollapse": {
       "id": "dtps.html#.moduleCollapse",
       "kind": "function",
@@ -9721,6 +10028,16 @@ window.lunrData = {
       "tags": "dtps.moduleCollapse moduleCollapse",
       "summary": "",
       "description": "Collapses a module"
+    },
+    "dtps.html#.iframeLoad": {
+      "id": "dtps.html#.iframeLoad",
+      "kind": "function",
+      "title": "&lt;static&gt; iframeLoad( iframeID )",
+      "longname": "dtps.iframeLoad",
+      "name": "iframeLoad",
+      "tags": "dtps.iframeLoad iframeLoad",
+      "summary": "",
+      "description": "Adjusts the height of an iFrame to match its content"
     },
     "dtps.html#.clearData": {
       "id": "dtps.html#.clearData",
@@ -9732,16 +10049,6 @@ window.lunrData = {
       "summary": "",
       "description": "Clears all DTPS data"
     },
-    "dtps.html#.chroma": {
-      "id": "dtps.html#.chroma",
-      "kind": "function",
-      "title": "&lt;static&gt; chroma()",
-      "longname": "dtps.chroma",
-      "name": "chroma",
-      "tags": "dtps.chroma chroma",
-      "summary": "",
-      "description": "Runs Razer Chroma RGB effects for the selected content"
-    },
     "dtps.html#.renderClassTools": {
       "id": "dtps.html#.renderClassTools",
       "kind": "function",
@@ -9751,6 +10058,16 @@ window.lunrData = {
       "tags": "dtps.renderClassTools renderClassTools",
       "summary": "",
       "description": "Gets stream tools HTML (search box, class info, and modules/assignment switcher)"
+    },
+    "dtps.html#.chroma": {
+      "id": "dtps.html#.chroma",
+      "kind": "function",
+      "title": "&lt;static&gt; chroma()",
+      "longname": "dtps.chroma",
+      "name": "chroma",
+      "tags": "dtps.chroma chroma",
+      "summary": "",
+      "description": "Runs Razer Chroma RGB effects for the selected content"
     },
     "dtps.html#.showClasses": {
       "id": "dtps.html#.showClasses",
@@ -9835,7 +10152,7 @@ window.lunrData = {
     "dtps.html#.settings": {
       "id": "dtps.html#.settings",
       "kind": "function",
-      "title": "&lt;static&gt; settings()",
+      "title": "&lt;static&gt; settings( [ forceRerenderDashboard ] )",
       "longname": "dtps.settings",
       "name": "settings",
       "tags": "dtps.settings settings",
@@ -9851,6 +10168,16 @@ window.lunrData = {
       "tags": "dtps.saveDashboardPrefs saveDashboardPrefs",
       "summary": "",
       "description": "Saves dashboard prefrences"
+    },
+    "dtps.html#.resetDashboardPrefs": {
+      "id": "dtps.html#.resetDashboardPrefs",
+      "kind": "function",
+      "title": "&lt;static&gt; resetDashboardPrefs()",
+      "longname": "dtps.resetDashboardPrefs",
+      "name": "resetDashboardPrefs",
+      "tags": "dtps.resetDashboardPrefs resetDashboardPrefs",
+      "summary": "",
+      "description": "Resets dashboard prefrences"
     },
     "dtps.html#.loadDashboardPrefs": {
       "id": "dtps.html#.loadDashboardPrefs",
@@ -9976,7 +10303,7 @@ window.lunrData = {
     "dtpsLMS.html#.fetchDiscussionThreads": {
       "id": "dtpsLMS.html#.fetchDiscussionThreads",
       "kind": "function",
-      "title": "&lt;static&gt; fetchDiscussionThreads( classID ) → {Promise.&lt;Array.&lt;DiscussionThread&gt;&gt;}",
+      "title": "&lt;static&gt; fetchDiscussionThreads( classID ) → {Promise.&lt;Array.&lt;PartialDiscussionThread&gt;&gt;}",
       "longname": "dtpsLMS.fetchDiscussionThreads",
       "name": "fetchDiscussionThreads",
       "tags": "dtpsLMS.fetchDiscussionThreads fetchDiscussionThreads",
@@ -9986,7 +10313,7 @@ window.lunrData = {
     "dtpsLMS.html#.fetchDiscussionPosts": {
       "id": "dtpsLMS.html#.fetchDiscussionPosts",
       "kind": "function",
-      "title": "&lt;static&gt; fetchDiscussionPosts( classID, threadID ) → {Promise.&lt;Array.&lt;DiscussionPost&gt;&gt;}",
+      "title": "&lt;static&gt; fetchDiscussionPosts( classID, threadID ) → {Promise.&lt;DiscussionThread&gt;}",
       "longname": "dtpsLMS.fetchDiscussionPosts",
       "name": "fetchDiscussionPosts",
       "tags": "dtpsLMS.fetchDiscussionPosts fetchDiscussionPosts",
@@ -9996,7 +10323,7 @@ window.lunrData = {
     "dtpsLMS.html#.fetchPages": {
       "id": "dtpsLMS.html#.fetchPages",
       "kind": "function",
-      "title": "&lt;static&gt; fetchPages( classID ) → {Promise.&lt;Array.&lt;Page&gt;&gt;}",
+      "title": "&lt;static&gt; fetchPages( classID ) → {Promise.&lt;Array.&lt;PartialPage&gt;&gt;}",
       "longname": "dtpsLMS.fetchPages",
       "name": "fetchPages",
       "tags": "dtpsLMS.fetchPages fetchPages",
@@ -10006,7 +10333,7 @@ window.lunrData = {
     "dtpsLMS.html#.fetchPageContent": {
       "id": "dtpsLMS.html#.fetchPageContent",
       "kind": "function",
-      "title": "&lt;static&gt; fetchPageContent( classID, pageID ) → {Promise.&lt;string&gt;}",
+      "title": "&lt;static&gt; fetchPageContent( classID, pageID ) → {Promise.&lt;Page&gt;}",
       "longname": "dtpsLMS.fetchPageContent",
       "name": "fetchPageContent",
       "tags": "dtpsLMS.fetchPageContent fetchPageContent",
