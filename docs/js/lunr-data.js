@@ -563,6 +563,16 @@ window.lunrData = {
           "page",
           "set"
         ],
+        "dtps.html#.renderGradesInSettings": [
+          "dtps.rendergradesinset",
+          "function",
+          "grade",
+          "lt;static&gt",
+          "render",
+          "rendergradesinset",
+          "set",
+          "tab"
+        ],
         "dtps.html#.saveDashboardPrefs": [
           "dashboard",
           "dtps.savedashboardpref",
@@ -901,7 +911,7 @@ window.lunrData = {
           "updateclass"
         ]
       },
-      "length": 69
+      "length": 70
     },
     "tokenStore": {
       "root": {
@@ -1281,6 +1291,44 @@ window.lunrData = {
                                       "dtps.html#.renderLite": {
                                         "ref": "dtps.html#.renderLite",
                                         "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "g": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {
+                                                      "dtps.html#.renderGradesInSettings": {
+                                                        "ref": "dtps.html#.renderGradesInSettings",
+                                                        "tf": 1150
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
                                       }
                                     }
                                   }
@@ -3674,6 +3722,10 @@ window.lunrData = {
                                     "ref": "dtps.html#.settings",
                                     "tf": 33.33333333333333
                                   },
+                                  "dtps.html#.renderGradesInSettings": {
+                                    "ref": "dtps.html#.renderGradesInSettings",
+                                    "tf": 50
+                                  },
                                   "dtps.html#.saveDashboardPrefs": {
                                     "ref": "dtps.html#.saveDashboardPrefs",
                                     "tf": 50
@@ -4901,6 +4953,10 @@ window.lunrData = {
                         "ref": "dtps.html#.presentClass",
                         "tf": 4.545454545454546
                       },
+                      "dtps.html#.renderGradesInSettings": {
+                        "ref": "dtps.html#.renderGradesInSettings",
+                        "tf": 12.5
+                      },
                       "dtps.html#.render": {
                         "ref": "dtps.html#.render",
                         "tf": 710
@@ -5103,6 +5159,44 @@ window.lunrData = {
                                         "dtps.html#.renderClassTools": {
                                           "ref": "dtps.html#.renderClassTools",
                                           "tf": 666.6666666666666
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "g": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "d": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "s": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {
+                                            "dtps.html#.renderGradesInSettings": {
+                                              "ref": "dtps.html#.renderGradesInSettings",
+                                              "tf": 700
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -5438,6 +5532,10 @@ window.lunrData = {
                     "dtps.html#.logGrades": {
                       "ref": "dtps.html#.logGrades",
                       "tf": 14.285714285714285
+                    },
+                    "dtps.html#.renderGradesInSettings": {
+                      "ref": "dtps.html#.renderGradesInSettings",
+                      "tf": 12.5
                     },
                     "dtpsLMS.html#.gradebook": {
                       "ref": "dtpsLMS.html#.gradebook",
@@ -5833,6 +5931,10 @@ window.lunrData = {
                           },
                           "dtps.html#.settings": {
                             "ref": "dtps.html#.settings",
+                            "tf": 110
+                          },
+                          "dtps.html#.renderGradesInSettings": {
+                            "ref": "dtps.html#.renderGradesInSettings",
                             "tf": 110
                           },
                           "dtps.html#.saveDashboardPrefs": {
@@ -6975,6 +7077,10 @@ window.lunrData = {
                 "dtps.html#.settings": {
                   "ref": "dtps.html#.settings",
                   "tf": 700
+                },
+                "dtps.html#.renderGradesInSettings": {
+                  "ref": "dtps.html#.renderGradesInSettings",
+                  "tf": 12.5
                 }
               }
             }
@@ -9046,6 +9152,10 @@ window.lunrData = {
                 "dtps.html#.presentClass": {
                   "ref": "dtps.html#.presentClass",
                   "tf": 4.545454545454546
+                },
+                "dtps.html#.renderGradesInSettings": {
+                  "ref": "dtps.html#.renderGradesInSettings",
+                  "tf": 12.5
                 }
               }
             },
@@ -9359,7 +9469,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 723
+      "length": 731
     },
     "corpusTokens": [
       "1",
@@ -9460,6 +9570,7 @@ window.lunrData = {
       "dtps.rendercalendar",
       "dtps.renderclasstool",
       "dtps.renderduetoday",
+      "dtps.rendergradesinset",
       "dtps.renderlit",
       "dtps.renderloadingscreen",
       "dtps.renderupcom",
@@ -9626,6 +9737,7 @@ window.lunrData = {
       "renderassignmentscor",
       "renderclasstool",
       "renderduetoday",
+      "rendergradesinset",
       "renderlit",
       "renderloadingscreen",
       "renderupcom",
@@ -10158,6 +10270,16 @@ window.lunrData = {
       "tags": "dtps.settings settings",
       "summary": "",
       "description": "Opens the settings page"
+    },
+    "dtps.html#.renderGradesInSettings": {
+      "id": "dtps.html#.renderGradesInSettings",
+      "kind": "function",
+      "title": "&lt;static&gt; renderGradesInSettings()",
+      "longname": "dtps.renderGradesInSettings",
+      "name": "renderGradesInSettings",
+      "tags": "dtps.renderGradesInSettings renderGradesInSettings",
+      "summary": "",
+      "description": "Renders the grades tab in settings"
     },
     "dtps.html#.saveDashboardPrefs": {
       "id": "dtps.html#.saveDashboardPrefs",
