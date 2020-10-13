@@ -156,10 +156,10 @@ if (typeof dtps !== "undefined") throw "Error: DTPS is already loading";
 var dtps = {
     ver: 305,
     readableVer: "v3.0.5",
-    env: window.localStorage.dtpsLoaderPref == "debugging" ? "dev" : window.jottocraftSatEnv || "prod",
+    env: new URL(window.dtpsBaseURL || "https://powerplus.app").hostname == "localhost" ? "dev" : window.jottocraftSatEnv || "prod",
     classes: [],
-    baseURL: document.currentScript.src ? document.currentScript.src.split("/scripts/core.js")[0] : "https://powerplus.app",
-    unstable: window.localStorage.dtpsLoaderPref == "canary" || window.localStorage.dtpsLoaderPref == "debugging" || String(document.currentScript.src).includes("http://localhost"),
+    baseURL: window.dtpsBaseURL || "https://powerplus.app",
+    unstable: window.dtpsBaseURL !== "https://powerplus.app",
     gradebookExpanded: false,
     updates: [],
     dashboardItems: [
@@ -1483,6 +1483,7 @@ dtps.renderLite = function () {
     });
 
     //Render settings card
+    var baseHost = new URL(dtps.baseURL).hostname;
     jQuery(".card.settingsCard").html(/*html*/`
         &lt;i onclick="fluid.cards.close('.card.settingsCard')" class="material-icons close">close&lt;/i>
 
@@ -1491,7 +1492,7 @@ dtps.renderLite = function () {
 	            &lt;img src="https://powerplus.app/icon.svg" style="width: 50px;vertical-align: middle;padding: 7px; padding-top: 14px;" />
 	            &lt;div style="vertical-align: middle; display: inline-block;">
                     &lt;h5 style="font-weight: bold;display: inline-block;vertical-align: middle;">Power+&lt;/h5>
-                    &lt;p>${dtps.readableVer + (window.localStorage.dtpsLoaderPref ? ` &lt;span style="font-size: 12px;">(${window.localStorage.dtpsLoaderPref})&lt;/span>` : "")}&lt;/p>
+                    &lt;p>${dtps.readableVer + (dtps.unstable ? ` &lt;span style="font-size: 12px;">(unstable)&lt;/span>` : "")}&lt;/p>
 	            &lt;/div>
             &lt;/div>
 
@@ -1511,7 +1512,7 @@ dtps.renderLite = function () {
                     &lt;i class="material-icons">bug_report&lt;/i> Debugging
                 &lt;/div>
             ` : ``}
-            &lt;div onclick="$('.abtpage').hide();$('.abtpage.about').show(); if ($('body').hasClass('sudo')) { $('.advancedOptions').show(); $('.advOp').hide(); } else { $('.advancedOptions').hide(); $('.advOp').show(); }" class="item abt">
+            &lt;div onclick="$('.abtpage').hide();$('.abtpage.about').show();" class="item abt">
                 &lt;i class="material-icons">info&lt;/i> About
             &lt;/div>
         &lt;/div>
@@ -1551,7 +1552,7 @@ dtps.renderLite = function () {
                     &lt;/div>
                 &lt;/div>
 
-                ${window.localStorage.githubCanary || window.localStorage.dtpsDebuggingPort ? /*html*/`
+                ${window.localStorage.githubCanary || window.localStorage.debuggingConfig || window.localStorage.codespaceExternalURL ? /*html*/`
                     &lt;br />&lt;br />
                     &lt;p>Prerelease testing&lt;/p>
 
@@ -1569,7 +1570,14 @@ dtps.renderLite = function () {
                                     &lt;i class="material-icons">build_circle&lt;/i> Canary
                                 &lt;/button>
                             ` : ``}
-                            ${window.localStorage.dtpsDebuggingPort ? /*html*/`
+                            ${window.localStorage.codespaceExternalURL ? /*html*/`
+                                &lt;button 
+                                    onclick="window.localStorage.setItem('dtpsLoaderPref', 'codespace')" 
+                                    class="btn ${window.localStorage.dtpsLoaderPref == "codespace" ? "active" : ""}">
+                                    &lt;i class="material-icons">code&lt;/i> Codespace
+                                &lt;/button>
+                            ` : ``}
+                            ${window.localStorage.debuggingConfig ? /*html*/`
                                 &lt;button 
                                     onclick="window.localStorage.setItem('dtpsLoaderPref', 'debugging')" 
                                     class="btn ${window.localStorage.dtpsLoaderPref == "debugging" ? "active" : ""}">
@@ -1617,9 +1625,14 @@ dtps.renderLite = function () {
 
                    &lt;br />
 
+                   &lt;h5>Script configuration&lt;/h5>
+
+                   &lt;button onclick="['dtpsLoaderPref', 'debuggingConfig', 'githubCanary', 'codespaceExternalURL', 'dtpsLMSOverride'].forEach(k => window.localStorage.removeItem(k)); window.location.reload();" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Reset release overrides&lt;/button>
+                   &lt;br />&lt;br />
+
                    &lt;div>
-                       &lt;input id="dtpsDebuggingPort" value="${window.localStorage.dtpsDebuggingPort || ""}" placeholder="Debugging Port" />
-                       &lt;button class="btn small" onclick="window.localStorage.setItem('dtpsDebuggingPort', $('#dtpsDebuggingPort').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
+                       &lt;input id="dtpsCodespaceURL" value="${window.localStorage.codespaceExternalURL || ""}" placeholder="GitHub Codespace subdomain" />
+                       &lt;button class="btn small" onclick="window.localStorage.setItem('codespaceExternalURL', $('#dtpsCodespaceURL').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
                    &lt;/div>
 
                    &lt;div>
@@ -1652,7 +1665,7 @@ dtps.renderLite = function () {
                         &lt;h4 style="font-weight: bold; font-size: 32px; margin-bottom: 0px;">Power+&lt;/h4>
                         &lt;div style="font-size: 16px; margin-top: 5px;">
                             ${dtps.readableVer}
-                            &lt;div class="buildInfo" style="display: inline-block;margin: 0px 5px;font-size: 12px;cursor: pointer;">&lt;/div>
+                            &lt;div style="display: inline-block;margin: 0px 5px;font-size: 12px;">${baseHost !== "powerplus.app" ? `(from ${baseHost})` : ""}&lt;/div>
                         &lt;/div>
                     &lt;/div>
 
@@ -1692,19 +1705,19 @@ dtps.renderLite = function () {
                     &lt;/div>
                 &lt;/div>
 
-                &lt;div class="card advancedOptions" style="padding: 8px 16px; box-shadow: none !important; border: 2px solid var(--elements); margin-top: 20px; display: none;">
+                &lt;div class="card advancedOptions" style="padding: 8px 16px; box-shadow: none !important; border: 2px solid var(--elements); margin-top: 20px; ${dtps.env == "dev" ? `` : `display: none;`}">
                     &lt;div style="display: inline-block; vertical-align: middle;">
                         &lt;h4 style="font-weight: bold; font-size: 28px; margin-bottom: 0px;">Advanced Options&lt;/h4>
                     &lt;/div>
 
                     &lt;div style="margin-top: 15px; margin-bottom: 7px;">
                         &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="dtps.clearData();">&lt;i class="material-icons" style="vertical-align: middle">refresh&lt;/i> Reset Power+&lt;/a>
-                        &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="window.localStorage.dtpsDebuggingPort = window.prompt('Please enter the port the server is running on'); alert('Reload the page for changes to take effect');">&lt;i class="material-icons" style="vertical-align: middle">bug_report&lt;/i> Debug mode&lt;/a>
+                        &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="window.localStorage.debuggingConfig = 'true'; alert('Debugging configuration enabled. Reload Power+ to see changes.');">&lt;i class="material-icons" style="vertical-align: middle">bug_report&lt;/i> Enable debug config&lt;/a>
                     &lt;/div>
                 &lt;/div>
 
                 &lt;br />
-                &lt;p style="cursor: pointer; color: var(--secText, gray)" onclick="$('.advancedOptions').show(); $(this).hide();" class="advOp">Show advanced options&lt;/p>
+                ${dtps.env == "dev" ? `` : `&lt;p style="cursor: pointer; color: var(--secText, gray)" onclick="$('.advancedOptions').show(); $(this).hide();" class="advOp">Show advanced options&lt;/p>`}
 
                 &lt;div style="text-align: center; padding: 50px 0px;">
                     &lt;img style="height: 45px; margin-right: 20px; vertical-align: middle;" src="https://cdn.jottocraft.com/images/footerImage.png" />
@@ -1981,7 +1994,7 @@ dtps.init();
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
 				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 12th Oct 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 13th Oct 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
