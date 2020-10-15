@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Namespaces</title>
+		<title>people.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,7 +43,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#b59032","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2020 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -108,44 +109,101 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Namespaces</span></h1>
-				<div class="summary"><p>All documented namespaces.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">people.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Namespaces</li>
-						</ol>
-					<section>
-		<h2><span class="name">Namespaces</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title namespace public">
-			<h4 id="dtps" class="namespace public"><a href="dtps.html"><span class="name">dtps</span></a></h4>
-</dt>
-<dd class="symbol-details namespace public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title namespace public">
-			<h4 id="dtpsLMS" class="namespace public"><a href="dtpsLMS.html"><span class="name">dtpsLMS</span></a></h4>
-</dt>
-<dd class="symbol-details namespace public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * @file DTPS course user list screen
+ * @author jottocraft
+ * 
+ * @copyright Copyright (c) 2018-2020 jottocraft. All rights reserved.
+ * @license GPL-2.0-only
+ */
+
+
+/**
+ * Renders the people tab for a class
+ * 
+ * @param {string} courseID The course ID to render the people tab for
+ */
+dtps.usersList = function (courseID) {
+    //Get class index and set as selected class
+    var classNum = dtps.classes.map(course => course.id).indexOf(courseID);
+    dtps.selectedClass = classNum;
+
+    //Set people as the selected content
+    dtps.selectedContent = "people";
+    $("#dtpsTabBar .btn").removeClass("active");
+    $("#dtpsTabBar .btn.people").addClass("active");
+
+    if (classNum == -1) {
+        //Class does not exist
+        dtps.error("The selected class doesn't exist", "classNum check failed @ dtps.usersList");
+    }
+
+    //Load class color and things
+    dtps.presentClass(classNum);
+
+    if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "people")) {
+        jQuery(".classContent").html(`&lt;div class="spinner">&lt;/div>`);
+    }
+
+    //Fetch users list
+    dtpsLMS.fetchUsers(dtps.classes[classNum].id).then(function (sections) {
+        if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "people")) {
+            if (!sections || (sections.length == 0)) {
+                //No people in this class? (this shouldn't be possible)
+                jQuery(".classContent").html(/*html*/`
+                    &lt;div style="cursor: auto;" class="card assignment">
+                        &lt;h4>Error&lt;/h4>
+                        &lt;p>Power+ could not get the list of people in this course&lt;/p>
+                    &lt;/div>
+                `);
+            } else {
+                jQuery(".classContent").html(sections.map(section => (
+                    /*html*/`
+                        &lt;div class="card">
+                            &lt;h5>&lt;b>${section.title}&lt;/b>&lt;/h5>
+                            ${section.users.map(user => (
+                                /*html*/`
+                                    &lt;div>
+                                        &lt;p>
+                                            &lt;img style="width: 30px; border-radius: 50%; vertical-align: middle; margin-right: 5px;" src="${user.photoURL}" />
+                                            &lt;a href="${user.url}" style="color: var(--text); vertical-align: middle;">${user.name}&lt;/a>
+                                        &lt;/p>
+                                    &lt;/div>
+                                `
+                            )).join("")}
+                        &lt;/div>
+                    `
+                )).join(""));
+            }
+        }
+    }).catch(function (err) {
+        dtps.error("Couldn't fetch users", "Caught promise rejection @ dtps.usersList", err);
+    });
+}
+
+//Fluid UI screen definitions
+fluid.externalScreens.people = (courseID) => {
+    dtps.usersList(courseID);
+}
+
+/**
+* @typedef {Object} ClassSection
+* @description Defines a class section in DTPS
+* @property {string} title Name of the section
+* @property {string} id Section ID
+* @property {User[]} users Students in this section
+*/</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -178,3 +236,4 @@
 	
 </body>
 </html>
+<!-- end:source.tmpl.hbs -->

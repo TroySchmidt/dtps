@@ -80,6 +80,17 @@
           "renderassign",
           "string"
         ],
+        "dtps.html#.usersList": [
+          "class",
+          "courseid",
+          "dtps.userslist",
+          "function",
+          "lt;static&gt",
+          "peopl",
+          "render",
+          "tab",
+          "userslist"
+        ],
         "dtps.html#.loadThreadsList": [
           "class",
           "courseid",
@@ -751,6 +762,19 @@
           "option",
           "promise.&lt;string&gt"
         ],
+        "dtpsLMS.html#.fetchUsers": [
+          "classid",
+          "cours",
+          "dtpslms.fetchus",
+          "fetch",
+          "fetchus",
+          "function",
+          "lm",
+          "lt;static&gt",
+          "option",
+          "promise.&lt;array.&lt;classsection&gt;&gt",
+          "user"
+        ],
         "dtpsLMS.html#.fetchDiscussionThreads": [
           "classid",
           "cours",
@@ -912,7 +936,7 @@
           "updateclass"
         ]
       },
-      "length": 70
+      "length": 72
     },
     "tokenStore": {
       "root": {
@@ -1383,6 +1407,38 @@
                                             }
                                           }
                                         }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "u": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "dtps.html#.usersList": {
+                                        "ref": "dtps.html#.usersList",
+                                        "tf": 1150
                                       }
                                     }
                                   }
@@ -2603,6 +2659,10 @@
                                         "dtpsLMS.html#.fetchUser": {
                                           "ref": "dtpsLMS.html#.fetchUser",
                                           "tf": 1150
+                                        },
+                                        "dtpsLMS.html#.fetchUsers": {
+                                          "ref": "dtpsLMS.html#.fetchUsers",
+                                          "tf": 1150
                                         }
                                       }
                                     }
@@ -3624,6 +3684,10 @@
                                     "ref": "dtps.html#.renderAssignment",
                                     "tf": 25
                                   },
+                                  "dtps.html#.usersList": {
+                                    "ref": "dtps.html#.usersList",
+                                    "tf": 33.33333333333333
+                                  },
                                   "dtps.html#.loadThreadsList": {
                                     "ref": "dtps.html#.loadThreadsList",
                                     "tf": 20
@@ -3842,6 +3906,10 @@
                                   },
                                   "dtpsLMS.html#.fetchHomepage": {
                                     "ref": "dtpsLMS.html#.fetchHomepage",
+                                    "tf": 25
+                                  },
+                                  "dtpsLMS.html#.fetchUsers": {
+                                    "ref": "dtpsLMS.html#.fetchUsers",
                                     "tf": 25
                                   },
                                   "dtpsLMS.html#.fetchDiscussionThreads": {
@@ -4158,6 +4226,10 @@
                 "ref": "dtpsLMS.html#.fetchHomepage",
                 "tf": 8.333333333333332
               },
+              "dtpsLMS.html#.fetchUsers": {
+                "ref": "dtpsLMS.html#.fetchUsers",
+                "tf": 10
+              },
               "dtpsLMS.html#.fetchDiscussionThreads": {
                 "ref": "dtpsLMS.html#.fetchDiscussionThreads",
                 "tf": 8.333333333333332
@@ -4214,6 +4286,23 @@
                   "dtpsLMS.html#.fetchDiscussionPosts": {
                     "ref": "dtpsLMS.html#.fetchDiscussionPosts",
                     "tf": 6.25
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "dtps.html#.usersList": {
+                      "ref": "dtps.html#.usersList",
+                      "tf": 12.5
+                    }
                   }
                 }
               }
@@ -4340,6 +4429,53 @@
                                                                               "dtpsLMS.html#.updateClasses": {
                                                                                 "ref": "dtpsLMS.html#.updateClasses",
                                                                                 "tf": 25
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "s": {
+                                                                "docs": {},
+                                                                "e": {
+                                                                  "docs": {},
+                                                                  "c": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {},
+                                                                      "i": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {},
+                                                                          "n": {
+                                                                            "docs": {},
+                                                                            "&": {
+                                                                              "docs": {},
+                                                                              "g": {
+                                                                                "docs": {},
+                                                                                "t": {
+                                                                                  "docs": {},
+                                                                                  ";": {
+                                                                                    "docs": {},
+                                                                                    "&": {
+                                                                                      "docs": {},
+                                                                                      "g": {
+                                                                                        "docs": {},
+                                                                                        "t": {
+                                                                                          "docs": {
+                                                                                            "dtpsLMS.html#.fetchUsers": {
+                                                                                              "ref": "dtpsLMS.html#.fetchUsers",
+                                                                                              "tf": 25
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
                                                                               }
                                                                             }
                                                                           }
@@ -4978,6 +5114,10 @@
                       "dtps.html#.renderAssignment": {
                         "ref": "dtps.html#.renderAssignment",
                         "tf": 10
+                      },
+                      "dtps.html#.usersList": {
+                        "ref": "dtps.html#.usersList",
+                        "tf": 12.5
                       },
                       "dtps.html#.loadThreadsList": {
                         "ref": "dtps.html#.loadThreadsList",
@@ -5803,6 +5943,10 @@
                             "ref": "dtps.html#.renderAssignment",
                             "tf": 110
                           },
+                          "dtps.html#.usersList": {
+                            "ref": "dtps.html#.usersList",
+                            "tf": 110
+                          },
                           "dtps.html#.loadThreadsList": {
                             "ref": "dtps.html#.loadThreadsList",
                             "tf": 110
@@ -6019,6 +6163,10 @@
                             "ref": "dtpsLMS.html#.fetchHomepage",
                             "tf": 110
                           },
+                          "dtpsLMS.html#.fetchUsers": {
+                            "ref": "dtpsLMS.html#.fetchUsers",
+                            "tf": 110
+                          },
                           "dtpsLMS.html#.fetchDiscussionThreads": {
                             "ref": "dtpsLMS.html#.fetchDiscussionThreads",
                             "tf": 110
@@ -6169,6 +6317,10 @@
                       "ref": "dtpsLMS.html#.fetchHomepage",
                       "tf": 8.333333333333332
                     },
+                    "dtpsLMS.html#.fetchUsers": {
+                      "ref": "dtpsLMS.html#.fetchUsers",
+                      "tf": 10
+                    },
                     "dtpsLMS.html#.fetchDiscussionThreads": {
                       "ref": "dtpsLMS.html#.fetchDiscussionThreads",
                       "tf": 8.333333333333332
@@ -6193,6 +6345,10 @@
                         "dtpsLMS.html#.fetchUser": {
                           "ref": "dtpsLMS.html#.fetchUser",
                           "tf": 683.3333333333334
+                        },
+                        "dtpsLMS.html#.fetchUsers": {
+                          "ref": "dtpsLMS.html#.fetchUsers",
+                          "tf": 675
                         }
                       }
                     }
@@ -6796,6 +6952,10 @@
                       "dtpsLMS.html#.fetchHomepage": {
                         "ref": "dtpsLMS.html#.fetchHomepage",
                         "tf": 8.333333333333332
+                      },
+                      "dtpsLMS.html#.fetchUsers": {
+                        "ref": "dtpsLMS.html#.fetchUsers",
+                        "tf": 10
                       },
                       "dtpsLMS.html#.fetchDiscussionThreads": {
                         "ref": "dtpsLMS.html#.fetchDiscussionThreads",
@@ -7839,6 +7999,10 @@
                 "docs": {},
                 "s": {
                   "docs": {
+                    "dtps.html#.usersList": {
+                      "ref": "dtps.html#.usersList",
+                      "tf": 12.5
+                    },
                     "dtps.html#.loadThreadsList": {
                       "ref": "dtps.html#.loadThreadsList",
                       "tf": 12.5
@@ -7974,6 +8138,10 @@
                           "ref": "dtpsLMS.html#.fetchHomepage",
                           "tf": 25
                         },
+                        "dtpsLMS.html#.fetchUsers": {
+                          "ref": "dtpsLMS.html#.fetchUsers",
+                          "tf": 25
+                        },
                         "dtpsLMS.html#.fetchDiscussionThreads": {
                           "ref": "dtpsLMS.html#.fetchDiscussionThreads",
                           "tf": 25
@@ -8103,6 +8271,10 @@
                       "ref": "dtpsLMS.html#.fetchHomepage",
                       "tf": 8.333333333333332
                     },
+                    "dtpsLMS.html#.fetchUsers": {
+                      "ref": "dtpsLMS.html#.fetchUsers",
+                      "tf": 10
+                    },
                     "dtpsLMS.html#.fetchDiscussionThreads": {
                       "ref": "dtpsLMS.html#.fetchDiscussionThreads",
                       "tf": 8.333333333333332
@@ -8130,6 +8302,10 @@
                       "docs": {},
                       "d": {
                         "docs": {
+                          "dtps.html#.usersList": {
+                            "ref": "dtps.html#.usersList",
+                            "tf": 33.33333333333333
+                          },
                           "dtps.html#.loadThreadsList": {
                             "ref": "dtps.html#.loadThreadsList",
                             "tf": 20
@@ -8545,6 +8721,412 @@
             }
           }
         },
+        "t": {
+          "docs": {},
+          "a": {
+            "docs": {},
+            "b": {
+              "docs": {
+                "dtps.html#.usersList": {
+                  "ref": "dtps.html#.usersList",
+                  "tf": 12.5
+                },
+                "dtps.html#.presentClass": {
+                  "ref": "dtps.html#.presentClass",
+                  "tf": 4.545454545454546
+                },
+                "dtps.html#.renderGradesInSettings": {
+                  "ref": "dtps.html#.renderGradesInSettings",
+                  "tf": 12.5
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "k": {
+                "docs": {
+                  "dtpsLMS.html": {
+                    "ref": "dtpsLMS.html",
+                    "tf": 3.125
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "dtpsLMS.html#.gradebook": {
+                        "ref": "dtpsLMS.html#.gradebook",
+                        "tf": 2.941176470588235
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "y": {
+                  "docs": {
+                    "dtps.html#.isToday": {
+                      "ref": "dtps.html#.isToday",
+                      "tf": 16.666666666666664
+                    },
+                    "dtps.html#.renderDueToday": {
+                      "ref": "dtps.html#.renderDueToday",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "dtps.html#.renderClassTools": {
+                    "ref": "dtps.html#.renderClassTools",
+                    "tf": 5
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "dtpsLMS.html#.fetchDiscussionThreads": {
+                        "ref": "dtpsLMS.html#.fetchDiscussionThreads",
+                        "tf": 8.333333333333332
+                      },
+                      "dtpsLMS.html#.fetchDiscussionPosts": {
+                        "ref": "dtpsLMS.html#.fetchDiscussionPosts",
+                        "tf": 6.25
+                      }
+                    },
+                    "i": {
+                      "docs": {},
+                      "d": {
+                        "docs": {
+                          "dtps.html#.loadThreadPosts": {
+                            "ref": "dtps.html#.loadThreadPosts",
+                            "tf": 20
+                          },
+                          "dtpsLMS.html#.fetchDiscussionPosts": {
+                            "ref": "dtpsLMS.html#.fetchDiscussionPosts",
+                            "tf": 20
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "o": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "g": {
+                    "docs": {},
+                    "h": {
+                      "docs": {
+                        "dtpsLMS.html#.updateAssignments": {
+                          "ref": "dtpsLMS.html#.updateAssignments",
+                          "tf": 3.571428571428571
+                        },
+                        "dtpsLMS.html#.updateClasses": {
+                          "ref": "dtpsLMS.html#.updateClasses",
+                          "tf": 3.571428571428571
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "dtps.html#.ampm": {
+                    "ref": "dtps.html#.ampm",
+                    "tf": 12.5
+                  }
+                }
+              }
+            }
+          },
+          "y": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "dtps.html#.renderClassTools": {
+                    "ref": "dtps.html#.renderClassTools",
+                    "tf": 16.666666666666664
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "x": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "dtps.html#.brightenTextForDarkMode": {
+                    "ref": "dtps.html#.brightenTextForDarkMode",
+                    "tf": 8.333333333333332
+                  }
+                }
+              }
+            }
+          }
+        },
+        "u": {
+          "docs": {},
+          "s": {
+            "docs": {
+              "dtps.html#.class": {
+                "ref": "dtps.html#.class",
+                "tf": 5
+              },
+              "dtps.html#.search": {
+                "ref": "dtps.html#.search",
+                "tf": 8.333333333333332
+              },
+              "dtps.html#.showLMSGradebook": {
+                "ref": "dtps.html#.showLMSGradebook",
+                "tf": 10
+              },
+              "dtpsLMS.html#.commonHeaders": {
+                "ref": "dtpsLMS.html#.commonHeaders",
+                "tf": 3.3333333333333335
+              },
+              "dtpsLMS.html#.calculateGrade": {
+                "ref": "dtpsLMS.html#.calculateGrade",
+                "tf": 4.166666666666666
+              }
+            },
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "dtps.html#.renderLite": {
+                    "ref": "dtps.html#.renderLite",
+                    "tf": 10
+                  },
+                  "dtpsLMS.html#.fetchUser": {
+                    "ref": "dtpsLMS.html#.fetchUser",
+                    "tf": 10
+                  },
+                  "dtpsLMS.html#.fetchUsers": {
+                    "ref": "dtpsLMS.html#.fetchUsers",
+                    "tf": 10
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "dtps.html#.usersList": {
+                              "ref": "dtps.html#.usersList",
+                              "tf": 683.3333333333334
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "m": {
+                  "docs": {
+                    "dtps.html#.renderUpcoming": {
+                      "ref": "dtps.html#.renderUpcoming",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "dtps.html#.renderUpdates": {
+                      "ref": "dtps.html#.renderUpdates",
+                      "tf": 7.142857142857142
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "i": {
+                            "docs": {},
+                            "g": {
+                              "docs": {},
+                              "n": {
+                                "docs": {
+                                  "dtpsLMS.html#.updateAssignments": {
+                                    "ref": "dtpsLMS.html#.updateAssignments",
+                                    "tf": 675
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "c": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "s": {
+                              "docs": {
+                                "dtpsLMS.html#.updateClasses": {
+                                  "ref": "dtpsLMS.html#.updateClasses",
+                                  "tf": 675
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "l": {
+              "docs": {
+                "dtps.html#.showIFrameCard": {
+                  "ref": "dtps.html#.showIFrameCard",
+                  "tf": 45.83333333333333
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "q": {
+                "docs": {},
+                "u": {
+                  "docs": {
+                    "dtpsLMS.html#.gradebook": {
+                      "ref": "dtpsLMS.html#.gradebook",
+                      "tf": 2.941176470588235
+                    },
+                    "dtpsLMS.html#.calculateGrade": {
+                      "ref": "dtpsLMS.html#.calculateGrade",
+                      "tf": 4.166666666666666
+                    }
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "|": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "j": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {
+                                          "dtpsLMS.html#.calculateGrade": {
+                                            "ref": "dtpsLMS.html#.calculateGrade",
+                                            "tf": 20
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "m": {
           "docs": {},
           "a": {
@@ -8815,204 +9397,6 @@
             }
           }
         },
-        "u": {
-          "docs": {},
-          "s": {
-            "docs": {
-              "dtps.html#.class": {
-                "ref": "dtps.html#.class",
-                "tf": 5
-              },
-              "dtps.html#.search": {
-                "ref": "dtps.html#.search",
-                "tf": 8.333333333333332
-              },
-              "dtps.html#.showLMSGradebook": {
-                "ref": "dtps.html#.showLMSGradebook",
-                "tf": 10
-              },
-              "dtpsLMS.html#.commonHeaders": {
-                "ref": "dtpsLMS.html#.commonHeaders",
-                "tf": 3.3333333333333335
-              },
-              "dtpsLMS.html#.calculateGrade": {
-                "ref": "dtpsLMS.html#.calculateGrade",
-                "tf": 4.166666666666666
-              }
-            },
-            "e": {
-              "docs": {},
-              "r": {
-                "docs": {
-                  "dtps.html#.renderLite": {
-                    "ref": "dtps.html#.renderLite",
-                    "tf": 10
-                  },
-                  "dtpsLMS.html#.fetchUser": {
-                    "ref": "dtpsLMS.html#.fetchUser",
-                    "tf": 10
-                  }
-                }
-              }
-            }
-          },
-          "p": {
-            "docs": {},
-            "c": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "m": {
-                  "docs": {
-                    "dtps.html#.renderUpcoming": {
-                      "ref": "dtps.html#.renderUpcoming",
-                      "tf": 10
-                    }
-                  }
-                }
-              }
-            },
-            "d": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "dtps.html#.renderUpdates": {
-                      "ref": "dtps.html#.renderUpdates",
-                      "tf": 7.142857142857142
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "a": {
-                      "docs": {},
-                      "s": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "i": {
-                            "docs": {},
-                            "g": {
-                              "docs": {},
-                              "n": {
-                                "docs": {
-                                  "dtpsLMS.html#.updateAssignments": {
-                                    "ref": "dtpsLMS.html#.updateAssignments",
-                                    "tf": 675
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "c": {
-                      "docs": {},
-                      "l": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "s": {
-                            "docs": {},
-                            "s": {
-                              "docs": {
-                                "dtpsLMS.html#.updateClasses": {
-                                  "ref": "dtpsLMS.html#.updateClasses",
-                                  "tf": 675
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "l": {
-              "docs": {
-                "dtps.html#.showIFrameCard": {
-                  "ref": "dtps.html#.showIFrameCard",
-                  "tf": 45.83333333333333
-                }
-              }
-            }
-          },
-          "n": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "q": {
-                "docs": {},
-                "u": {
-                  "docs": {
-                    "dtpsLMS.html#.gradebook": {
-                      "ref": "dtpsLMS.html#.gradebook",
-                      "tf": 2.941176470588235
-                    },
-                    "dtpsLMS.html#.calculateGrade": {
-                      "ref": "dtpsLMS.html#.calculateGrade",
-                      "tf": 4.166666666666666
-                    }
-                  }
-                }
-              }
-            },
-            "d": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "f": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "e": {
-                        "docs": {},
-                        "d": {
-                          "docs": {},
-                          "|": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "b": {
-                                "docs": {},
-                                "j": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "c": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {
-                                          "dtpsLMS.html#.calculateGrade": {
-                                            "ref": "dtpsLMS.html#.calculateGrade",
-                                            "tf": 20
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "w": {
           "docs": {},
           "e": {
@@ -9042,186 +9426,6 @@
                         "tf": 7.142857142857142
                       }
                     }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "t": {
-          "docs": {},
-          "o": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "y": {
-                  "docs": {
-                    "dtps.html#.isToday": {
-                      "ref": "dtps.html#.isToday",
-                      "tf": 16.666666666666664
-                    },
-                    "dtps.html#.renderDueToday": {
-                      "ref": "dtps.html#.renderDueToday",
-                      "tf": 10
-                    }
-                  }
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "l": {
-                "docs": {
-                  "dtps.html#.renderClassTools": {
-                    "ref": "dtps.html#.renderClassTools",
-                    "tf": 5
-                  }
-                }
-              }
-            }
-          },
-          "h": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "d": {
-                    "docs": {
-                      "dtpsLMS.html#.fetchDiscussionThreads": {
-                        "ref": "dtpsLMS.html#.fetchDiscussionThreads",
-                        "tf": 8.333333333333332
-                      },
-                      "dtpsLMS.html#.fetchDiscussionPosts": {
-                        "ref": "dtpsLMS.html#.fetchDiscussionPosts",
-                        "tf": 6.25
-                      }
-                    },
-                    "i": {
-                      "docs": {},
-                      "d": {
-                        "docs": {
-                          "dtps.html#.loadThreadPosts": {
-                            "ref": "dtps.html#.loadThreadPosts",
-                            "tf": 20
-                          },
-                          "dtpsLMS.html#.fetchDiscussionPosts": {
-                            "ref": "dtpsLMS.html#.fetchDiscussionPosts",
-                            "tf": 20
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "o": {
-                "docs": {},
-                "u": {
-                  "docs": {},
-                  "g": {
-                    "docs": {},
-                    "h": {
-                      "docs": {
-                        "dtpsLMS.html#.updateAssignments": {
-                          "ref": "dtpsLMS.html#.updateAssignments",
-                          "tf": 3.571428571428571
-                        },
-                        "dtpsLMS.html#.updateClasses": {
-                          "ref": "dtpsLMS.html#.updateClasses",
-                          "tf": 3.571428571428571
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "dtps.html#.ampm": {
-                    "ref": "dtps.html#.ampm",
-                    "tf": 12.5
-                  }
-                }
-              }
-            }
-          },
-          "y": {
-            "docs": {},
-            "p": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "dtps.html#.renderClassTools": {
-                    "ref": "dtps.html#.renderClassTools",
-                    "tf": 16.666666666666664
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "b": {
-              "docs": {
-                "dtps.html#.presentClass": {
-                  "ref": "dtps.html#.presentClass",
-                  "tf": 4.545454545454546
-                },
-                "dtps.html#.renderGradesInSettings": {
-                  "ref": "dtps.html#.renderGradesInSettings",
-                  "tf": 12.5
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "k": {
-                "docs": {
-                  "dtpsLMS.html": {
-                    "ref": "dtpsLMS.html",
-                    "tf": 3.125
-                  }
-                }
-              }
-            },
-            "i": {
-              "docs": {},
-              "l": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "dtpsLMS.html#.gradebook": {
-                        "ref": "dtpsLMS.html#.gradebook",
-                        "tf": 2.941176470588235
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "x": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "dtps.html#.brightenTextForDarkMode": {
-                    "ref": "dtps.html#.brightenTextForDarkMode",
-                    "tf": 8.333333333333332
                   }
                 }
               }
@@ -9569,7 +9773,7 @@
           }
         }
       },
-      "length": 732
+      "length": 752
     },
     "corpusTokens": [
       "1",
@@ -9685,6 +9889,7 @@
       "dtps.showclass",
       "dtps.showiframecard",
       "dtps.showlmsgradebook",
+      "dtps.userslist",
       "dtpslm",
       "dtpslms.calculategrad",
       "dtpslms.collapsemodul",
@@ -9812,6 +10017,7 @@
       "overrid",
       "page",
       "pageid",
+      "peopl",
       "post",
       "power",
       "prefrenc",
@@ -9822,6 +10028,7 @@
       "promise.&lt;array.&lt;announcement&gt;&gt",
       "promise.&lt;array.&lt;assignment&gt;&gt",
       "promise.&lt;array.&lt;class&gt;&gt",
+      "promise.&lt;array.&lt;classsection&gt;&gt",
       "promise.&lt;array.&lt;module&gt;&gt",
       "promise.&lt;array.&lt;partialdiscussionthread&gt;&gt",
       "promise.&lt;array.&lt;partialpage&gt;&gt",
@@ -9897,6 +10104,7 @@
       "url",
       "us",
       "user",
+      "userslist",
       "variabl",
       "version",
       "web",
@@ -9962,6 +10170,16 @@
       "tags": "dtps.renderAssignment renderAssignment",
       "summary": "",
       "description": "Renders HTML for an assignment item in a list"
+    },
+    "dtps.html#.usersList": {
+      "id": "dtps.html#.usersList",
+      "kind": "function",
+      "title": "&lt;static&gt; usersList( courseID )",
+      "longname": "dtps.usersList",
+      "name": "usersList",
+      "tags": "dtps.usersList usersList",
+      "summary": "",
+      "description": "Renders the people tab for a class"
     },
     "dtps.html#.loadThreadsList": {
       "id": "dtps.html#.loadThreadsList",
@@ -10523,6 +10741,16 @@
       "tags": "dtpsLMS.fetchHomepage fetchHomepage",
       "summary": "",
       "description": "[OPTIONAL] Fetches homepage HTML for a course from the LMS"
+    },
+    "dtpsLMS.html#.fetchUsers": {
+      "id": "dtpsLMS.html#.fetchUsers",
+      "kind": "function",
+      "title": "&lt;static&gt; fetchUsers( classID ) → {Promise.&lt;Array.&lt;ClassSection&gt;&gt;}",
+      "longname": "dtpsLMS.fetchUsers",
+      "name": "fetchUsers",
+      "tags": "dtpsLMS.fetchUsers fetchUsers",
+      "summary": "",
+      "description": "[OPTIONAL] Fetches the users for a course from the LMS"
     },
     "dtpsLMS.html#.fetchDiscussionThreads": {
       "id": "dtpsLMS.html#.fetchDiscussionThreads",
