@@ -167,15 +167,6 @@
           "post",
           "threadid"
         ],
-        "dtps.html#.log": [
-          "debug",
-          "dtps.log",
-          "function",
-          "log",
-          "lt;static&gt",
-          "messag",
-          "msg"
-        ],
         "dtps.html#.renderDueToday": [
           "compil",
           "display",
@@ -187,6 +178,15 @@
           "renderduetoday",
           "stream",
           "today"
+        ],
+        "dtps.html#.log": [
+          "debug",
+          "dtps.log",
+          "function",
+          "log",
+          "lt;static&gt",
+          "messag",
+          "msg"
         ],
         "dtps.html#.error": [
           "alert",
@@ -417,17 +417,16 @@
           "function",
           "lt;static&gt"
         ],
-        "dtps.html#.chroma": [
-          "chroma",
-          "content",
-          "dtps.chroma",
-          "effect",
+        "dtps.html#.showClasses": [
+          "class",
+          "dtps.showclass",
           "function",
+          "list",
           "lt;static&gt",
-          "razer",
-          "rgb",
-          "run",
-          "select"
+          "overrid",
+          "render",
+          "showclass",
+          "sidebar"
         ],
         "dtps.html#.moduleCollapse": [
           "classid",
@@ -439,17 +438,6 @@
           "modid",
           "modul",
           "modulecollaps"
-        ],
-        "dtps.html#.showClasses": [
-          "class",
-          "dtps.showclass",
-          "function",
-          "list",
-          "lt;static&gt",
-          "overrid",
-          "render",
-          "showclass",
-          "sidebar"
         ],
         "dtps.html#.renderClassTools": [
           "box",
@@ -924,7 +912,7 @@
           "updateclass"
         ]
       },
-      "length": 71
+      "length": 70
     },
     "tokenStore": {
       "root": {
@@ -1805,23 +1793,6 @@
                                       }
                                     }
                                   }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "r": {
-                        "docs": {},
-                        "o": {
-                          "docs": {},
-                          "m": {
-                            "docs": {},
-                            "a": {
-                              "docs": {
-                                "dtps.html#.chroma": {
-                                  "ref": "dtps.html#.chroma",
-                                  "tf": 1150
                                 }
                               }
                             }
@@ -3681,12 +3652,12 @@
                                     "ref": "dtps.html#.loadThreadPosts",
                                     "tf": 20
                                   },
-                                  "dtps.html#.log": {
-                                    "ref": "dtps.html#.log",
-                                    "tf": 33.33333333333333
-                                  },
                                   "dtps.html#.renderDueToday": {
                                     "ref": "dtps.html#.renderDueToday",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "dtps.html#.log": {
+                                    "ref": "dtps.html#.log",
                                     "tf": 33.33333333333333
                                   },
                                   "dtps.html#.error": {
@@ -3769,17 +3740,13 @@
                                     "ref": "dtps.html#.clearData",
                                     "tf": 50
                                   },
-                                  "dtps.html#.chroma": {
-                                    "ref": "dtps.html#.chroma",
-                                    "tf": 50
+                                  "dtps.html#.showClasses": {
+                                    "ref": "dtps.html#.showClasses",
+                                    "tf": 33.33333333333333
                                   },
                                   "dtps.html#.moduleCollapse": {
                                     "ref": "dtps.html#.moduleCollapse",
                                     "tf": 20
-                                  },
-                                  "dtps.html#.showClasses": {
-                                    "ref": "dtps.html#.showClasses",
-                                    "tf": 33.33333333333333
                                   },
                                   "dtps.html#.renderClassTools": {
                                     "ref": "dtps.html#.renderClassTools",
@@ -5489,41 +5456,9 @@
                   "ref": "dtps.html#.firstrun",
                   "tf": 7.142857142857142
                 },
-                "dtps.html#.chroma": {
-                  "ref": "dtps.html#.chroma",
-                  "tf": 7.142857142857142
-                },
                 "dtpsLMS.html#.gradebookDidRender": {
                   "ref": "dtpsLMS.html#.gradebookDidRender",
                   "tf": 3.3333333333333335
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "z": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "dtps.html#.chroma": {
-                      "ref": "dtps.html#.chroma",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "g": {
-            "docs": {},
-            "b": {
-              "docs": {
-                "dtps.html#.chroma": {
-                  "ref": "dtps.html#.chroma",
-                  "tf": 7.142857142857142
                 }
               }
             }
@@ -5896,12 +5831,12 @@
                             "ref": "dtps.html#.loadThreadPosts",
                             "tf": 110
                           },
-                          "dtps.html#.log": {
-                            "ref": "dtps.html#.log",
-                            "tf": 110
-                          },
                           "dtps.html#.renderDueToday": {
                             "ref": "dtps.html#.renderDueToday",
+                            "tf": 110
+                          },
+                          "dtps.html#.log": {
+                            "ref": "dtps.html#.log",
                             "tf": 110
                           },
                           "dtps.html#.error": {
@@ -5984,16 +5919,12 @@
                             "ref": "dtps.html#.clearData",
                             "tf": 110
                           },
-                          "dtps.html#.chroma": {
-                            "ref": "dtps.html#.chroma",
+                          "dtps.html#.showClasses": {
+                            "ref": "dtps.html#.showClasses",
                             "tf": 110
                           },
                           "dtps.html#.moduleCollapse": {
                             "ref": "dtps.html#.moduleCollapse",
-                            "tf": 110
-                          },
-                          "dtps.html#.showClasses": {
-                            "ref": "dtps.html#.showClasses",
                             "tf": 110
                           },
                           "dtps.html#.renderClassTools": {
@@ -7096,10 +7027,6 @@
                       "dtps.html#.class": {
                         "ref": "dtps.html#.class",
                         "tf": 5
-                      },
-                      "dtps.html#.chroma": {
-                        "ref": "dtps.html#.chroma",
-                        "tf": 7.142857142857142
                       },
                       "dtps.html#.presentClass": {
                         "ref": "dtps.html#.presentClass",
@@ -8317,10 +8244,6 @@
                           "ref": "dtps.html#.iframeLoad",
                           "tf": 10
                         },
-                        "dtps.html#.chroma": {
-                          "ref": "dtps.html#.chroma",
-                          "tf": 7.142857142857142
-                        },
                         "dtps.html#.renderLite": {
                           "ref": "dtps.html#.renderLite",
                           "tf": 10
@@ -8552,23 +8475,6 @@
                     "dtps.html#.obsSwitch": {
                       "ref": "dtps.html#.obsSwitch",
                       "tf": 8.333333333333332
-                    }
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "a": {
-                    "docs": {
-                      "dtps.html#.chroma": {
-                        "ref": "dtps.html#.chroma",
-                        "tf": 707.1428571428571
-                      }
                     }
                   }
                 }
@@ -9461,26 +9367,6 @@
               }
             }
           },
-          "f": {
-            "docs": {},
-            "f": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "dtps.html#.chroma": {
-                        "ref": "dtps.html#.chroma",
-                        "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "t": {
             "docs": {},
             "c": {
@@ -9683,7 +9569,7 @@
           }
         }
       },
-      "length": 742
+      "length": 732
     },
     "corpusTokens": [
       "1",
@@ -9713,7 +9599,6 @@
       "changelog",
       "check",
       "child",
-      "chroma",
       "class",
       "classhom",
       "classid",
@@ -9756,7 +9641,6 @@
       "dtps.brightentextfordarkmod",
       "dtps.calendar",
       "dtps.changelog",
-      "dtps.chroma",
       "dtps.class",
       "dtps.classhom",
       "dtps.classinfo",
@@ -9820,7 +9704,6 @@
       "dtpslms.updateassign",
       "dtpslms.updateclass",
       "due",
-      "effect",
       "el",
       "element",
       "enabl",
@@ -9946,7 +9829,6 @@
       "promise.&lt;page&gt",
       "promise.&lt;string&gt",
       "promise.&lt;user&gt",
-      "razer",
       "readabl",
       "readm",
       "recent",
@@ -9967,7 +9849,6 @@
       "reset",
       "resetdashboardpref",
       "return",
-      "rgb",
       "run",
       "save",
       "savedashboardpref",
@@ -10152,16 +10033,6 @@
       "summary": "",
       "description": "Fetches and displays posts in a discussion"
     },
-    "dtps.html#.log": {
-      "id": "dtps.html#.log",
-      "kind": "function",
-      "title": "&lt;static&gt; log( msg )",
-      "longname": "dtps.log",
-      "name": "log",
-      "tags": "dtps.log log",
-      "summary": "",
-      "description": "Logs debugging messages"
-    },
     "dtps.html#.renderDueToday": {
       "id": "dtps.html#.renderDueToday",
       "kind": "function",
@@ -10171,6 +10042,16 @@
       "tags": "dtps.renderDueToday renderDueToday",
       "summary": "",
       "description": "Compiles and displays due today / to-do stream"
+    },
+    "dtps.html#.log": {
+      "id": "dtps.html#.log",
+      "kind": "function",
+      "title": "&lt;static&gt; log( msg )",
+      "longname": "dtps.log",
+      "name": "log",
+      "tags": "dtps.log log",
+      "summary": "",
+      "description": "Logs debugging messages"
     },
     "dtps.html#.error": {
       "id": "dtps.html#.error",
@@ -10372,15 +10253,15 @@
       "summary": "",
       "description": "Clears all DTPS data"
     },
-    "dtps.html#.chroma": {
-      "id": "dtps.html#.chroma",
+    "dtps.html#.showClasses": {
+      "id": "dtps.html#.showClasses",
       "kind": "function",
-      "title": "&lt;static&gt; chroma()",
-      "longname": "dtps.chroma",
-      "name": "chroma",
-      "tags": "dtps.chroma chroma",
+      "title": "&lt;static&gt; showClasses( [ override ] )",
+      "longname": "dtps.showClasses",
+      "name": "showClasses",
+      "tags": "dtps.showClasses showClasses",
       "summary": "",
-      "description": "Runs Razer Chroma RGB effects for the selected content"
+      "description": "Renders the class list in the sidebar"
     },
     "dtps.html#.moduleCollapse": {
       "id": "dtps.html#.moduleCollapse",
@@ -10391,16 +10272,6 @@
       "tags": "dtps.moduleCollapse moduleCollapse",
       "summary": "",
       "description": "Collapses a module"
-    },
-    "dtps.html#.showClasses": {
-      "id": "dtps.html#.showClasses",
-      "kind": "function",
-      "title": "&lt;static&gt; showClasses( [ override ] )",
-      "longname": "dtps.showClasses",
-      "name": "showClasses",
-      "tags": "dtps.showClasses showClasses",
-      "summary": "",
-      "description": "Renders the class list in the sidebar"
     },
     "dtps.html#.renderClassTools": {
       "id": "dtps.html#.renderClassTools",
