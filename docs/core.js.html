@@ -613,7 +613,7 @@ dtps.init = function () {
             fluid.screens.pages = dtps.baseURL + "/scripts/pages-discussions.js";
             fluid.screens.discussions = dtps.baseURL + "/scripts/pages-discussions.js";
 
-            if (dtpsLMS.gradebook) {
+            if (dtpsLMS.gradebook &amp;&amp; !((dtps.env == "dev") &amp;&amp; (fluid.get("pref-debuggingGenericGradebook") == "true"))) {
                 //Handle LMS gradebook
                 fluid.screens.gradebook = dtps.showLMSGradebook;
             } else if (dtpsLMS.genericGradebook) {
@@ -1513,6 +1513,9 @@ dtps.renderLite = function () {
                 &lt;div onclick="$('.abtpage').hide();$('.abtpage.debugging').show();" class="item">
                     &lt;i class="material-icons">bug_report&lt;/i> Debugging
                 &lt;/div>
+                &lt;div onclick="$('.abtpage').hide();$('.abtpage.experiments').show();" class="item">
+                    &lt;i class="material-icons">science&lt;/i> Experiments
+                &lt;/div>
             ` : ``}
             &lt;div onclick="$('.abtpage').hide();$('.abtpage.about').show();" class="item abt">
                 &lt;i class="material-icons">info&lt;/i> About
@@ -1630,9 +1633,9 @@ dtps.renderLite = function () {
 
                    &lt;br />
 
-                   &lt;h5>Script configuration&lt;/h5>
+                   &lt;h5>Release configuration&lt;/h5>
 
-                   &lt;button onclick="['dtpsLoaderPref', 'debuggingConfig', 'githubCanary', 'codespaceExternalURL', 'dtpsLMSOverride'].forEach(k => window.localStorage.removeItem(k)); window.location.reload();" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Reset release overrides&lt;/button>
+                   &lt;button onclick="['dtpsLoaderPref', 'debuggingConfig', 'githubCanary', 'codespaceExternalURL', 'dtpsLMSOverride'].forEach(k => window.localStorage.removeItem(k)); window.location.reload();" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Clear release configurations&lt;/button>
                    &lt;br />&lt;br />
 
                    &lt;div>
@@ -1647,9 +1650,18 @@ dtps.renderLite = function () {
 
                    &lt;br />
 
-                   &lt;h5>Remote config overrides&lt;/h5>
-                   &lt;button onclick="Object.keys(dtps.remoteConfig).forEach(k => window.localStorage.removeItem('dtpsRemoteConfig-' + k));" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Clear&lt;/button>
-                   &lt;br />&lt;br />
+                   &lt;h5>Behavior Overrides&lt;/h5>
+
+                   &lt;br />
+                   &lt;div onclick="fluid.set('pref-debuggingGenericGradebook')" class="switch pref-debuggingGenericGradebook">&lt;span class="head">&lt;/span>&lt;/div>
+                   &lt;div class="label">Always use the generic gradebook&lt;/div>
+                &lt;/div>
+                &lt;div style="display: none;" class="abtpage experiments">
+                    &lt;h5>&lt;b>Experiments&lt;/b>&lt;/h5>
+                    &lt;p>These settings control how Power+ behaves. Changing these settings may enabled unsupported and/or unfinished features that can break Power+. Use at your own risk.&lt;/p>
+
+                    &lt;button onclick="Object.keys(dtps.remoteConfig).forEach(k => window.localStorage.removeItem('dtpsRemoteConfig-' + k));" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Clear Overrides&lt;/button>
+                    &lt;br />&lt;br />
                    ${Object.keys(dtps.remoteConfig).map(k => (`
                         &lt;div>
                             &lt;p>${k} ${window.localStorage.getItem("dtpsRemoteConfig-" + k) ? " &lt;b>(overridden)&lt;/b>" : ""}&lt;/p>
