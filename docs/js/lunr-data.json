@@ -372,18 +372,6 @@
           "show",
           "stream"
         ],
-        "dtps.html#.ampm": [
-          "12",
-          "ampm",
-          "date",
-          "dtps.ampm",
-          "formatt",
-          "function",
-          "hour",
-          "lt;static&gt",
-          "string",
-          "time"
-        ],
         "dtps.html#.formatDate": [
           "date",
           "dtps.formatd",
@@ -470,19 +458,6 @@
           "tool",
           "type"
         ],
-        "dtps.html#.classInfo": [
-          "amp",
-          "card",
-          "class",
-          "classinfo",
-          "display",
-          "dtps.classinfo",
-          "function",
-          "info",
-          "lt;static&gt",
-          "num",
-          "syllabu"
-        ],
         "dtps.html#.presentClass": [
           "class",
           "classnum",
@@ -498,6 +473,19 @@
           "select",
           "set",
           "tab"
+        ],
+        "dtps.html#.classInfo": [
+          "amp",
+          "card",
+          "class",
+          "classinfo",
+          "display",
+          "dtps.classinfo",
+          "function",
+          "info",
+          "lt;static&gt",
+          "num",
+          "syllabu"
         ],
         "dtps.html#.classHome": [
           "class",
@@ -936,19 +924,11 @@
           "updateclass"
         ]
       },
-      "length": 72
+      "length": 71
     },
     "tokenStore": {
       "root": {
         "1": {
-          "2": {
-            "docs": {
-              "dtps.html#.ampm": {
-                "ref": "dtps.html#.ampm",
-                "tf": 12.5
-              }
-            }
-          },
           "docs": {
             "dtpsLMS.html#.gradebook": {
               "ref": "dtpsLMS.html#.gradebook",
@@ -2067,20 +2047,6 @@
                           }
                         }
                       }
-                    },
-                    "m": {
-                      "docs": {},
-                      "p": {
-                        "docs": {},
-                        "m": {
-                          "docs": {
-                            "dtps.html#.ampm": {
-                              "ref": "dtps.html#.ampm",
-                              "tf": 1150
-                            }
-                          }
-                        }
-                      }
                     }
                   },
                   "s": {
@@ -3195,10 +3161,6 @@
                     "ref": "dtps.html#.isToday",
                     "tf": 49.99999999999999
                   },
-                  "dtps.html#.ampm": {
-                    "ref": "dtps.html#.ampm",
-                    "tf": 25
-                  },
                   "dtps.html#.formatDate": {
                     "ref": "dtps.html#.formatDate",
                     "tf": 45
@@ -3784,10 +3746,6 @@
                                     "ref": "dtps.html#.moduleStream",
                                     "tf": 33.33333333333333
                                   },
-                                  "dtps.html#.ampm": {
-                                    "ref": "dtps.html#.ampm",
-                                    "tf": 25
-                                  },
                                   "dtps.html#.formatDate": {
                                     "ref": "dtps.html#.formatDate",
                                     "tf": 25
@@ -3816,12 +3774,12 @@
                                     "ref": "dtps.html#.renderClassTools",
                                     "tf": 16.666666666666664
                                   },
-                                  "dtps.html#.classInfo": {
-                                    "ref": "dtps.html#.classInfo",
-                                    "tf": 33.33333333333333
-                                  },
                                   "dtps.html#.presentClass": {
                                     "ref": "dtps.html#.presentClass",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "dtps.html#.classInfo": {
+                                    "ref": "dtps.html#.classInfo",
                                     "tf": 33.33333333333333
                                   },
                                   "dtps.html#.classHome": {
@@ -6043,10 +6001,6 @@
                             "ref": "dtps.html#.moduleStream",
                             "tf": 110
                           },
-                          "dtps.html#.ampm": {
-                            "ref": "dtps.html#.ampm",
-                            "tf": 110
-                          },
                           "dtps.html#.formatDate": {
                             "ref": "dtps.html#.formatDate",
                             "tf": 110
@@ -6075,12 +6029,12 @@
                             "ref": "dtps.html#.renderClassTools",
                             "tf": 110
                           },
-                          "dtps.html#.classInfo": {
-                            "ref": "dtps.html#.classInfo",
-                            "tf": 110
-                          },
                           "dtps.html#.presentClass": {
                             "ref": "dtps.html#.presentClass",
+                            "tf": 110
+                          },
+                          "dtps.html#.classInfo": {
+                            "ref": "dtps.html#.classInfo",
                             "tf": 110
                           },
                           "dtps.html#.classHome": {
@@ -6651,14 +6605,6 @@
                         "tf": 10
                       }
                     },
-                    "t": {
-                      "docs": {
-                        "dtps.html#.ampm": {
-                          "ref": "dtps.html#.ampm",
-                          "tf": 12.5
-                        }
-                      }
-                    },
                     "d": {
                       "docs": {
                         "dtps.html#.formatDate": {
@@ -7028,10 +6974,6 @@
                       },
                       "dtps.html#.renderAssignmentScore": {
                         "ref": "dtps.html#.renderAssignmentScore",
-                        "tf": 25
-                      },
-                      "dtps.html#.ampm": {
-                        "ref": "dtps.html#.ampm",
                         "tf": 25
                       },
                       "dtps.html#.formatDate": {
@@ -7785,14 +7727,6 @@
                   "ref": "dtps.html#.classInfo",
                   "tf": 8.333333333333332
                 }
-              },
-              "m": {
-                "docs": {
-                  "dtps.html#.ampm": {
-                    "ref": "dtps.html#.ampm",
-                    "tf": 675
-                  }
-                }
               }
             }
           },
@@ -7892,44 +7826,6 @@
               }
             }
           },
-          "o": {
-            "docs": {},
-            "u": {
-              "docs": {},
-              "r": {
-                "docs": {
-                  "dtps.html#.ampm": {
-                    "ref": "dtps.html#.ampm",
-                    "tf": 12.5
-                  }
-                }
-              }
-            },
-            "m": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "p": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "g": {
-                      "docs": {
-                        "dtps.html#.classHome": {
-                          "ref": "dtps.html#.classHome",
-                          "tf": 16.666666666666664
-                        },
-                        "dtpsLMS.html#.fetchHomepage": {
-                          "ref": "dtpsLMS.html#.fetchHomepage",
-                          "tf": 8.333333333333332
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "e": {
             "docs": {},
             "i": {
@@ -7964,6 +7860,33 @@
                       "dtpsLMS.html#.commonHeaders": {
                         "ref": "dtpsLMS.html#.commonHeaders",
                         "tf": 3.3333333333333335
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "g": {
+                      "docs": {
+                        "dtps.html#.classHome": {
+                          "ref": "dtps.html#.classHome",
+                          "tf": 16.666666666666664
+                        },
+                        "dtpsLMS.html#.fetchHomepage": {
+                          "ref": "dtpsLMS.html#.fetchHomepage",
+                          "tf": 8.333333333333332
+                        }
                       }
                     }
                   }
@@ -8035,13 +7958,13 @@
                       "ref": "dtps.html#.renderClassTools",
                       "tf": 5
                     },
-                    "dtps.html#.classInfo": {
-                      "ref": "dtps.html#.classInfo",
-                      "tf": 8.333333333333332
-                    },
                     "dtps.html#.presentClass": {
                       "ref": "dtps.html#.presentClass",
                       "tf": 13.636363636363635
+                    },
+                    "dtps.html#.classInfo": {
+                      "ref": "dtps.html#.classInfo",
+                      "tf": 8.333333333333332
                     },
                     "dtps.html#.classHome": {
                       "ref": "dtps.html#.classHome",
@@ -8857,20 +8780,6 @@
                         }
                       }
                     }
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "dtps.html#.ampm": {
-                    "ref": "dtps.html#.ampm",
-                    "tf": 12.5
                   }
                 }
               }
@@ -9773,18 +9682,16 @@
           }
         }
       },
-      "length": 752
+      "length": 742
     },
     "corpusTokens": [
       "1",
-      "12",
       "account",
       "actual",
       "adjust",
       "alert",
       "alway",
       "amp",
-      "ampm",
       "announc",
       "assign",
       "basic",
@@ -9840,7 +9747,6 @@
       "document",
       "doneload",
       "dtp",
-      "dtps.ampm",
       "dtps.assign",
       "dtps.brightentextfordarkmod",
       "dtps.calendar",
@@ -9936,7 +9842,6 @@
       "forcererenderdashboard",
       "format",
       "formatd",
-      "formatt",
       "formula",
       "frommodul",
       "function",
@@ -9952,7 +9857,6 @@
       "header",
       "height",
       "homepag",
-      "hour",
       "html",
       "id",
       "ifram",
@@ -10091,7 +9995,6 @@
       "thread",
       "threadid",
       "through",
-      "time",
       "today",
       "tool",
       "type",
@@ -10421,16 +10324,6 @@
       "summary": "",
       "description": "Shows the module stream for a class"
     },
-    "dtps.html#.ampm": {
-      "id": "dtps.html#.ampm",
-      "kind": "function",
-      "title": "&lt;static&gt; ampm( date ) → {string}",
-      "longname": "dtps.ampm",
-      "name": "ampm",
-      "tags": "dtps.ampm ampm",
-      "summary": "",
-      "description": "12 hour time formatter"
-    },
     "dtps.html#.formatDate": {
       "id": "dtps.html#.formatDate",
       "kind": "function",
@@ -10501,16 +10394,6 @@
       "summary": "",
       "description": "Gets stream tools HTML (search box, class info, and modules/assignment switcher)"
     },
-    "dtps.html#.classInfo": {
-      "id": "dtps.html#.classInfo",
-      "kind": "function",
-      "title": "&lt;static&gt; classInfo( num )",
-      "longname": "dtps.classInfo",
-      "name": "classInfo",
-      "tags": "dtps.classInfo classInfo",
-      "summary": "",
-      "description": "Displays class info &amp; syllabus card"
-    },
     "dtps.html#.presentClass": {
       "id": "dtps.html#.presentClass",
       "kind": "function",
@@ -10520,6 +10403,16 @@
       "tags": "dtps.presentClass presentClass",
       "summary": "",
       "description": "Renders the class header (color, name, tabs, etc.) and sets the class as the selected class"
+    },
+    "dtps.html#.classInfo": {
+      "id": "dtps.html#.classInfo",
+      "kind": "function",
+      "title": "&lt;static&gt; classInfo( num )",
+      "longname": "dtps.classInfo",
+      "name": "classInfo",
+      "tags": "dtps.classInfo classInfo",
+      "summary": "",
+      "description": "Displays class info &amp; syllabus card"
     },
     "dtps.html#.classHome": {
       "id": "dtps.html#.classHome",
