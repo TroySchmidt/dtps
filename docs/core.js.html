@@ -1561,7 +1561,7 @@ dtps.renderLite = function () {
 
                 &lt;/div>
 
-                ${window.localStorage.githubCanary || window.localStorage.debuggingConfig || window.localStorage.codespaceExternalURL ? /*html*/`
+                &lt;div id="dtpsPrereleaseTesting" style="${window.localStorage.prereleaseEnabled || (dtps.env == "dev") || window.localStorage.githubRepo || window.localStorage.externalReleaseURL ? "" : "display: none;"}">
                     &lt;br />&lt;br />
                     &lt;p>Prerelease testing&lt;/p>
 
@@ -1569,33 +1569,36 @@ dtps.renderLite = function () {
                         &lt;div class="btns row small">
                             &lt;button 
                                 onclick="window.localStorage.setItem('dtpsLoaderPref', 'prod')" 
-                                class="btn ${!["canary", "codespace", "debugging"].includes(window.localStorage.dtpsLoaderPref) ? "active" : ""}">
+                                class="btn ${!["dev", "github", "external", "local"].includes(window.localStorage.dtpsLoaderPref) ? "active" : ""}">
                                 &lt;i class="material-icons">label&lt;/i> Production
                             &lt;/button>
-                            ${window.localStorage.githubCanary ? /*html*/`
+                            &lt;button 
+                                onclick="window.localStorage.setItem('dtpsLoaderPref', 'dev')" 
+                                class="btn ${window.localStorage.dtpsLoaderPref == "dev" ? "active" : ""}">
+                                &lt;i class="material-icons">feedback&lt;/i> Dev
+                            &lt;/button>
+                            ${window.localStorage.githubRepo ? /*html*/`
                                 &lt;button 
-                                    onclick="window.localStorage.setItem('dtpsLoaderPref', 'canary')" 
-                                    class="btn ${window.localStorage.dtpsLoaderPref == "canary" ? "active" : ""}">
-                                    &lt;i class="material-icons">build_circle&lt;/i> Canary
+                                    onclick="window.localStorage.setItem('dtpsLoaderPref', 'github')" 
+                                    class="btn ${window.localStorage.dtpsLoaderPref == "github" ? "active" : ""}">
+                                    &lt;i class="material-icons">account_tree&lt;/i> Branch
                                 &lt;/button>
                             ` : ``}
-                            ${window.localStorage.codespaceExternalURL ? /*html*/`
+                            ${window.localStorage.externalReleaseURL ? /*html*/`
                                 &lt;button 
-                                    onclick="window.localStorage.setItem('dtpsLoaderPref', 'codespace')" 
-                                    class="btn ${window.localStorage.dtpsLoaderPref == "codespace" ? "active" : ""}">
-                                    &lt;i class="material-icons">code&lt;/i> Codespace
+                                    onclick="window.localStorage.setItem('dtpsLoaderPref', 'external')" 
+                                    class="btn ${window.localStorage.dtpsLoaderPref == "external" ? "active" : ""}">
+                                    &lt;i class="material-icons">public&lt;/i> External
                                 &lt;/button>
                             ` : ``}
-                            ${window.localStorage.debuggingConfig ? /*html*/`
-                                &lt;button 
-                                    onclick="window.localStorage.setItem('dtpsLoaderPref', 'debugging')" 
-                                    class="btn ${window.localStorage.dtpsLoaderPref == "debugging" ? "active" : ""}">
-                                    &lt;i class="material-icons">bug_report&lt;/i> Debugging
-                                &lt;/button>
-                            ` : ``}
+                            &lt;button
+                                onclick="window.localStorage.setItem('dtpsLoaderPref', 'local')" 
+                                class="btn ${window.localStorage.dtpsLoaderPref == "local" ? "active" : ""}">
+                                &lt;i class="material-icons">developer_board&lt;/i> Local
+                            &lt;/button>
                         &lt;/div>
                     &lt;/div>
-                ` : ``}
+                &lt;/div>
 
             &lt;/div>
 
@@ -1640,12 +1643,17 @@ dtps.renderLite = function () {
 
                    &lt;h5>Release configuration&lt;/h5>
 
-                   &lt;button onclick="['dtpsLoaderPref', 'debuggingConfig', 'githubCanary', 'codespaceExternalURL', 'dtpsLMSOverride'].forEach(k => window.localStorage.removeItem(k)); window.location.reload();" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Clear release configurations&lt;/button>
+                   &lt;button onclick="['dtpsLoaderPref', 'prereleaseEnabled', 'githubRepo', 'externalReleaseURL', 'dtpsLMSOverride'].forEach(k => window.localStorage.removeItem(k)); window.location.reload();" class="btn small">&lt;i class="material-icons">cancel&lt;/i> Clear release configurations&lt;/button>
                    &lt;br />&lt;br />
 
                    &lt;div>
-                       &lt;input id="dtpsCodespaceURL" value="${window.localStorage.codespaceExternalURL || ""}" placeholder="GitHub Codespace subdomain" />
-                       &lt;button class="btn small" onclick="window.localStorage.setItem('codespaceExternalURL', $('#dtpsCodespaceURL').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
+                       &lt;input id="dtpsGithubRepo" value="${window.localStorage.githubRepo || ""}" placeholder="Branch GitHub repo" />
+                       &lt;button class="btn small" onclick="window.localStorage.setItem('githubRepo', $('#dtpsGithubRepo').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
+                   &lt;/div>
+
+                   &lt;div>
+                       &lt;input id="dtpsExternalReleaseURL" value="${window.localStorage.externalReleaseURL || ""}" placeholder="External release URL" />
+                       &lt;button class="btn small" onclick="window.localStorage.setItem('externalReleaseURL', $('#dtpsExternalReleaseURL').val())">&lt;i class="material-icons">save&lt;/i> Save&lt;/button>
                    &lt;/div>
 
                    &lt;div>
@@ -1733,7 +1741,7 @@ dtps.renderLite = function () {
 
                     &lt;div style="margin-top: 15px; margin-bottom: 7px;">
                         &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="dtps.clearData();">&lt;i class="material-icons" style="vertical-align: middle">refresh&lt;/i> Reset Power+&lt;/a>
-                        &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="window.localStorage.debuggingConfig = 'true'; alert('Debugging configuration enabled. Reload Power+ to see changes.');">&lt;i class="material-icons" style="vertical-align: middle">bug_report&lt;/i> Enable debug config&lt;/a>
+                        &lt;a style="color: var(--lightText); margin: 0px 5px; cursor: pointer;" onclick="window.localStorage.prereleaseEnabled = 'true'; $('#dtpsPrereleaseTesting').show(); alert('Prerelease versions can be enabled by going to Settings -> Prerelease testing');">&lt;i class="material-icons" style="vertical-align: middle">feedback&lt;/i> Test prerelease versions&lt;/a>
                     &lt;/div>
                 &lt;/div>
 
