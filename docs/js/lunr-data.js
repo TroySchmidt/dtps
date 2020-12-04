@@ -509,15 +509,6 @@ window.lunrData = {
           "showlmsgradebook",
           "us"
         ],
-        "dtps.html#.gradebook": [
-          "classid",
-          "dtps.gradebook",
-          "function",
-          "gener",
-          "gradebook",
-          "lt;static&gt",
-          "show"
-        ],
         "dtps.html#.showIFrameCard": [
           "card",
           "dtps.showiframecard",
@@ -527,6 +518,15 @@ window.lunrData = {
           "show",
           "showiframecard",
           "url"
+        ],
+        "dtps.html#.gradebook": [
+          "classid",
+          "dtps.gradebook",
+          "function",
+          "gener",
+          "gradebook",
+          "lt;static&gt",
+          "show"
         ],
         "dtps.html#.brightenTextForDarkMode": [
           "bg",
@@ -3790,12 +3790,12 @@ window.lunrData = {
                                     "ref": "dtps.html#.showLMSGradebook",
                                     "tf": 33.33333333333333
                                   },
-                                  "dtps.html#.gradebook": {
-                                    "ref": "dtps.html#.gradebook",
-                                    "tf": 33.33333333333333
-                                  },
                                   "dtps.html#.showIFrameCard": {
                                     "ref": "dtps.html#.showIFrameCard",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "dtps.html#.gradebook": {
+                                    "ref": "dtps.html#.gradebook",
                                     "tf": 33.33333333333333
                                   },
                                   "dtps.html#.brightenTextForDarkMode": {
@@ -6045,12 +6045,12 @@ window.lunrData = {
                             "ref": "dtps.html#.showLMSGradebook",
                             "tf": 110
                           },
-                          "dtps.html#.gradebook": {
-                            "ref": "dtps.html#.gradebook",
-                            "tf": 110
-                          },
                           "dtps.html#.showIFrameCard": {
                             "ref": "dtps.html#.showIFrameCard",
+                            "tf": 110
+                          },
+                          "dtps.html#.gradebook": {
+                            "ref": "dtps.html#.gradebook",
                             "tf": 110
                           },
                           "dtps.html#.brightenTextForDarkMode": {
@@ -7267,13 +7267,13 @@ window.lunrData = {
                     "ref": "dtps.html#.showLMSGradebook",
                     "tf": 10
                   },
-                  "dtps.html#.gradebook": {
-                    "ref": "dtps.html#.gradebook",
-                    "tf": 16.666666666666664
-                  },
                   "dtps.html#.showIFrameCard": {
                     "ref": "dtps.html#.showIFrameCard",
                     "tf": 12.5
+                  },
+                  "dtps.html#.gradebook": {
+                    "ref": "dtps.html#.gradebook",
+                    "tf": 16.666666666666664
                   },
                   "dtpsLMS.html#.gradebook": {
                     "ref": "dtpsLMS.html#.gradebook",
@@ -10434,16 +10434,6 @@ window.lunrData = {
       "summary": "",
       "description": "Shows the gradebook using HTML from dtpsLMS.gradebook"
     },
-    "dtps.html#.gradebook": {
-      "id": "dtps.html#.gradebook",
-      "kind": "function",
-      "title": "&lt;static&gt; gradebook( classID )",
-      "longname": "dtps.gradebook",
-      "name": "gradebook",
-      "tags": "dtps.gradebook gradebook",
-      "summary": "",
-      "description": "Shows the generic gradebook"
-    },
     "dtps.html#.showIFrameCard": {
       "id": "dtps.html#.showIFrameCard",
       "kind": "function",
@@ -10453,6 +10443,16 @@ window.lunrData = {
       "tags": "dtps.showIFrameCard showIFrameCard",
       "summary": "",
       "description": "Shows a URL in the iFrame card"
+    },
+    "dtps.html#.gradebook": {
+      "id": "dtps.html#.gradebook",
+      "kind": "function",
+      "title": "&lt;static&gt; gradebook( classID )",
+      "longname": "dtps.gradebook",
+      "name": "gradebook",
+      "tags": "dtps.gradebook gradebook",
+      "summary": "",
+      "description": "Shows the generic gradebook"
     },
     "dtps.html#.brightenTextForDarkMode": {
       "id": "dtps.html#.brightenTextForDarkMode",
