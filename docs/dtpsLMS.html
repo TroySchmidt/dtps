@@ -41,7 +41,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2020 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2021 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -81,6 +81,7 @@
 											<li><a href="global.html#PartialDiscussionThread">PartialDiscussionThread</a></li>
 											<li><a href="global.html#PartialPage">PartialPage</a></li>
 											<li><a href="global.html#RubricItem">RubricItem</a></li>
+											<li><a href="global.html#SearchData">SearchData</a></li>
 											<li><a href="global.html#User">User</a></li>
 									</ul>
 								</li>
@@ -251,7 +252,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1686">line 1686</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2071">line 2071</a></p>
 								</div>
 							</div>
 			
@@ -271,8 +272,7 @@
 		</dt>
 <dd class="symbol-details member public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Common headers used for Canvas web requests.
-			This variable is specific to Canvas LMS integration in DTPS and is not required for other LMS integrations.</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Common headers used for Canvas web requests.This variable is specific to Canvas LMS integration in DTPS and is not required for other LMS integrations.</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -303,6 +303,43 @@
 					</form>
 			</div>	</div>
 </dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id=".teacherCache" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">teacherCache</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">List of teachers from dtpsLMS.fetchClasses for use in other methodsThis variable is specific to Canvas LMS integration in DTPS and is not required for other LMS integrations.</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lms_canvas.js.html">lms/canvas.js</a>, <a href="lms_canvas.js.html#line-34">line 34</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
@@ -312,7 +349,7 @@
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">[REQUIRED] Fetches user data from the LMS</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">[REQUIRED] Fetches data for the current user from the LMS. If the user is not signed in, reject with an object that looks like {action: "login", redirectURL: "..."} to login the user.</div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
 								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;<a href="global.html#User">User</a>></span></label>
@@ -341,7 +378,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1703">line 1703</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2088">line 2088</a></p>
 								</div>
 							</div>
 			
@@ -353,12 +390,33 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".fetchClasses" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchClasses</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;<a href="global.html#Class">Class</a>>>}</span></h4>
+			<h4 id=".fetchClasses" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchClasses</span><span class="signature-params">( <span class="signature-param">userID</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;<a href="global.html#Class">Class</a>>>}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">[REQUIRED] Fetches class data from the LMS</div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>userID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The user ID to fetch classes for
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
 								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;Array.&lt;<a href="global.html#Class">Class</a>>></span></label>
 								<div class="col-sm-9">
@@ -386,7 +444,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1710">line 1710</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2095">line 2095</a></p>
 								</div>
 							</div>
 			
@@ -398,7 +456,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".fetchAssignments" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchAssignments</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;<a href="global.html#Assignment">Assignment</a>>>}</span></h4>
+			<h4 id=".fetchAssignments" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchAssignments</span><span class="signature-params">( <span class="signature-param">userID</span>, <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;<a href="global.html#Assignment">Assignment</a>>>}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -414,6 +472,13 @@
 					</tr>
 					</thead>
 					<tbody>
+						<tr>
+								<td><code>userID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The user ID to fetch assignments for
+							</td>
+						</tr>
 						<tr>
 								<td><code>classID</code></td>
 							<td><span class="param-type">string</span></td>
@@ -452,7 +517,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1717">line 1717</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2103">line 2103</a></p>
 								</div>
 							</div>
 			
@@ -464,7 +529,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".fetchModules" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchModules</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;<a href="global.html#Module">Module</a>>>}</span></h4>
+			<h4 id=".fetchModules" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchModules</span><span class="signature-params">( <span class="signature-param">userID</span>, <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;Array.&lt;<a href="global.html#Module">Module</a>>>}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -480,6 +545,13 @@
 					</tr>
 					</thead>
 					<tbody>
+						<tr>
+								<td><code>userID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The user ID to fetch modules for
+							</td>
+						</tr>
 						<tr>
 								<td><code>classID</code></td>
 							<td><span class="param-type">string</span></td>
@@ -518,7 +590,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1725">line 1725</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2112">line 2112</a></p>
 								</div>
 							</div>
 			
@@ -598,7 +670,80 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1733">line 1733</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2121">line 2121</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".collapseAllModules" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">collapseAllModules</span><span class="signature-params">( <span class="signature-param">classID</span>, <span class="signature-param">collapsed</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">[OPTIONAL] Collapses all modules in the LMS</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>classID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The ID of the class
+							</td>
+						</tr>
+						<tr>
+								<td><code>collapsed</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if all modules should be collapsed, false otherwise
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">A promise which resolves when the operation is completed</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2131">line 2131</a></p>
 								</div>
 							</div>
 			
@@ -664,7 +809,73 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1743">line 1743</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2140">line 2140</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".fetchMeetingURL" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">fetchMeetingURL</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;string>}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">[OPTIONAL] Fetches the videoMeetingURL for a class</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>classID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The class ID to get the videoMeetingURL for
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;string></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">A promise which resolves to the videoMeetingURL for the class, or null if the class does not have a videoMeetingURL</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2148">line 2148</a></p>
 								</div>
 							</div>
 			
@@ -730,7 +941,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1751">line 1751</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2156">line 2156</a></p>
 								</div>
 							</div>
 			
@@ -796,7 +1007,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1759">line 1759</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2164">line 2164</a></p>
 								</div>
 							</div>
 			
@@ -862,7 +1073,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1767">line 1767</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2172">line 2172</a></p>
 								</div>
 							</div>
 			
@@ -935,7 +1146,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1775">line 1775</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2180">line 2180</a></p>
 								</div>
 							</div>
 			
@@ -1001,7 +1212,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1784">line 1784</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2189">line 2189</a></p>
 								</div>
 							</div>
 			
@@ -1074,7 +1285,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1792">line 1792</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2197">line 2197</a></p>
 								</div>
 							</div>
 			
@@ -1140,7 +1351,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1801">line 1801</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2206">line 2206</a></p>
 								</div>
 							</div>
 			
@@ -1198,7 +1409,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1809">line 1809</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2214">line 2214</a></p>
 								</div>
 							</div>
 			
@@ -1271,7 +1482,73 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1816">line 1816</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2221">line 2221</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".isUsualDueDate" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">isUsualDueDate</span><span class="signature-params">( <span class="signature-param">date</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{boolean}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">[OPTIONAL, INSTITUTION ONLY] This function returns true if the due date provided is usual/expected and false if the due date is unusual/expected. If the due date is unusual, it is shown in bold in the UI. For institutions where there is a pattern/standard for due dates between classes.</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>date</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+							<td class="last">
+									The due date to check
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">True if the due date is usual, false if the due date is unusual/unexpected.</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2230">line 2230</a></p>
 								</div>
 							</div>
 			
@@ -1337,7 +1614,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1825">line 1825</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2238">line 2238</a></p>
 								</div>
 							</div>
 			
@@ -1403,7 +1680,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1833">line 1833</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-2246">line 2246</a></p>
 								</div>
 							</div>
 			
@@ -1424,8 +1701,8 @@
 	</div>
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
-				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 28th Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+				<div class="copyright">(c) 2018-2021 jottocraft. All rights reserved.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 31st Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

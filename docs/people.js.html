@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2020 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2021 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -82,6 +82,7 @@
 											<li><a href="global.html#PartialDiscussionThread">PartialDiscussionThread</a></li>
 											<li><a href="global.html#PartialPage">PartialPage</a></li>
 											<li><a href="global.html#RubricItem">RubricItem</a></li>
+											<li><a href="global.html#SearchData">SearchData</a></li>
 											<li><a href="global.html#User">User</a></li>
 									</ul>
 								</li>
@@ -122,7 +123,7 @@
  * @file DTPS course user list screen
  * @author jottocraft
  * 
- * @copyright Copyright (c) 2018-2020 jottocraft. All rights reserved.
+ * @copyright Copyright (c) 2018-2021 jottocraft. All rights reserved.
  * @license GPL-2.0-only
  */
 
@@ -154,11 +155,65 @@ dtps.usersList = function (courseID) {
     }
 
     if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "people")) {
-        jQuery(".classContent").html(`&lt;div class="spinner">&lt;/div>`);
+        jQuery(".classContent").html(/*html*/`
+            &lt;div style="--size: 250px; margin: 0px 20px;" class="grid flex">
+              &lt;div class="block status card">
+                &lt;h2 class="main">&lt;span class="shimmer">--&lt;/span>&lt;/h2>
+                &lt;h5 class="bottom">&lt;i class="fluid-icon">contact_page&lt;/i> Your section&lt;/h5>
+              &lt;/div>
+              &lt;div class="block status">
+                &lt;h2 class="main numFont">&lt;span class="shimmer">--&lt;/span>&lt;/h2>
+                &lt;h5 class="bottom">&lt;i class="fluid-icon">groups&lt;/i> Total Students&lt;/h5>
+              &lt;/div>
+              &lt;div class="block status">
+                &lt;h2 class="main numFont">&lt;span class="shimmer">--&lt;/span>&lt;/h2>
+                &lt;h5 class="bottom">&lt;i class="fluid-icon">school&lt;/i> Teachers&lt;/h5>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="card">
+                &lt;h5>&lt;b style="width: 300px; display: inline-block;" class="shimmer">Title&lt;/b>&lt;/h5>
+                ${[1, 2, 3, 4, 5, 6].map(() => (
+                    /*html*/`
+                        &lt;div>
+                            &lt;p class="shimmerParent">
+                                &lt;span style="width: 30px; height: 30px; outline: none; border-radius: 50%; display: inline-block; vertical-align: middle; margin-right: 5px;">&lt;/span>
+                                &lt;a style="color: var(--text); vertical-align: middle;">User name&lt;/a>
+                            &lt;/p>
+                        &lt;/div>
+                    `
+        )).join("")}
+            &lt;/div>
+        `);
     }
 
     //Fetch users list
-    dtpsLMS.fetchUsers(dtps.classes[classNum].id).then(function (sections) {
+    new Promise(resolve => {
+        if (dtps.classes[classNum].people &amp;&amp; (dtps.classes[classNum].people !== true)) {
+            resolve(dtps.classes[classNum].people);
+        } else {
+            dtpsLMS.fetchUsers(dtps.classes[classNum].lmsID).then(data => resolve(data));
+        }
+    }).then(function (sections) {
+        dtps.classes[classNum].people = sections;
+
+        //Count students and teachers by user ID
+        var allStudents = [];
+        var allTeachers = [];
+        var currentSection = null;
+        sections.forEach(section => {
+            section.users.forEach(user => {
+                if ((section.title == "Teachers") &amp;&amp; !allTeachers.includes(user.id)) {
+                    allTeachers.push(user.id);
+                } else if (!allStudents.includes(user.id)) {
+                    allStudents.push(user.id);
+                }
+
+                if (!currentSection &amp;&amp; (user.id == dtps.user.id)) {
+                    currentSection = section.title;
+                }
+            });
+        });
+
         if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "people")) {
             if (!sections || (sections.length == 0)) {
                 //No people in this class? (this shouldn't be possible)
@@ -169,7 +224,22 @@ dtps.usersList = function (courseID) {
                     &lt;/div>
                 `);
             } else {
-                jQuery(".classContent").html(sections.map(section => (
+                jQuery(".classContent").html(/*html*/`
+                    &lt;div style="--size: 250px; margin: 0px 20px;" class="grid flex">
+                      &lt;div class="block status card">
+                        &lt;h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="main">${currentSection || "--"}&lt;/h2>
+                        &lt;h5 class="bottom">&lt;i class="fluid-icon">contact_page&lt;/i> Your section&lt;/h5>
+                      &lt;/div>
+                      &lt;div class="block status">
+                        &lt;h2 class="main numFont">${allStudents.length}&lt;/h2>
+                        &lt;h5 class="bottom">&lt;i class="fluid-icon">groups&lt;/i> Total Students&lt;/h5>
+                      &lt;/div>
+                      &lt;div class="block status">
+                        &lt;h2 class="main numFont">${allTeachers.length}&lt;/h2>
+                        &lt;h5 class="bottom">&lt;i class="fluid-icon">school&lt;/i> ${allTeachers.length == 1 ? "Teacher" : "Teachers"}&lt;/h5>
+                      &lt;/div>
+                    &lt;/div>
+                ` + sections.map(section => (
                     /*html*/`
                         &lt;div class="card">
                             &lt;h5>&lt;b>${section.title}&lt;/b>&lt;/h5>
@@ -182,7 +252,7 @@ dtps.usersList = function (courseID) {
                                         &lt;/p>
                                     &lt;/div>
                                 `
-                            )).join("")}
+                )).join("")}
                         &lt;/div>
                     `
                 )).join(""));
@@ -211,8 +281,8 @@ fluid.externalScreens.people = (courseID) => {
 	</div>
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
-				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 28th Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+				<div class="copyright">(c) 2018-2021 jottocraft. All rights reserved.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 31st Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

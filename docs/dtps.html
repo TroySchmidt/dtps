@@ -41,7 +41,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2020 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2021 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -81,6 +81,7 @@
 											<li><a href="global.html#PartialDiscussionThread">PartialDiscussionThread</a></li>
 											<li><a href="global.html#PartialPage">PartialPage</a></li>
 											<li><a href="global.html#RubricItem">RubricItem</a></li>
+											<li><a href="global.html#SearchData">SearchData</a></li>
 											<li><a href="global.html#User">User</a></li>
 									</ul>
 								</li>
@@ -127,8 +128,7 @@
 </dt>
 <dd class="symbol-details namespace" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Global DTPS object
-			All global DTPS functions and variables are stored in this object</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Global DTPS objectAll global DTPS functions and variables are stored in this object</div>
 			</div>			<div class="callout callout-info">
 				<h5>Properties</h5>
 				<table class="params table table-striped">
@@ -259,6 +259,13 @@
 									Configuration variables that can be remotely changed
 							</td>
 						</tr>
+						<tr>
+								<td><code>searchScrollListener</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if the search scroll listener has been added
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -296,72 +303,6 @@
 							<article class="secondary">
 									<h3>Methods</h3>
 									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".renderAssignment" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderAssignment</span><span class="signature-params">( <span class="signature-param">assignment</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders HTML for an assignment item in a list</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>assignment</code></td>
-							<td><span class="param-type"><a href="global.html#Assignment">Assignment</a></span></td>
-							<td class="last">
-									The assignment object to render
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">Assignment HTML for use in a list</div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-15">line 15</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
 											<hr/>
 											<dt class="symbol-title function public">
 			<h4 id=".usersList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">usersList</span><span class="signature-params">( <span class="signature-param">courseID</span>&nbsp;)</span><span class="signature-type"></span></h4>
@@ -422,7 +363,141 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".loadThreadsList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadsList</span><span class="signature-params">( <span class="signature-param">courseID</span> [,&nbsp;<span class="signature-param">defaultThread</span>&nbsp;], <span class="signature-param">fromModules</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".globalSearch" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">globalSearch</span><span class="signature-params">( <span class="signature-param">term</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Searches Power+ globally and shows results on the "Search Results" screen</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>term</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The search term typed in the input box
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="search.js.html">search.js</a>, <a href="search.js.html#line-15">line 15</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".renderAssignment" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderAssignment</span><span class="signature-params">( <span class="signature-param">assignment</span> [,&nbsp;<span class="signature-param">childDisplay</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders HTML for an assignment item in a list</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>assignment</code></td>
+							<td><span class="param-type"><a href="global.html#Assignment">Assignment</a></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									The assignment object to render
+							</td>
+						</tr>
+						<tr>
+								<td><code>childDisplay</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Text to display for specifying the child or children this assignment is for
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Assignment HTML for use in a list</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-16">line 16</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".loadThreadsList" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadsList</span><span class="signature-params">( <span class="signature-param">courseID</span> [,&nbsp;<span class="signature-param">defaultThread</span> [,&nbsp;<span class="signature-param">fromModules</span> [,&nbsp;<span class="signature-param">defaultPost</span>&nbsp;]&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -458,9 +533,17 @@
 						<tr>
 								<td><code>fromModules</code></td>
 							<td><span class="param-type">boolean</span></td>
-								<td class="attributes"></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
 									True if this page is being loaded from the moduleStream
+							</td>
+						</tr>
+						<tr>
+								<td><code>defaultPost</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The post to load by default
 							</td>
 						</tr>
 					</tbody>
@@ -486,7 +569,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-17">line 17</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-18">line 18</a></p>
 								</div>
 							</div>
 			
@@ -552,44 +635,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-62">line 62</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".masterStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">masterStream</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the DTPS dashboard and calls dtps.renderCalendar, dtps.renderUpdates, and dtps.renderUpcoming</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-98">line 98</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-68">line 68</a></p>
 								</div>
 							</div>
 			
@@ -634,7 +680,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-110">line 110</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-101">line 101</a></p>
 								</div>
 							</div>
 			
@@ -646,11 +692,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".isToday" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">isToday</span><span class="signature-params">( <span class="signature-param">date</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".mergeAndRenderChildAssignments" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">mergeAndRenderChildAssignments</span><span class="signature-params">( <span class="signature-param">assignments</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Checks if a Date is today</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Merges and renders assignments for children in the same class</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -663,16 +709,24 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>date</code></td>
-							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td><code>assignments</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#Assignment">Assignment</a>></span></td>
 							<td class="last">
-									Date string to check
+									An array of assignment objects to merge
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">HTML with the assignments merged and labelled</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -692,7 +746,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-119">line 119</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-107">line 107</a></p>
 								</div>
 							</div>
 			
@@ -750,7 +804,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-133">line 133</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-110">line 110</a></p>
 								</div>
 							</div>
 			
@@ -762,47 +816,12 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".loadThreadPosts" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadPosts</span><span class="signature-params">( <span class="signature-param">classNum</span>, <span class="signature-param">threadID</span>, <span class="signature-param">fromModules</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".mainStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">mainStream</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Fetches and displays posts in a discussion</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>classNum</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									The class number to render
-							</td>
-						</tr>
-						<tr>
-								<td><code>threadID</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-									The discussion thread to render
-							</td>
-						</tr>
-						<tr>
-								<td><code>fromModules</code></td>
-							<td><span class="param-type">boolean</span></td>
-							<td class="last">
-									True if this page is being loaded from the moduleStream
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the DTPS dashboard and calls dtps.renderCalendar, dtps.renderUpdates, and dtps.renderUpcoming</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -822,65 +841,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-150">line 150</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".renderDueToday" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderDueToday</span><span class="signature-params">( <span class="signature-param">doneLoading</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays due today / to-do stream</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>doneLoading</code></td>
-							<td><span class="param-type">boolean</span></td>
-							<td class="last">
-									True if all classes have finished loading their assignment lists
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-164">line 164</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-141">line 141</a></p>
 								</div>
 							</div>
 			
@@ -938,7 +899,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-165">line 165</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-142">line 142</a></p>
 								</div>
 							</div>
 			
@@ -1014,7 +975,91 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-177">line 177</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-154">line 154</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".loadThreadPosts" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">loadThreadPosts</span><span class="signature-params">( <span class="signature-param">classNum</span>, <span class="signature-param">threadID</span> [,&nbsp;<span class="signature-param">fromModules</span> [,&nbsp;<span class="signature-param">defaultPost</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Fetches and displays posts in a discussion</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>classNum</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									The class number to render
+							</td>
+						</tr>
+						<tr>
+								<td><code>threadID</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									The discussion thread to render
+							</td>
+						</tr>
+						<tr>
+								<td><code>fromModules</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if this page is being loaded from the moduleStream
+							</td>
+						</tr>
+						<tr>
+								<td><code>defaultPost</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The post ID to jump to
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-159">line 159</a></p>
 								</div>
 							</div>
 			
@@ -1051,7 +1096,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-191">line 191</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-168">line 168</a></p>
 								</div>
 							</div>
 			
@@ -1063,12 +1108,43 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".renderUpcoming" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderUpcoming</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id=".isDueOnDate" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">isDueOnDate</span><span class="signature-params">( <span class="signature-param">date</span> [,&nbsp;<span class="signature-param">onDate</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays upcoming assignments stream</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Checks if a due date is on a date</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>date</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Date to check
+							</td>
+						</tr>
+						<tr>
+								<td><code>onDate</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									Date checked against (defaults to today)
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -1088,7 +1164,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-219">line 219</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-210">line 210</a></p>
 								</div>
 							</div>
 			
@@ -1125,7 +1201,75 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-242">line 242</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-219">line 219</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".renderDueToday" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderDueToday</span><span class="signature-params">( <span class="signature-param">doneLoading</span> [,&nbsp;<span class="signature-param">fromDate</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays due today / to-do stream</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>doneLoading</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									True if all classes have finished loading their assignment lists
+							</td>
+						</tr>
+						<tr>
+								<td><code>fromDate</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The date to display assignments from. Defaults to the current date.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-234">line 234</a></p>
 								</div>
 							</div>
 			
@@ -1183,7 +1327,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-261">line 261</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-238">line 238</a></p>
 								</div>
 							</div>
 			
@@ -1195,11 +1339,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".renderUpdates" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderUpdates</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id=".CSS" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">CSS</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders updates stream (recently graded & announcements)</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Load all DTPS CSS files</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1220,7 +1364,67 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-265">line 265</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-267">line 267</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".renderUpcoming" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderUpcoming</span><span class="signature-params">( [&nbsp;<span class="signature-param">fromDate</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays upcoming assignments stream</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>fromDate</code></td>
+							<td><span class="param-type"><a href="global.html#Date">Date</a></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The date to display assignments from. Defaults to the current date.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-295">line 295</a></p>
 								</div>
 							</div>
 			
@@ -1296,81 +1500,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-275">line 275</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".CSS" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">CSS</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Load all DTPS CSS files</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-286">line 286</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".calendar" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">calendar</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays the assignment calendar</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-303">line 303</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-306">line 306</a></p>
 								</div>
 							</div>
 			
@@ -1407,7 +1537,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-333">line 333</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-307">line 307</a></p>
 								</div>
 							</div>
 			
@@ -1419,11 +1549,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".classStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">classStream</span><span class="signature-params">( <span class="signature-param">classID</span> [,&nbsp;<span class="signature-param">searchResults</span> [,&nbsp;<span class="signature-param">searchText</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".renderUpdates" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderUpdates</span><span class="signature-params">( [&nbsp;<span class="signature-param">dateSelected</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows the assignments stream for a class</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders updates stream (recently graded & announcements)</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -1437,27 +1567,11 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>classID</code></td>
-							<td><span class="param-type">string</span></td>
-								<td class="attributes"></td>
-							<td class="last">
-									The class ID to show assignments for
-							</td>
-						</tr>
-						<tr>
-								<td><code>searchResults</code></td>
-							<td><span class="param-type">Array.&lt;<a href="global.html#Assignment">Assignment</a>></span></td>
+								<td><code>dateSelected</code></td>
+							<td><span class="param-type">boolean</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									An array of assignemnts to render instead of course.assignments. Used for assignment search.
-							</td>
-						</tr>
-						<tr>
-								<td><code>searchText</code></td>
-							<td><span class="param-type">string</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-							<td class="last">
-									Text to render in the search box. Used for assignment search.
+									True if a date is selected in the dashboard
 							</td>
 						</tr>
 					</tbody>
@@ -1483,7 +1597,125 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-376">line 376</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-353">line 353</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".filterSearch" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">filterSearch</span><span class="signature-params">( [&nbsp;<span class="signature-param">toggleItem</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Filters search results</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>toggleItem</code></td>
+							<td><span class="param-type">Element</span> | <span class="param-type">string</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									The selector for the element to toggle
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="search.js.html">search.js</a>, <a href="search.js.html#line-408">line 408</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".calendar" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">calendar</span><span class="signature-params">( <span class="signature-param">doneLoading</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Compiles and displays the assignment calendar</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>doneLoading</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									True if all classes have finished loading their assignment lists
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-415">line 415</a></p>
 								</div>
 							</div>
 			
@@ -1555,7 +1787,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-395">line 395</a></p>
+									<p class="form-control-static"><a href="pages-discussions.js.html">pages-discussions.js</a>, <a href="pages-discussions.js.html#line-437">line 437</a></p>
 								</div>
 							</div>
 			
@@ -1567,11 +1799,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".assignment" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">assignment</span><span class="signature-params">( <span class="signature-param">id</span>, <span class="signature-param">classNum</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".renderSearchResult" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderSearchResult</span><span class="signature-params">( <span class="signature-param">result</span>, <span class="signature-param">matchData</span> [,&nbsp;<span class="signature-param">mixedClasses</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows details for an assignment given the assignment ID and class number</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders a Search data object into HTML for display in the search results list</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -1579,64 +1811,46 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
+							<th>Attributes</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>id</code></td>
-							<td><span class="param-type">string</span></td>
+								<td><code>result</code></td>
+							<td><span class="param-type"><a href="global.html#SearchData">SearchData</a></span></td>
+								<td class="attributes"></td>
 							<td class="last">
-									Assignment ID
+									The search result to render
 							</td>
 						</tr>
 						<tr>
-								<td><code>classNum</code></td>
-							<td><span class="param-type">number</span></td>
+								<td><code>matchData</code></td>
+							<td><span class="param-type">Array.&lt;Object></span></td>
+								<td class="attributes"></td>
 							<td class="last">
-									Assignment class number
+									The list of matches from Lunr
+							</td>
+						</tr>
+						<tr>
+								<td><code>mixedClasses</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if there are results from multiple classes
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-489">line 489</a></p>
+									<div class="form-control-static returns-description">The HTML for this result in the results list</div>
 								</div>
 							</div>
-			
-			
-			
-			
 					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".search" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">search</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Searches the assignment stream for a keyword using Fuse.js</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -1657,7 +1871,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-653">line 653</a></p>
+									<p class="form-control-static"><a href="search.js.html">search.js</a>, <a href="search.js.html#line-455">line 455</a></p>
 								</div>
 							</div>
 			
@@ -1669,11 +1883,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".moduleStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">moduleStream</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".classStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">classStream</span><span class="signature-params">( <span class="signature-param">classID</span> [,&nbsp;<span class="signature-param">searchResults</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows the module stream for a class</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows the assignments stream for a class</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -1681,6 +1895,7 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
+							<th>Attributes</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
@@ -1688,8 +1903,17 @@
 						<tr>
 								<td><code>classID</code></td>
 							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
 							<td class="last">
-									Class number to fetch modules for
+									The class ID to show assignments for
+							</td>
+						</tr>
+						<tr>
+								<td><code>searchResults</code></td>
+							<td><span class="param-type">Array.&lt;<a href="global.html#Assignment">Assignment</a>></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									An array of assignemnts to render instead of course.assignments. Used for assignment search.
 							</td>
 						</tr>
 					</tbody>
@@ -1715,7 +1939,83 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-670">line 670</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-520">line 520</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".assignment" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">assignment</span><span class="signature-params">( <span class="signature-param">id</span>, <span class="signature-param">classNum</span> [,&nbsp;<span class="signature-param">generic</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows details for an assignment given the assignment ID and class number</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>id</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Assignment ID
+							</td>
+						</tr>
+						<tr>
+								<td><code>classNum</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									Assignment class number
+							</td>
+						</tr>
+						<tr>
+								<td><code>generic</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									True if user-specific details, such as grades, should not be displayed
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-645">line 645</a></p>
 								</div>
 							</div>
 			
@@ -1781,65 +2081,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-687">line 687</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".obsSwitch" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">obsSwitch</span><span class="signature-params">( <span class="signature-param">ele</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Switches the current child account being observed</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>ele</code></td>
-							<td><span class="param-type">Element</span></td>
-							<td class="last">
-									The dropdown element used to switch accounts
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-700">line 700</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-688">line 688</a></p>
 								</div>
 							</div>
 			
@@ -1897,7 +2139,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-720">line 720</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-701">line 701</a></p>
 								</div>
 							</div>
 			
@@ -1934,7 +2176,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-731">line 731</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-712">line 712</a></p>
 								</div>
 							</div>
 			
@@ -1994,7 +2236,123 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-743">line 743</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-724">line 724</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".moduleStream" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">moduleStream</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows the module stream for a class</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>classID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Class number to fetch modules for
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-812">line 812</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".presentClass" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">presentClass</span><span class="signature-params">( <span class="signature-param">classNum</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the class header (color, name, tabs, etc.) and sets the class as the selected class</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>classNum</code></td>
+							<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
+							<td class="last">
+									The class number to load or "dash" if loading the dashboard
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-833">line 833</a></p>
 								</div>
 							</div>
 			
@@ -2066,207 +2424,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-784">line 784</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".renderClassTools" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderClassTools</span><span class="signature-params">( <span class="signature-param">num</span>, <span class="signature-param">type</span> [,&nbsp;<span class="signature-param">searchText</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Gets stream tools HTML (search box, class info, and modules/assignment switcher)</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>num</code></td>
-							<td><span class="param-type">number</span></td>
-								<td class="attributes"></td>
-							<td class="last">
-									Class number
-							</td>
-						</tr>
-						<tr>
-								<td><code>type</code></td>
-							<td><span class="param-type">string</span></td>
-								<td class="attributes"></td>
-							<td class="last">
-									Class content these tools are for (e.g. "stream")
-							</td>
-						</tr>
-						<tr>
-								<td><code>searchText</code></td>
-							<td><span class="param-type">string</span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-							<td class="last">
-									Text to render in the search box for assignment search
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description">Stream tools HTML</div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-807">line 807</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".presentClass" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">presentClass</span><span class="signature-params">( <span class="signature-param">classNum</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Renders the class header (color, name, tabs, etc.) and sets the class as the selected class</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>classNum</code></td>
-							<td><span class="param-type">number</span> | <span class="param-type">string</span></td>
-							<td class="last">
-									The class number to load or "dash" if loading the dashboard
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-839">line 839</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".classInfo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">classInfo</span><span class="signature-params">( <span class="signature-param">num</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Displays class info & syllabus card</div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>num</code></td>
-							<td><span class="param-type">number</span></td>
-							<td class="last">
-									Class number to show info for
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-860">line 860</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-965">line 965</a></p>
 								</div>
 							</div>
 			
@@ -2324,7 +2482,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-905">line 905</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-975">line 975</a></p>
 								</div>
 							</div>
 			
@@ -2336,11 +2494,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".showLMSGradebook" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">showLMSGradebook</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".moduleCollapseAll" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">moduleCollapseAll</span><span class="signature-params">( <span class="signature-param">collapse</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows the gradebook using HTML from dtpsLMS.gradebook</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Collapses all module</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -2353,10 +2511,10 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>classID</code></td>
-							<td><span class="param-type">string</span></td>
+								<td><code>collapse</code></td>
+							<td><span class="param-type">boolean</span></td>
 							<td class="last">
-									Class ID
+									If true, modules will be collapsed, otherwise, they will all be expanded
 							</td>
 						</tr>
 					</tbody>
@@ -2382,7 +2540,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-949">line 949</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-988">line 988</a></p>
 								</div>
 							</div>
 			
@@ -2394,11 +2552,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".showIFrameCard" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">showIFrameCard</span><span class="signature-params">( <span class="signature-param">url</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".renderStreamTools" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">renderStreamTools</span><span class="signature-params">( <span class="signature-param">num</span>, <span class="signature-param">type</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{string}</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows a URL in the iFrame card</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Gets stream tools HTML (search box, class info, and modules/assignment switcher)</div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -2411,16 +2569,31 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>url</code></td>
+								<td><code>num</code></td>
+							<td><span class="param-type">number</span></td>
+							<td class="last">
+									Class number
+							</td>
+						</tr>
+						<tr>
+								<td><code>type</code></td>
 							<td><span class="param-type">string</span></td>
 							<td class="last">
-									The URL to load
+									Class content these tools are for (e.g. "stream")
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description">Stream tools HTML</div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -2440,7 +2613,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1002">line 1002</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1013">line 1013</a></p>
 								</div>
 							</div>
 			
@@ -2498,7 +2671,123 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1013">line 1013</a></p>
+									<p class="form-control-static"><a href="assignments.js.html">assignments.js</a>, <a href="assignments.js.html#line-1036">line 1036</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".showLMSGradebook" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">showLMSGradebook</span><span class="signature-params">( <span class="signature-param">classID</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows the gradebook using HTML from dtpsLMS.gradebook</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>classID</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									Class ID
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1083">line 1083</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".showIFrameCard" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">showIFrameCard</span><span class="signature-params">( <span class="signature-param">url</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows a URL in the iFrame card</div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>url</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									The URL to load
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1136">line 1136</a></p>
 								</div>
 							</div>
 			
@@ -2574,7 +2863,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1020">line 1020</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1154">line 1154</a></p>
 								</div>
 							</div>
 			
@@ -2632,7 +2921,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1048">line 1048</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1182">line 1182</a></p>
 								</div>
 							</div>
 			
@@ -2692,7 +2981,44 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1079">line 1079</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1213">line 1213</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".settingsReloadWarning" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">settingsReloadWarning</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Shows a warning telling the user that they must reload for setting changes to take effect</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1255">line 1255</a></p>
 								</div>
 							</div>
 			
@@ -2729,7 +3055,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1121">line 1121</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1262">line 1262</a></p>
 								</div>
 							</div>
 			
@@ -2766,7 +3092,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1174">line 1174</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1315">line 1315</a></p>
 								</div>
 							</div>
 			
@@ -2803,7 +3129,44 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1199">line 1199</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1340">line 1340</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".classicEntry" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">classicEntry</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Redirects to DTPS classic edition</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1354">line 1354</a></p>
 								</div>
 							</div>
 			
@@ -2840,7 +3203,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1213">line 1213</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1372">line 1372</a></p>
 								</div>
 							</div>
 			
@@ -2877,7 +3240,44 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1260">line 1260</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1419">line 1419</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".setSearchBox" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">setSearchBox</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description">Sets the search box text based on the current page or keywords</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1628">line 1628</a></p>
 								</div>
 							</div>
 			
@@ -2914,7 +3314,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1355">line 1355</a></p>
+									<p class="form-control-static"><a href="core.js.html">core.js</a>, <a href="core.js.html#line-1730">line 1730</a></p>
 								</div>
 							</div>
 			
@@ -2935,8 +3335,8 @@
 	</div>
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
-				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 28th Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+				<div class="copyright">(c) 2018-2021 jottocraft. All rights reserved.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 31st Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2020 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"Do MMM YYYY","systemName":"Power+ Docs","systemSummary":"Reference documentation for the latest version of Power+","systemLogo":"img/favicon.png","systemColor":"#c5982f","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' />","copyright":"(c) 2018-2021 jottocraft. All rights reserved.","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -82,6 +82,7 @@
 											<li><a href="global.html#PartialDiscussionThread">PartialDiscussionThread</a></li>
 											<li><a href="global.html#PartialPage">PartialPage</a></li>
 											<li><a href="global.html#RubricItem">RubricItem</a></li>
+											<li><a href="global.html#SearchData">SearchData</a></li>
 											<li><a href="global.html#User">User</a></li>
 									</ul>
 								</li>
@@ -122,7 +123,7 @@
  * @file DTPS pages &amp; discussion functions
  * @author jottocraft
  * 
- * @copyright Copyright (c) 2018-2020 jottocraft. All rights reserved.
+ * @copyright Copyright (c) 2018-2021 jottocraft. All rights reserved.
  * @license GPL-2.0-only
  */
 
@@ -132,9 +133,10 @@
  * 
  * @param {string} courseID The course ID to render discussion threads for
  * @param {string} [defaultThread] The thread to load by default
- * @param {boolean} fromModules True if this page is being loaded from the moduleStream
+ * @param {boolean} [fromModules] True if this page is being loaded from the moduleStream
+ * @param {string} [defaultPost] The post to load by default
  */
-dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
+dtps.loadThreadsList = function (courseID, defaultThread, fromModules, defaultPost) {
     //Get class index and set as selected class
     var classNum = dtps.classes.map(course => course.id).indexOf(courseID);
     dtps.selectedClass = classNum;
@@ -157,20 +159,37 @@ dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
 
     //Load module thread
     if (fromModules) {
-        dtps.loadThreadPosts(classNum, defaultThread, fromModules);
+        dtps.loadThreadPosts(classNum, defaultThread, fromModules, defaultPost);
         return;
     }
 
     if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "discuss")) {
         //Render sidebar
         jQuery(".sidebar").html(/*html*/`
-            &lt;div class="bigLogo" style="text-align: center; margin: 10px 0 20px; height: 38px;">
-                &lt;i style="font-size: 28px; margin-right: 7px; vertical-align: middle;" class="material-icons">forum&lt;/i>
-                &lt;h4 style="color: var(--text); display: inline-block; font-size: 26px; vertical-align: middle; margin: 0px;">Discussions&lt;/h4>
-            &lt;/div>
+            &lt;div class="title">
+                &lt;i style="font-size: 28px; margin-right: 7px; vertical-align: middle;" class="fluid-icon">forum&lt;/i>
+               &lt;h4>Discussions&lt;/h4>
+             &lt;/div>
                         
             &lt;div class="items">
-                &lt;div class="spinner">&lt;/div>
+                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="item main back">
+                    &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i> &lt;span class="label">Classes&lt;/span>
+                &lt;/div>
+
+                &lt;div class="divider">&lt;/div>
+
+                &lt;div class="item shimmerParent">
+                    &lt;i class="fluid-icon">star&lt;/i>
+                    &lt;span class="label">Discussion thread Title&lt;/span>
+                &lt;/div>
+                &lt;div class="item shimmerParent">
+                    &lt;i class="fluid-icon">star&lt;/i>
+                    &lt;span class="label">Discussion thread Title&lt;/span>
+                &lt;/div>
+                &lt;div class="item shimmerParent">
+                    &lt;i class="fluid-icon">star&lt;/i>
+                    &lt;span class="label">Discussion thread Title&lt;/span>
+                &lt;/div>
             &lt;/div>
         `);
 
@@ -179,18 +198,15 @@ dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
     }
 
     //Fetch discussion thread data
-    dtpsLMS.fetchDiscussionThreads(dtps.classes[classNum].id).then(function (threadData) {
+    dtpsLMS.fetchDiscussionThreads(dtps.classes[classNum].lmsID).then(function (threadData) {
         //Store fetched data to the selected class
         dtps.classes[classNum].discussions = threadData;
 
         if (dtps.classes[classNum].discussions.length == 0) {
             //No discussion topics in this class
             jQuery(".sidebar .items").html(/*html*/`
-                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="class item main back">
-                    &lt;span class="label">Classes&lt;/span>
-                    &lt;div class="icon">
-                        &lt;i class="material-icons">keyboard_arrow_left&lt;/i>
-                    &lt;/div>
+                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="item main back">
+                    &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i> &lt;span class="label">Classes&lt;/span>
                 &lt;/div>
 
                 &lt;p style="text-align: center; font-weight: bold; margin-top: 60px; margin-bottom: 10px;">No discussions found&lt;/p>
@@ -201,10 +217,8 @@ dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
             var discussionHTML = dtps.classes[classNum].discussions.map(discussionThread => {
                 return /*html*/`
                     &lt;div data-threadID="${discussionThread.id}" class="item">
+                        &lt;i class="fluid-icon">${discussionThread.locked ? "lock_outline" : "chat_bubble_outline"}&lt;/i>
                         &lt;span class="label">${discussionThread.title}&lt;/span>
-                        &lt;div class="icon">
-                            &lt;i style="font-family: 'Material Icons Extended';" class="material-icons">${discussionThread.locked ? "lock_outline" : "chat_bubble_outline"}&lt;/i>
-                        &lt;/div>
                     &lt;/div>
                 `;
             }).join("");
@@ -212,20 +226,15 @@ dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
             //Render discussion threads in the sidebar
             if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "discuss")) {
                 jQuery(".sidebar .items").html(/*html*/`
-                    &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="class item main back">
-                        &lt;span class="label">Classes&lt;/span>
-                        &lt;div class="icon">
-                            &lt;i class="material-icons">keyboard_arrow_left&lt;/i>
-                        &lt;/div>
-                    &lt;/div>
+                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="item main back">
+                    &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i> &lt;span class="label">Classes&lt;/span>
+                &lt;/div>
 
                     ${
                     dtps.classes[classNum].newDiscussionThreadURL ? (/*html*/`
-                            &lt;div onclick="window.open('${dtps.classes[classNum].newDiscussionThreadURL}')" class="class item back">
+                            &lt;div onclick="window.open('${dtps.classes[classNum].newDiscussionThreadURL}')" class="item back">
+                                &lt;i class="fluid-icon">add&lt;/i>
                                 &lt;span class="label">New discussion&lt;/span>
-                                &lt;div class="icon">
-                                    &lt;i class="material-icons">add&lt;/i>
-                                &lt;/div>
                             &lt;/div>
                         `) : ""
                     }
@@ -237,7 +246,7 @@ dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
 
                 //Load default thread if provided
                 if (defaultThread) {
-                    dtps.loadThreadPosts(classNum, defaultThread);
+                    dtps.loadThreadPosts(classNum, defaultThread, fromModules, defaultPost);
                 }
 
                 //Add click event listeners for discussion threads
@@ -265,16 +274,34 @@ dtps.loadThreadsList = function (courseID, defaultThread, fromModules) {
  * 
  * @param {number} classNum The class number to render
  * @param {string} threadID The discussion thread to render
- * @param {boolean} fromModules True if this page is being loaded from the moduleStream
+ * @param {boolean} [fromModules] True if this page is being loaded from the moduleStream
+ * @param {string} [defaultPost] The post ID to jump to
  */
-dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
+dtps.loadThreadPosts = function (classNum, threadID, fromModules, defaultPost) {
     //Show loading indicator
     if ((dtps.selectedClass == classNum) &amp;&amp; ((dtps.selectedContent == "discuss") || fromModules)) {
-        jQuery(".classContent").html(`&lt;div class="spinner">&lt;/div>`);
+        jQuery(".classContent").html(/*html*/`
+            &lt;div class="card" style="margin-top: 20px;margin-bottom: 75px;">
+                &lt;h4>&lt;span class="shimmer">[SHIMMER] Thread Title&lt;/span>&lt;/h4>
+
+                &lt;div style="margin-bottom: 32px;" class="discussionHeader">
+                    &lt;h5 >&lt;span class="shimmer">Discussion author name&lt;/span>&lt;/h5>
+
+                    &lt;i class="fluid-icon shimmer">calendar_today&lt;/i>
+                    &lt;span class="shimmer">Discussion date&lt;/span>
+                &lt;/div>
+
+                &lt;div class="shimmer" style="margin: 10px 0px; width: 100%; height: 400px; border: none; outline: none;">&lt;/div>
+
+                &lt;div style="margin-top: 32px;" class="discussionFooter">
+                    &lt;button class="btn small shimmer">&lt;i class="fluid-icon">post_add&lt;/i> Add Post&lt;/button>
+                &lt;/div> 
+            &lt;/div>
+        `);
     }
 
     //Fetch discussion posts from the LMS
-    dtpsLMS.fetchDiscussionPosts(dtps.classes[classNum].id, threadID).then(function (thread) {
+    dtpsLMS.fetchDiscussionPosts(dtps.classes[classNum].lmsID, threadID).then(function (thread) {
         //Post HTML array
         var postHTML = [];
 
@@ -301,7 +328,7 @@ dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
                 //Get HTML for each reply and add to array
                 post.replies.forEach(reply => {
                     replyHTML.push(/*html*/`
-                        &lt;div style="margin-left: ${(reply.depth || 0) * 50}px;" class="discussionReply">
+                        &lt;div data-post-id="${reply.id}" style="margin-left: ${(reply.depth || 0) * 50}px;" class="discussionReply">
                             &lt;div class="discussionHeader">
                                 ${post.author ? /*html*/`
                                     &lt;img src="${reply.author.photoURL}" />
@@ -309,7 +336,7 @@ dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
                                 ` : ``}
                                 
                                 &lt;span style="cursor: pointer;" onclick="window.open('${reply.replyURL}')">
-                                    &lt;i class="material-icons">reply&lt;/i>
+                                    &lt;i class="fluid-icon">reply&lt;/i>
                                     &lt;span>Reply&lt;/span>
                                 &lt;/span>
                             &lt;/div>
@@ -326,7 +353,7 @@ dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
             //Create HTML for this post
             //Note that index == 0 is the initial post
             postHTML.push(/*html*/`
-                    &lt;div class="card" style="margin-top: 20px;${index == 0 ? "margin-bottom: 75px;" : "padding: 20px 30px;"}">
+                    &lt;div class="card" data-post-id="${post.id}" style="margin-top: 20px;${index == 0 ? "margin-bottom: 75px;" : "padding: 20px 30px;"}">
                         &lt;!-- Thread title (Initial post) -->
                         ${index == 0 ? /*html*/`
                             &lt;h4 style="font-weight: bold">${thread.title}&lt;/h4>
@@ -339,14 +366,14 @@ dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
                                 &lt;h5>${post.author.name}&lt;/h5>
                             ` : ``}
 
-                            &lt;i class="material-icons">calendar_today&lt;/i>
+                            &lt;i class="fluid-icon">calendar_today&lt;/i>
                             &lt;span>${dtps.formatDate(post.postedAt)}&lt;/span>
 
                             &lt;!-- Thread info (initial post) -->
                             ${index == 0 ? /*html*/`
-                                ${thread.locked ? `&lt;i class="material-icons">lock&lt;/i>` : ""}
+                                ${thread.locked ? `&lt;i class="fluid-icon">lock&lt;/i>` : ""}
                                 ${thread.requireInitialPost ? /*html*/`
-                                    &lt;i class="material-icons">visibility&lt;/i>
+                                    &lt;i class="fluid-icon">visibility&lt;/i>
                                     &lt;span>You must post before you can see other replies&lt;/span>
                                 ` : ""}
                             ` : ''}
@@ -362,9 +389,9 @@ dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
                         ${post.replyURL ? /*html*/`
                             &lt;div ${index == 0 ? `style="margin-top: 32px;"` : ""} class="discussionFooter">
                                 ${index == 0 ? /*html*/`
-                                    &lt;button onclick="window.open('${post.replyURL}')" class="btn small">&lt;i class="material-icons">post_add&lt;/i> Add Post&lt;/button>
+                                    &lt;button onclick="window.open('${post.replyURL}')" class="btn small">&lt;i class="fluid-icon">post_add&lt;/i> Add Post&lt;/button>
                                 ` : /*html*/`
-                                    &lt;button onclick="window.open('${post.replyURL}')" class="btn small">&lt;i class="material-icons">reply&lt;/i> Reply&lt;/button>
+                                    &lt;button onclick="window.open('${post.replyURL}')" class="btn small">&lt;i class="fluid-icon">reply&lt;/i> Reply&lt;/button>
                                 `}
                             &lt;/div> 
                         ` : ""}
@@ -375,10 +402,15 @@ dtps.loadThreadPosts = function (classNum, threadID, fromModules) {
         //Render HTML
         if ((dtps.selectedClass == classNum) &amp;&amp; ((dtps.selectedContent == "discuss") || fromModules)) {
             jQuery(".classContent").html((fromModules ? /*html*/`
-                &lt;div class="acrylicMaterial" onclick="fluid.screen('moduleStream', '${dtps.classes[classNum].id}')" style="line-height: 40px;display:  inline-block;border-radius: 20px;margin: 82px 0px 0px 82px; cursor: pointer;">
-                    &lt;div style="font-size: 16px;display: inline-block;vertical-align: middle;margin: 0px 20px;">&lt;i style="vertical-align: middle;" class="material-icons">keyboard_arrow_left&lt;/i> Back&lt;/div>
-                &lt;/div>
+                &lt;button style="margin: 10px 0px 0px 20px;" class="btn" onclick="fluid.screen('moduleStream', '${dtps.classes[classNum].id}')">
+                    &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i> Back
+                &lt;/button>
             ` : "") + postHTML.join(""));
+
+            //Jump to post if specified
+            if (defaultPost) {
+                $("[data-post-id=" + defaultPost + "]").get(0).scrollIntoView();
+            }
         }
     }).catch(function (err) {
         dtps.error("Could not fetch discussion posts", "Caught promise rejection @ dtps.loadThreadPosts", err);
@@ -422,13 +454,30 @@ dtps.loadPagesList = function (courseID, defaultPage, fromModules) {
     if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "pages")) {
         //Render sidebar
         jQuery(".sidebar").html(/*html*/`
-            &lt;div class="bigLogo" style="text-align: center; margin: 10px 0 20px; height: 38px;">
-                &lt;i style="font-size: 28px; margin-right: 7px; vertical-align: middle;" class="material-icons">insert_drive_file&lt;/i>
-                &lt;h4 style="color: var(--text); display: inline-block; font-size: 26px; vertical-align: middle; margin: 0px;">Pages&lt;/h4>
-            &lt;/div>
-                        
-            &lt;div class="items">
-                &lt;div class="spinner">&lt;/div>
+            &lt;div class="title">
+                &lt;i style="font-size: 28px; margin-right: 7px; vertical-align: middle;" class="fluid-icon">insert_drive_file&lt;/i>
+                &lt;h4>Pages&lt;/h4>
+             &lt;/div>
+
+             &lt;div class="items">
+                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="item main back">
+                    &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i> &lt;span class="label">Classes&lt;/span>
+                &lt;/div>
+
+                &lt;div class="divider">&lt;/div>
+
+                &lt;div class="item shimmerParent">
+                    &lt;i class="fluid-icon">star&lt;/i>
+                    &lt;span class="label">Class page title&lt;/span>
+                &lt;/div>
+                &lt;div class="item shimmerParent">
+                    &lt;i class="fluid-icon">star&lt;/i>
+                    &lt;span class="label">Class page title&lt;/span>
+                &lt;/div>
+                &lt;div class="item shimmerParent">
+                    &lt;i class="fluid-icon">star&lt;/i>
+                    &lt;span class="label">Class page title&lt;/span>
+                &lt;/div>
             &lt;/div>
         `);
 
@@ -436,18 +485,16 @@ dtps.loadPagesList = function (courseID, defaultPage, fromModules) {
         jQuery(".classContent").html("");
     }
 
-    dtpsLMS.fetchPages(dtps.classes[classNum].id).then(function (pagesData) {
+    dtpsLMS.fetchPages(dtps.classes[classNum].lmsID).then(function (pagesData) {
         //Store fetched pages data to the class
         dtps.classes[classNum].pages = pagesData;
 
         if (pagesData.length == 0) {
             //No pages in this class
             jQuery(".sidebar .items").html(/*html*/`
-                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="class item main back">
+                &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="item main back">
+                    &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i>
                     &lt;span class="label">Classes&lt;/span>
-                    &lt;div class="icon">
-                        &lt;i class="material-icons">keyboard_arrow_left&lt;/i>
-                    &lt;/div>
                 &lt;/div>
 
                 &lt;p style="text-align: center; font-weight: bold; margin-top: 60px; margin-bottom: 10px;">No pages found&lt;/p>
@@ -458,10 +505,8 @@ dtps.loadPagesList = function (courseID, defaultPage, fromModules) {
             var pageHTML = dtps.classes[classNum].pages.map(page => {
                 return /*html*/`
                     &lt;div data-pageID="${page.id}" class="item ${(defaultPage &amp;&amp; (page.id == defaultPage)) ? "active" : ""}">
+                        &lt;i class="fluid-icon">insert_drive_file&lt;/i>    
                         &lt;span class="label">${page.title}&lt;/span>
-                        &lt;div class="icon">
-                            &lt;i class="material-icons">insert_drive_file&lt;/i>
-                        &lt;/div>
                     &lt;/div>
                 `;
             }).join("");
@@ -469,11 +514,9 @@ dtps.loadPagesList = function (courseID, defaultPage, fromModules) {
             //Render discussion threads in the sidebar
             if ((dtps.selectedClass == classNum) &amp;&amp; (dtps.selectedContent == "pages")) {
                 jQuery(".sidebar .items").html(/*html*/`
-                    &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="class item main back">
+                    &lt;div onclick="fluid.screen('stream', '${dtps.classes[classNum].id}');" class="item main back">
+                        &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i>    
                         &lt;span class="label">Classes&lt;/span>
-                        &lt;div class="icon">
-                            &lt;i class="material-icons">keyboard_arrow_left&lt;/i>
-                        &lt;/div>
                     &lt;/div>
 
                     &lt;div class="divider">&lt;/div>
@@ -515,14 +558,29 @@ dtps.loadPagesList = function (courseID, defaultPage, fromModules) {
 dtps.loadPage = function (classNum, pageID, fromModules) {
     //Show loading indicator
     if ((dtps.selectedClass == classNum) &amp;&amp; ((dtps.selectedContent == "pages") || fromModules)) {
-        jQuery(".classContent").html(`&lt;div class="spinner">&lt;/div>`);
+        jQuery(".classContent").html(/*html*/`
+             &lt;div style="margin: 20px; padding: 20px;">
+                &lt;h4>&lt;span class="shimmer">[SHIMMER] Class page title&lt;/span>&lt;/h4>
+
+                &lt;div style="margin-bottom: 32px;" class="discussionHeader">
+                    &lt;h5 class="shimmer">Page author name&lt;/h5>
+
+                    &lt;i class="fluid-icon shimmer">calendar_today&lt;/i>
+                    &lt;span class="shimmer">[SHIMMER] Last updated at&lt;/span>
+                &lt;/div>
+
+                &lt;!-- Page content -->
+                &lt;br />
+                &lt;div class="shimmer" style="margin: 10px 0px; width: 100%; height: 600px; border: none; outline: none;">&lt;/div>
+            &lt;/div>
+         `);
     }
 
     //Fetch page content
-    dtpsLMS.fetchPageContent(dtps.classes[classNum].id, pageID).then(function (page) {
+    dtpsLMS.fetchPageContent(dtps.classes[classNum].lmsID, pageID).then(function (page) {
         if ((dtps.selectedClass == classNum) &amp;&amp; ((dtps.selectedContent == "pages") || fromModules)) {
             //Get computed background and text color to style the iFrame with
-            var computedBackgroundColor = getComputedStyle($(".card.details")[0]).getPropertyValue("--cards");
+            var computedBackgroundColor = getComputedStyle($(".classContent")[0]).getPropertyValue("--background");
             var computedTextColor = getComputedStyle($(".card.details")[0]).getPropertyValue("--text");
 
             //Generate a blob with the page content and get its data URL
@@ -539,11 +597,11 @@ dtps.loadPage = function (classNum, pageID, fromModules) {
             //Render page card in the class content
             jQuery(".classContent").html(/*html*/`
                 ${fromModules ? /*html*/`
-                    &lt;div class="acrylicMaterial" onclick="fluid.screen('moduleStream', '${dtps.classes[classNum].id}')" style="line-height: 40px;display:  inline-block;border-radius: 20px;margin: 82px 0px 0px 82px; cursor: pointer;">
-                        &lt;div style="font-size: 16px;display: inline-block;vertical-align: middle;margin: 0px 20px;">&lt;i style="vertical-align: middle;" class="material-icons">keyboard_arrow_left&lt;/i> Back&lt;/div>
-                    &lt;/div>
+                    &lt;button style="margin: 10px 0px 0px 20px;" class="btn" onclick="fluid.screen('moduleStream', '${dtps.classes[classNum].id}')">
+                        &lt;i class="fluid-icon">keyboard_arrow_left&lt;/i> Back
+                    &lt;/button>
                 ` : ""}
-                &lt;div class="card">
+                &lt;div style="margin: 20px; padding: 20px;">
                     &lt;!-- Page title -->
                     &lt;h4 style="font-weight: bold;">${page.title}&lt;/h4>
 
@@ -554,7 +612,7 @@ dtps.loadPage = function (classNum, pageID, fromModules) {
                             &lt;h5>${page.author.name}&lt;/h5>
                         ` : ``}
 
-                        &lt;i class="material-icons">calendar_today&lt;/i>
+                        &lt;i class="fluid-icon">calendar_today&lt;/i>
                         &lt;span>${"Last Updated " + dtps.formatDate(page.updatedAt)}&lt;/span>
                     &lt;/div>
 
@@ -575,8 +633,9 @@ fluid.externalScreens.discussions = (param) => {
     var courseID = param.split("|")[0];
     var threadID = param.split("|")[1];
     var fromModules = param.split("|")[2] == "true";
+    var postID = param.split("|")[3];
 
-    dtps.loadThreadsList(courseID, threadID, fromModules);
+    dtps.loadThreadsList(courseID, threadID, fromModules, postID);
 }
 
 fluid.externalScreens.pages = (param) => {
@@ -642,8 +701,8 @@ fluid.externalScreens.pages = (param) => {
 	</div>
 	<footer>
 				<div class="footer-option"><img style='height: 32px; margin: 10px 0px;' src='https://cdn.jottocraft.com/images/footerImage.png' /></div>
-				<div class="copyright">(c) 2018-2020 jottocraft. All rights reserved.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 28th Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+				<div class="copyright">(c) 2018-2021 jottocraft. All rights reserved.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on 31st Dec 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
