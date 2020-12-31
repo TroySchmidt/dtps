@@ -1592,11 +1592,11 @@ dtps.render = function () {
           &lt;/div>
 
           &lt;div class="actions">
-            &lt;div class="item">
+            &lt;!--&lt;div class="item">
               &lt;i class="fluid-icon">feedback&lt;/i>
               &lt;span class="label">Feedback&lt;/span>
-            &lt;/div>
-            ${dtps.remoteConfig.showBugReportButton || dtps.unstable || (dtps.env == "dev") ? /*html*/`
+            &lt;/div>-->
+            ${false &amp;&amp; (dtps.remoteConfig.showBugReportButton || dtps.unstable || (dtps.env == "dev")) ? /*html*/`
                 &lt;div class="item">
                     &lt;i class="fluid-icon">bug_report&lt;/i>
                     &lt;span class="label">Bug Report&lt;/span>
